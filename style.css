@@ -1,0 +1,57 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+main {
+  padding: 20px;
+}
+
+.members, .latest-diaries {
+  margin-bottom: 30px;
+}
+
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.member {
+  text-align: center;
+  margin: 10px;
+}
+
+.member img {
+  width: 100px;
+  height: 100px;
+  background-color: gray; /* グレーの四角形 */
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.diary-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.diary-links a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-diary {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
