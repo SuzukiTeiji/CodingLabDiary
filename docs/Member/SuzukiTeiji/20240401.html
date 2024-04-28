@@ -34,7 +34,7 @@
 
         .button-container {
             display: flex;
-            justify-content: center; /* ボタンを中央寄せに設定 */
+            justify-content: center; /* ボタンを中央寄せにする */
         }
 
         button {
@@ -46,6 +46,11 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
+            margin-right: 10px;
+        }
+
+        button:last-child {
+            margin-right: 0;
         }
 
         button:hover {
@@ -56,33 +61,23 @@
 </head>
 <body>
     <header>
-        <h1>Suzuki Teiji</h1>
+        <h1>Suzuki Teiji's Diary</h1>
     </header>
     <main>
-        <section class="profile">
-            <h2>Profile</h2>
-            <div class="Profile">
-                <!-- プロフィールにリンクを挿入 -->
-                <ul>
-                    <li><a href="https://suzukiteiji.github.io/">Suzuki Teiji's GitHub Profile</a></li>
-                </ul>
-            </div>
-        </section>
         <section class="diary">
             <h2>Diary Entries</h2>
             <div class="diary-entries">
                 <ul>
-                    <li><a href="suzukiteiji_diary_2024_04_02.html"><strong>2024/04/02</strong> Suzuki Teiji's Diary - April 2, 2024</a></li>
-                    <li><a href="suzukiteiji_diary_2024_04_01.html"><strong>2024/04/01</strong> Suzuki Teiji's Diary - April 1, 2024</a></li>
-                    <!-- 他の日記エントリーも同様に追加 -->
+                    <li><strong>2024/04/01</strong> 夏のような暑い日でした。</li>
                 </ul>
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Coding Lab</p>
         <div class="button-container"> <!-- ボタンを中央寄せにするコンテナ -->
             <!-- 戻るボタン -->
+            <button onclick="window.location.href='suzukiteiji_diary.html'">戻る</button>
+            <!-- TOPボタン -->
             <button onclick="window.location.href='index.html'">Top</button>
         </div>
     </footer>
