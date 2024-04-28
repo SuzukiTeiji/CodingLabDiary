@@ -1,44 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Lab</title>
+    <title>コーディングラボDiaryPage</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .member-icon {
+            width: 100px;
+            height: auto;
+        }
+        .member {
+            position: relative;
+            display: inline-block;
+        }
+        .member:hover .member-name {
+            display: block;
+        }
+        .member-name {
+            display: none;
+            position: absolute;
+            bottom: -20px; /* アイコンの下に表示する調整 */
+            left: 50%; /* アイコン中央に配置する調整 */
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.8); /* テキストの背景色 */
+            color: black; /* テキストの色を黒に設定 */
+            padding: 5px 10px; /* テキストの余白 */
+            border-radius: 5px; /* テキストの角を丸くする */
+            white-space: nowrap; /* テキストが折り返されないようにする */
+        }
+        .diary-link {
+            text-decoration: none;
+            color: black;
+            transition: color 0.3s;
+        }
+        .diary-link:hover {
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>コーディングラボ
-        </h1>
+        <h1>コーディングラボ</h1>
     </header>
     <main>
         <section class="members">
-            <h2>Members</h2>
+            <h2>Member</h2>
             <div class="icon-container">
                 <!-- 参加者のアイコンと名前をここに追加 -->
-                <!-- サンプルとして4人分のアイコンを追加 -->
-                <a href="member1_diary.html" class="member">
-                    <img src="member1_icon.jpg" alt="Member 1">
-                    <p>Member 1</p>
+                <!-- MemberAのアイコンと名前を追加 -->
+                <a href="memberA_diary.html" class="member">
+                  <img src=" alt="MemberA" class="member-icon">
+                  <p class="member-name">MemberA</p>
                 </a>
-                <a href="member2_diary.html" class="member">
-                    <img src="member2_icon.jpg" alt="Member 2">
-                    <p>Member 2</p>
+               <a href="suzukiteiji_diary.html" class="member">
+                    <img src="img/profile.jpg" alt="Suzuki Teiji" class="member-icon">
+                    <p class="member-name">Suzuki Teiji</p>
                 </a>
-                <a href="member3_diary.html" class="member">
-                    <img src="member3_icon.jpg" alt="Member 3">
-                    <p>Member 3</p>
-                </a>
-                <a href="member4_diary.html" class="member">
-                    <img src="member4_icon.jpg" alt="Member 4">
-                    <p>Member 4</p>
-                </a>
+                
+            </div>
+        </section>
+
+        <!-- 最新の日記を表示する欄 -->
+        <section class="latest-diaries">
+            <h2>Latest Diaries</h2>
+            <div class="diary-links">
+              <a href="memberA_diary_2024_04_01.html" class="diary-link"><strong>MemberA</strong>: 2024/04/01 日記の本文</a>
+              <br>
+              <a href="suzukiteiji_diary_2024_04_02.html" class="diary-link"><strong>Suzuki Teiji</strong>: 2024/04/02 今日は庭に猫が10匹いました。</a>
+              
+              
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Coding Lab</p>
     </footer>
-    <button class="register-diary">日記登録</button>
 </body>
 </html>
