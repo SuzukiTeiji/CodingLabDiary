@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemberA's Diary</title>
+    <title>Minamino.Tsubasa's Diary</title>
     <style>
         body {
             margin: 0;
@@ -45,20 +45,23 @@
 </head>
 <body>
     <header>
-        <h1>MemberA's Diary</h1>
+        <h1>Minamino.Tsubasa</h1>
     </header>
     <main>
-        <section>
-            <h2>ポートフォリオページ</h2>
-            <div>
-                <a href="https://coderdojo-urasoe.github.io/index.html">ポートフォリオページへ</a>
+        <section class="profile">
+            <h2>Profile</h2>
+            <div class="Profile">
+                <!-- プロフィールにリンクを挿入 -->
+                <ul>
+                    <li><a href="https://coderdojo-urasoe.github.io/index.html">Minamino.Tsubasa's GitHub Profile</a></li>
+                </ul>
             </div>
         </section>
         <section class="diary">
             <h2>Diary Entries</h2>
             <div class="diary-entries">
                 <ul>
-                    <li><a href="memberA_diary_2024_04_01.html"><strong>2024/04/01</strong> MemberA's Diary - April 1, 2024</a></li>
+                    <li><a href="Diary/20240501.html"><strong>2024/05/01</strong></a></li>
                     <!-- 他の日記エントリーも同様に追加 -->
                 </ul>
             </div>
@@ -66,8 +69,10 @@
     </main>
     <footer>
         <p>&copy; 2024 Coding Lab</p>
-        <!-- 戻るボタン -->
-        <button onclick="window.location.href='index.html'">Top</button>
+        <div class="button-container"> <!-- ボタンを中央寄せにするコンテナ -->
+  <!-- 戻るボタン -->
+  <button onclick="window.location.href='../../index.html'">Top</button>
+        </div>
     </footer>
 </body>
 </html>
