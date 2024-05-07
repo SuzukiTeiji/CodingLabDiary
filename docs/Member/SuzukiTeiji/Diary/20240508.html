@@ -34,7 +34,7 @@
 
         .button-container {
             display: flex;
-            justify-content: center; /* ボタンを中央寄せに設定 */
+            justify-content: center; /* ボタンを中央寄せにする */
         }
 
         button {
@@ -46,6 +46,11 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
+            margin-right: 10px;
+        }
+
+        button:last-child {
+            margin-right: 0;
         }
 
         button:hover {
@@ -56,37 +61,27 @@
 </head>
 <body>
     <header>
-        <h1>Suzuki Teiji</h1>
+        <h1>Diary</h1>
     </header>
     <main>
-        <section class="profile">
-            <h2>Profile</h2>
-            <div class="Profile">
-                <!-- プロフィールにリンクを挿入 -->
-                <ul>
-                    <li><a href="https://suzukiteiji.github.io/">Suzuki Teiji's GitHub Profile</a></li>
-                </ul>
-            </div>
-        </section>
         <section class="diary">
-            <h2>Diary Entries</h2>
-            <div class="diary-entries">
-                <ul>
-                    <li><a href="Diary/20240508.html"><strong>2024/05/07</strong></a></li>
-                    <li><a href="Diary/20240507.html"><strong>2024/05/07</strong></a></li>
-                    <li><a href="Diary/20240504.html"><strong>2024/05/04</strong></a></li>
-                    <li><a href="Diary/20240402.html"><strong>2024/04/02</strong></a></li>
-                    <li><a href="Diary/20240401.html"><strong>2024/04/01</strong></a></li>
-                    <!-- 他の日記エントリーも同様に追加 -->
-                </ul>
-            </div>
-        </section>
+          <h2>2024/05/08 晴れ</h2>
+          <div class="diary-entries">
+              <h3>朝初更新！2回目</h3>
+              <div>
+                  昨日はアップまでできなかった。というのも、トップページのメンバーアイコンが消えてしまい、ぼーっと考えているうちに時間切れになったから。笑
+                  原因はわからないのだが、とりあえず私のプロフを2個入れて、1個に犠牲になってもらった。
+                  週4回以上やって習慣化キャンペーン2日目。
+              </div>
+          </div>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2024 Coding Lab</p>
         <div class="button-container"> <!-- ボタンを中央寄せにするコンテナ -->
             <!-- 戻るボタン -->
-            <button onclick="window.location.href='../../index.html'">Top</button>
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
         </div>
     </footer>
 </body>
