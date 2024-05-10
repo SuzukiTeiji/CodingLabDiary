@@ -75,9 +75,11 @@ footer {
   background-color: #ffa726; /* 明るいオレンジ色 */
 }
 img {
-    margin: 1.2em;
-    padding: 0.2em;
-    border: solid 1px #ccc;
+  width: 90%;
+  height: auto;
+  margin: 1.2em;
+  padding: 0.2em;
+  border: solid 1px #ccc;
 }
 
 @media (max-width: 768px) {
