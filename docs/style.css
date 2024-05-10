@@ -55,3 +55,46 @@ main {
   bottom: 20px;
   right: 20px;
 }
+.member-icon {
+  width: 100px;
+  height: auto;
+}
+
+.member {
+  position: relative;
+  display: inline-block;
+}
+
+.member:hover .member-name {
+  display: block;
+}
+
+.member-name {
+  display: none;
+  position: absolute;
+  bottom: -20px;
+  /* アイコンの下に表示する調整 */
+  left: 50%;
+  /* アイコン中央に配置する調整 */
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  /* テキストの背景色 */
+  color: black;
+  /* テキストの色を黒に設定 */
+  padding: 5px 10px;
+  /* テキストの余白 */
+  border-radius: 5px;
+  /* テキストの角を丸くする */
+  white-space: nowrap;
+  /* テキストが折り返されないようにする */
+}
+
+.diary-link {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.diary-link:hover {
+  color: #333;
+}
