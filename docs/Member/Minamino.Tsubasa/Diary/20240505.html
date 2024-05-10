@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minamino.Tsubasa's Diary</title>
-</head>
-<body>
-    <header style="background-color: hsl(0, 0%, 100%); color: rgb(0, 0, 0); text-align: center; padding: 1em 0;">
-        <h1>Minamino.Tsubasa's Diary</h1>
+    <link rel="stylesheet" href="diary.css">
+  </head>
+  <body>
+    <header>
+      <h1>Minamino.Tsubasa's Diary</h1>
     </header>
     <main>
-        <section class="diary">
-            <h2>2024/05/05 晴れ</h2>
-            <div class="diary-entries">
-                <h3>今日はとても晴れたいい日でした</h3>
-                <div>
-                    今日はいい日だったので北谷町のアメリカンビレッジを散策しました。
-                    観光客が多くてすごい賑わいでした。
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer style="background-color: #fff9f9; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
-        <div class="button-container">
-            <!-- 戻るボタン -->
-            <button onclick="history.back();">戻る</button>
-            <!-- TOPボタン -->
-            <button onclick="window.location.href='../../../index.html'">Top</button>
+      <section class="diary">
+        <h2>CodingLabとMinecraftカップ - 2024/05/05 晴れ</h2>
+        <div class="diary-entries">
+          <div>
+            午前中はCodingLabでGitHubを使うワーク、午後はMinecraftカップ参加者向けの企画ミーティングでした。
+          </div>
+          <h3>CodingLabはGitHubで混乱（笑）</h3>
+          <div>
+            先週に引き続き、GitHubを使った日記発信ワークを実施しました。前回はほとんどのメンバーが理解不十分なまま、一斉にリポジトリの操作を行ったため、競合が大量に発生してリポジトリが破綻。
+            今回はその反省を踏まえてグループに分けて、各グループごとにひとりづつリポジトリを操作するという形で実施してみました。
+            前回ほどの混乱はなかったものの、Gitをグラフィカルインターフェースで利用するSourcetreeがmacOS版、Windows版で少し挙動が異なることがあり、時間無いに解決できないエラーがいくつか残りました。
+            その後、発生したエラーを考察した結果、原因とSourcetreeでの処理方法（主にWindows版）にあたりがついたので、次回開催時にトラブルシューティング方法含めて皆様にお伝えしようと思ってます。
+            <img src="img/diary-20240505-01.jpg">
+          </div>
+          <h3>Minecraftカップ2024企画ミーティング</h3>
+          <div>
+            今年の<a href="https://minecraftcup.com/" target="_blank">Minecraftカップ</a>には、CoderDojo浦添から3チーム参加します。
+          </div>
+          <div>
+            テーマは「Well-beingをデザインしよう」。事務局が提示するwell-beingをはじめとする一般的な定義を理解して、参加者が自身の理解や体験と紐づけて仮想空間上の建築物として表現していきます。
+            社会人でも難易度が高いテーマだと思いますが、子どもたちが何を学んで、どういった視点を見つけて、どう表現していくのか楽しみです。
+            CoderDojo浦添では、浦添から参加する子たちを支援していきます。
+            <img src="img/diary-20240505-02.png">
+          </div>
+
         </div>
+      </section>
+    </main>
+    <footer>
+      <div class="button-container">
+        <!-- 戻るボタン -->
+        <button onclick="history.back();">戻る</button>
+        <!-- TOPボタン -->
+        <button onclick="window.location.href='../../../index.html'">
+          Top
+        </button>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
