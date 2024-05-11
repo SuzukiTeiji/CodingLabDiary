@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .diary {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .diary h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #34495e;
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .diary-entries {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .diary-entries img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4b06f8;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            width: max-content;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #3b0bd9;
+        }
+
+        /* レスポンシブ対応 */
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MmonOki's Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/10 晴れ</h2>
+            <div class="diary-entries">
+                <h3>定着させたい</h3>
+                <div>
+                    <br>まだ日記の作業フローが定着していない。<br>継続は力なりとなるようコツコツ頑張る。   <br>昨晩キングスがチャンピオンシップ クォーターファイナル GAME1を制した!今日はGAME2。GO!KINGS!
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
