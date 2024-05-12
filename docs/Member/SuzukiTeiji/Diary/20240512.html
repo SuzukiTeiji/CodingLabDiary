@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki Teiji's Diary</title>
+    <style>
+      body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          text-align: center;
+          background-image: url("img/sennitizenzai.jpeg");
+          background-repeat: repeat;
+          background-size: auto 100px; /* 画像のサイズを高さ100%に設定 */
+          color: white; /* テキストの色を白に設定 */
+          text-shadow: 1px 1px 1px black; /* テキストの縁取りを黒に設定 */
+          position: relative; /* 相対位置指定 */
+      }
+
+      body::before {
+          content: "";
+          position: absolute; /* 絶対位置指定 */
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(128, 128, 128, 0.5); /* 半透明のグレー */
+          z-index: -1; /* テキストより背面に配置 */
+      }
+
+      .right-align {
+          text-align: right;
+      }
+
+      .left-align {
+          text-align: left;
+      }
+
+      .center-align {
+          text-align: center;
+      }
+
+      header {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 1em 0;
+      }
+
+      main {
+          padding: 20px;
+      }
+
+      footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 1em 0;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+      }
+
+      .button-container {
+          display: flex;
+          justify-content: center; /* ボタンを中央寄せにする */
+      }
+
+      button {
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: transparent;
+          color: white;
+          border: 2px solid white;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s, color 0.3s;
+          margin-right: 10px;
+      }
+
+      button:last-child {
+          margin-right: 0;
+      }
+
+      button:hover {
+          background-color: white;
+          color: #333;
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/12 晴れ</h2>
+            <div class="diary-entries">
+                <h3>おいしいもの</h3>
+                <div>
+                    てだこホール練習室前の自販機で買った乳酸菌入りサイダー。<br>
+                    <br>ただの薄味のカルピスソーダなのだが<br>ゼロと書いてあるだけで罪悪感もゼロになるから不思議。<br><br>
+                    <div>
+                      <img src="img/nyuusan.jpeg" width="80">
+                  </div> 
+                                      <br>
+                    でもこのジャケットからは甘くない炭酸を期待するのでは、、、？ <br> よく見ると「甘さしっかり」って書いてあるんだけどね。<br> （自分も無味の炭酸が飲みたくて買った） <br>
+              
+                    <br>短命に終わらないよう微力ながら買い支えようと思う。<br>
+
+                    <div class="center-align">
+                        今日の挑戦は背景画像！                    </div><br><br><br>
+                  
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container"> <!-- ボタンを中央寄せにするコンテナ -->
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
