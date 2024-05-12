@@ -6,8 +6,10 @@
     <title>Makoto Diary</title>
 </head>
 <style>
+    
+/* imgにある背景画像 */
     body {
-        background-image: url(img/Diaryback.jpg); /* imgにある背景画像 */
+        background-image: url(img/Diaryback.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -15,8 +17,7 @@
         color: white;
     }
 
-        /* 画像をポップに動かすアニメーション */
-
+/* 画像をポップに動かすアニメーション */
         @keyframes pop {
             0% {
                 transform: scale(2);
@@ -28,8 +29,10 @@
                 transform: scale(3);
             }
         }
+
+/* アニメーションを適用 */
         img {
-            animation: pop 2s infinite alternate; /* アニメーションを適用 */
+            animation: pop 2s infinite alternate;
         }
     </style>
 
