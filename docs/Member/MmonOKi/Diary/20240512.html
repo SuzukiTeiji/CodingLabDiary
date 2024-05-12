@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-PYggO49G9tbVRgMYhv7bVEwX9wQcHEFjnqXa3uE3S0Xlmws8CQ3GBEYvFoXInehWMhdJwumK4biRX93S0AezLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #5bc0de;
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .diary {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            display: inline-block;
+            max-width: 800px; /* 変更：最大幅を800pxに */
+            width: 100%; /* 変更：幅を100%に */
+        }
+
+        .diary h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #34495e;
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: blue; /* 変更: 青色に */
+        }
+
+        .diary-entries {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .diary-entries img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #5bc0de;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            width: max-content;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #2980b9;
+        }
+
+        .icon-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* 変更：間隔を10pxに */
+            justify-content: center;
+        }
+
+        .icon-container .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .bubble {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            max-width: 70%;
+        }
+
+        .bubble-with-icon {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* レスポンシブ対応 */
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+            .diary-entries {
+                align-items: flex-start; /* レスポンシブ時に左揃え */
+            }
+            .icon-container {
+                margin-bottom: 5px; /* 変更：スマホサイズでの間隔を縮小 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MmonOki's Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/12 晴れのち曇り</h2>
+            <div class="diary-entries">
+                <h3>プログラミングしているのにアナログ思考</h3>
+                <div>
+                    <h4>昨日の自主学習での会話</h4>
+                </div>
+                <div class="icon-container">
+                    <div class="bubble">
+                        (MmonOki)<br>パソコンの充電が切れそうなので終わります.                   
+                    </div>
+                    <div class="icon">
+                        <img src="img/Mモンアイコン枠無し口小.png" alt="アイコン" width="90" height="90">
+                    </div>
+                </div>
+                <div class="icon-container">
+                    <div class="bubble-with-icon">
+                        <div class="bubble">
+                            (隣で自習していたSさん)<br>いやいやコンセント入れたらできるから（笑）.
+                        </div>
+                        <div class="icon">
+                            <img src="img/hito.jpg" alt="アイコン" width="90" height="90">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    プログラミングしているのにアナログ思考で笑った.
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
