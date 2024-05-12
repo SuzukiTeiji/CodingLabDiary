@@ -40,7 +40,6 @@ main {
 .member img {
   width: 100px;
   height: 100px;
-  background-color: gray; /* グレーの四角形 */
   border-radius: 50%;
   margin-bottom: 5px;
 }
