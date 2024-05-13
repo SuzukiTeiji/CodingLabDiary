@@ -3,10 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemberA's Diary</title>
+    <title>Makoto Diary</title>
 </head>
+<style>
+    
+/* imgにある背景画像 */
+    body {
+        background-image: url(img/Diaryback.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        color: white;
+    }
+
+/* 画像をポップに動かすアニメーション */
+        @keyframes pop {
+            0% {
+                transform: scale(2);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(3);
+            }
+        }
+
+/* アニメーションを適用 */
+        img {
+            animation: pop 2s infinite alternate;
+        }
+    </style>
+
+</style>
 <body>
-    <header style="background-color: hsl(0, 0%, 100%); color: rgb(0, 0, 0); text-align: center; padding: 1em 0;">
+    <header style="background-color: hsla(0, 5%, 17%, 0.266); color: rgb(0, 0, ); text-align: center; padding: 1em 0;">
         <h1>Makoto Diary</h1>
     </header>
     <main>
@@ -34,7 +66,7 @@
                         </pre>
                 </div>
                 <div>
-                    <img src="img/GitHub.jpeg" alt="">
+                    <img src="img/GitHub.jpeg" alt="GitHub" width="100px">
                 </div>
             </div>
         </section>
