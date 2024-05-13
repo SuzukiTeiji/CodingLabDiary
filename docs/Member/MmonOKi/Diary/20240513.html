@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* ヘッダーとメインセクションの間に余白を追加 */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .diary {
+            background-color: #d3eeba;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .diary h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #34495e;
+            text-align: center; /* タイトルを中央に */
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 10px; /* テキストの下に余白を追加 */
+        }
+
+        .diary-entries {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center; /* テキストを中央に配置 */
+        }
+
+        .diary-entries img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer; /* クリック可能にする */
+        }
+
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative; /* fixedからrelativeに変更 */
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* フッターとコンテンツの間に余白を追加 */
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            width: max-content;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 5px; /* ボタン間に余白を追加 */
+        }
+
+        .button-container button:hover {
+            background-color: #2980b9;
+        }
+        
+        .card-container {
+            width: 350px; /* カードコンテナの幅を調整 */
+            height: 450px; /* カードコンテナの高さを調整 */
+            perspective: 1000px;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer; /* クリック可能にする */
+            border-radius: 10px; /* カードの角を丸くする */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* カードに影を追加 */
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card:not(.flipped):hover {
+            transform: none; /* フリップしないようにする */
+        }
+
+        .card-face,
+        .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 10px; /* カードの角を丸くする */
+            overflow: hidden; /* 内容がはみ出ないようにする */
+        }
+
+        .card-face {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* 説明文を縦に配置 */
+            background-color: #c8f0e6;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background-color: #c8f0e6;
+        }
+
+        .card-image {
+            max-width: 100%; /* 画像を拡大できるようにする */
+            max-height: 60%; /* 画像の高さを調整 */
+            border-radius: 10px; /* 画像の角を丸くする */
+        }
+
+        /* 追加 */
+        .card.flipped .card-back {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MmonOki's Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/13 雨</h2>
+            <div class="diary-entries">
+                <h3>息抜き</h3>
+                <div>
+                   最近の息抜きはこの2つ <br>(画像をポチっとしてみてね)
+                </div>
+                <div class="card-container">
+                    <div class="card" onclick="flipCard(this)">
+                        <div class="card-face">
+                            <img class="card-image" src="img/pacman.jpeg" alt="パックマン">
+                            <p>Amazon FireTVStickでパックマン<br>好きな武器はelectric</p>
+                        </div>
+                        <div class="card-back">
+                            <img class="card-image" src="img/norakuro.jpeg" alt="のらくろ（フリップ版）">
+                            <p>近所のおじいさんが飼っている猫との戯れ<br>白い靴下履いてるよね?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+    <script>
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+    </script>
+</body>
+</html>
