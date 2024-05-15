@@ -1,0 +1,170 @@
+<!-- <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKI.COMPASS Diary</title>
+</head>
+<body>
+    <header style="background-color: hsl(0, 0%, 100%); color: rgb(0, 0, 0); text-align: center; padding: 1em 0;">
+        <h1>MAKI.COMPASS</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/16</h2>
+            <h3>懐かしいモノ＆かっこいいモノ</h3>
+            <div>
+                <P>夜、息子の皮膚科通院のため外出。</P>
+                <p>アイス欲しいからどこか寄り道してとリクエスト</p>
+                <p>息子は普段なら、車内で待機し店内には入らなのだけど珍しく店内で商品選び。</p>
+                <P>アイス・お菓子・調味料など、これ買って良い？と私の許可を得て買い物かごへ入れてくる。</P>
+                <P>息子が懐かしといい買ったもの「笛ラムネ」おまけは「かっこいいモノシリーズ」恐竜のフィギュアでした。</P>
+                <img class="card-image" src="img/かっこいいモノ.png" alt="かっこいいモノ">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="background-color: #fff9f9; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            戻るボタン
+            <button onclick="history.back();">戻る</button>
+            TOPボタン
+             <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body> -->
+<!-- </html> --> 
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字コードやビューポートの設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル -->
+    <title>MAKI.COMPASS Diary</title>
+    <!-- スタイルシートの定義 -->
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        /* ヘッダー部分のスタイル */
+        header {
+            background-color: #0b5d17; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* ヘッダーとメインセクションの間に余白を追加 */
+        }
+        /* タイトルのスタイル */
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+        
+        /* 日記エントリーのスタイル */
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px; /* テキストの下に余白を追加 */
+        }
+        /* カードコンテナのスタイル */
+        .card-container {
+            width: px;; /* カードコンテナの幅を調整 */
+            height: 400px; /* カードコンテナの高さを調整 */
+            perspective: 1000px;
+        }
+        /* カードのスタイル */
+        .card {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer; /* クリック可能にする */
+            border-radius: 10px; /* カードの角を丸くする */
+        }
+        /* カードをホバーしたときのスタイル */
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+        /* カードの表と裏のスタイル */
+        .card-face,
+        .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 10px; /* カードの角を丸くする */
+            overflow: hidden; /* 内容がはみ出ないようにする */
+        }
+        /* カードの表のスタイル */
+        .card-face {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* 説明文を縦に配置 */
+        }
+        /* カードの裏のスタイル */
+        .card-back {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+            flex-direction: column; /* 説明文を縦に配置 */
+        }
+        /* 画像のスタイル */
+        .card-image {
+            max-width: 100%; /* 画像を拡大できるようにする */
+            max-height: 60%; /* 画像の高さを調整 */
+            border-radius: 10px; /* 画像の角を丸くする */
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 日記セクション -->
+        <section class="diary">
+            <h2>2024/05/16</h2>
+            <div class="diary-entries">
+                <h3>迷惑</h3>
+                <div>
+                   <p>息子は笛ラムネおまけを部屋のインテリアとしてペットにプレゼント</p>
+                   <P>5/13 Mモンさんの日記、画像ポチリが面白かったので真似ました</P>
+                </div>
+                <!-- カードコンテナ -->
+                <div class="card-container">
+                    <!-- カード -->
+                    <div class="card" onclick="flipCard(this)">
+                        <!-- カード表 -->
+                        <div class="card-face">
+                            <img class="card-image" src="img/おまけ.png" alt="おまけ">
+                            <p>おまけ「かっこいい系おもちゃ箱」<br></p>
+                        </div>
+                        <!-- カード裏 -->
+                        <div class="card-back">
+                            <img class="card-image" src="img/迷惑.png" alt="迷惑">
+                            <p>邪魔で部屋に入れない<br>インテリアなんで要らない（心の声）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer>
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
