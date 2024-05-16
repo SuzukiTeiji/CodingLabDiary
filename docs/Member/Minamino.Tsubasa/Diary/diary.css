@@ -28,6 +28,11 @@ main {
   margin-bottom: 20px;
 }
 
+h1 {
+  text-align: center;
+  width: 100%;
+}
+
 h2,
 h3,
 h4 {
@@ -80,6 +85,37 @@ img {
   margin: 1.2em;
   padding: 0.2em;
   border: solid 1px #ccc;
+}
+.div-comment {
+  padding: 1em;
+  margin: 1em;
+  border: 1px #333 solid;
+}
+
+/* styles.css */
+
+/* 基本的なスタイル */
+.article {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  list-style-type: none; /* リストマーカーを非表示 */
+}
+
+/* new-articleクラスを持つ記事にNEWラベルを追加 */
+.new-article::before {
+  content: "NEW";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 3px;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
