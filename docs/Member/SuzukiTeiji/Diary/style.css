@@ -6,9 +6,8 @@ body {
   background-image: url("img/sennitizenzai.jpeg");
   background-repeat: repeat;
   background-size: auto 100px; /* 画像のサイズを高さ100%に設定 */
-  color: white; /* テキストの色を白に設定 */
-  text-shadow: 1px 1px 1px black; /* テキストの縁取りを黒に設定 */
-  position: relative; /* 相対位置指定 */
+  color: rgb(5, 5, 5); /* テキストの色を白に設定 */
+    position: relative; /* 相対位置指定 */
 }
 
 body::before {

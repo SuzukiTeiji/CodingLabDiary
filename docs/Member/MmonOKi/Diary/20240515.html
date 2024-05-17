@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-PYggO49G9tbVRgMYhv7bVEwX9wQcHEFjnqXa3uE3S0Xlmws8CQ3GBEYvFoXInehWMhdJwumK4biRX93S0AezLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin-bottom: 60px; /* フッターの高さ分の余白を追加 */
+        }
+
+        .diary-entries {
+            margin-bottom: 20px;
+        }
+
+        .diary-entries div {
+            margin-bottom: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            background-color: #008CBA;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 8px 8px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px; /* フッターの高さを指定 */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MmonOki's Diary</h1>
+    </header>
+
+    <div class="container">
+        <main>
+            <section class="diary">
+                <h2>2024/05/15 晴れ</h2>
+                <div class="diary-entries">
+                    <h3>問題です</h3>
+                    <div>
+                        本日はJavascriptを使用してJavascriptに関する問題を作ってみた。
+                    </div>
+                    <br>
+                    <div>
+                        問題1<br>
+                        テンプレートリテラルってどんなもの？
+                    </div>
+                    <button onclick="showAnswer('answer1');" style="background-color: #4CAF50;">回答を表示</button>
+                    <button id="hideAnswerButton1" class="hidden" onclick="hideAnswer('answer1');" style="background-color: #FF5722;">戻す</button>
+                    <div id="answer1" class="hidden">
+                        回答<br>
+                        テンプレートリテラルは、バッククォート（`）で囲まれた文字列内で変数や式を埋め込む方法です。例えば、console.log(`${name}は${age}歳です。`);こんな感じで書きます。
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="diary-entries">
+                    <div>
+                        問題2<br>
+                        以下のプログラムを読んで、consoleに表示される文字列を予想してみよう。<br>
+                        let number = 10;<br>
+                        if (number > 5) {<br>
+                            console.log("数字は5より大きいです。");<br>
+                        } else {<br>
+                            console.log("数字は5以下です。");<br>
+                        }
+                    </div>
+                    <button onclick="showAnswer('answer2');" style="background-color: #4CAF50;">回答を表示</button>
+                    <button id="hideAnswerButton2" class="hidden" onclick="hideAnswer('answer2');" style="background-color: #FF5722;">戻す</button>
+                    <div id="answer2" class="hidden">
+                        回答<br>
+                        数字は5より大きいです。
+                    </div>
+                    <div>
+                        <br>ふう💦こつこつとjavascript理解する。
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();" style="background-color: #4CAF50;">戻る</button>
+            <button onclick="window.location.href='../../../index.html';" style="background-color: #FF5722;">Top</button>
+        </div>
+    </footer>
+
+    <script>
+        function showAnswer(answerId) {
+            document.getElementById(answerId).classList.remove("hidden");
+            document.getElementById("hideAnswerButton" + answerId.substring(6)).classList.remove("hidden");
+        }
+
+        function hideAnswer(answerId) {
+            document.getElementById(answerId).classList.add("hidden");
+            document.getElementById("hideAnswerButton" + answerId.substring(6)).classList.add("hidden");
+        }
+    </script>
+</body>
+</html>

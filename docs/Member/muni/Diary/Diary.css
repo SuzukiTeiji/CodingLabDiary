@@ -1,0 +1,38 @@
+body {
+    font-size: 1.2em;
+    color: rgb(233, 251, 182);
+    text-shadow: 2px 2px 4px #211005;
+    text-align: center; /* テキストを中央揃え */
+    background-image: url('img/Diary.jpg');
+    background-size: cover;
+}
+
+.diary-entries {
+    background-color: rgba(30, 23, 6, 0.8); /* 内容の背景色を設定して読みやすく */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.diary-entries {
+background-color: rgba(30, 23, 6, 0.8);
+padding: 20px;
+border-radius: 10px;
+margin: 20px auto; /* 左右に余白を追加 */
+max-width: 700px; /* 必要に応じて最大幅を設定 */
+}
+
+.button-container button {
+background-color: #341208; /* 戻るTopカラー */
+color: #fff;
+border: none;
+padding: 10px 20px;
+margin: 5px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.button-container button:hover {
+background-color: #a1a366; /* 戻るTop選択時カラー */
+}
+

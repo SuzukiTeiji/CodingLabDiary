@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suzuki Teiji's Diary</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(img/nyuusan.jpeg), url(img/sennitizenzai.jpeg);
+            background-size: 100px 100px; /* 画像のサイズを調整 */
+            background-repeat: repeat;
+            background-position: 0 0, 100px 100px; /* 画像の位置を調整 */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .diary {
+            background: rgba(255, 255, 255, 0.8); /* 内容の背景色を設定して読みやすく */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .center-align {
+            text-align: center;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/15 晴れ</h2>
+            <div class="diary-entries">
+                <h3>時短更新</h3>
+                <div>
+                    5分くらいで更新できるようになりたい。<br>
+            
+                    <br><br>
+
+                    <div class="center-align">
+                        今日の挑戦は2枚の画像を背景に交互に並べる。
+                    </div>
+                    失敗！<br><br><br>
+                    ChatGPTへの指示が難しい。中々間違いを認めないし。<BR><br>
+                    今回、CSSがこのシートに復活してしまったので、<br>
+                    極力手動での修正が少なくなるような指示を意識して命令する。<br>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
