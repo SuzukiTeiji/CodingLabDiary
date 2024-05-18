@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+
+        main {
+            padding: 20px;
+            padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            /* 背景画像を追加 */
+            background-image: url('path/to/your/background-image.jpg');
+            background-size: cover; /* 画像をカバーするように */
+            background-position: center; /* 画像を中央に配置 */
+            background-repeat: no-repeat; /* 画像を繰り返さない */
+        }
+
+        .diary {
+            background-color: rgba(228, 247, 189, 0.9); /* 背景を白にして少し透明に */
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .diary h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #34495e;
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .diary-entries {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .diary-entries img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            /* アニメーションを追加 */
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: fadeInFromLeft 3s forwards;
+        }
+
+        /* アニメーションの定義 */
+        @keyframes fadeInFromLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            height: 60px; /* フッターの高さ */
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            width: max-content;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #2980b9;
+        }
+
+        /* レスポンシブ対応 */
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+                padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MmonOki's Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/17 曇り時々雨</h2>
+            <div class="diary-entries">
+                <h3>ソーキ汁</h3>
+                <div>
+                    法事で軟骨ソーキ汁を作りました。ソーキは豚のあばら肉のところですです。一般的には「スペアリブ」の部位に該当します。<br>ソーキには本ソーキと軟骨ソーキがあります。<br>どちらも旨いことは確かです😊。
+                    <li>本ソーキ…硬い骨を含むあばら骨についた肉</li>
+                    <li>軟骨ソーキ…軟骨を含むあばら骨周りの肉</li>
+                </div>
+                <div>
+                    <img src="img/souki.jpeg" alt="ソーキ汁">
+                </div>
+            </div>
+        </section>
+        <div>
+            
+        </div>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
