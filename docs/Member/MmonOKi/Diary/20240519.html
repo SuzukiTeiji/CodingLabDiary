@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        /* カスタム変数の定義 */
+        :root {
+            --main-bg-color: #5bc0de; /* 水色 */
+            --main-text-color: #333; /* 主なテキストカラー */
+            --secondary-text-color: #666; /* サブテキストカラー */
+            --highlight-color: rgb(240, 105, 128); /* ハイライトカラー */
+            --white-bg-opacity: rgba(255, 255, 255, 0.9); /* 透明度のある白背景 */
+            --box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* ボックスシャドウ */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* フォントファミリー */
+        }
+
+        /* ボディ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-family);
+            background-color: #f8f8f8;
+            color: var(--main-text-color);
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: var(--main-bg-color);
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: var(--box-shadow);
+        }
+
+        /* タイトルのスタイル */
+        h1, h2, h3 {
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #34495e;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            color: var(--secondary-text-color);
+        }
+
+        /* メインコンテンツのスタイル */
+        main {
+            padding: 20px;
+            padding-bottom: 80px;
+            background-color: rgb(210, 248, 248);
+        }
+
+        /* 日記セクションのスタイル */
+        .diary {
+            background-image: url('img/22856685.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: var(--white-bg-opacity);
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .diary p {
+            line-height: 1.6;
+            font-size: 1em;
+        }
+
+        /* 日記エントリのスタイル */
+        .diary-entries {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .diary-entries img {
+            max-width: 80%; /* 画像の最大幅を80%に設定 */
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            /* アニメーションを追加 */
+            opacity: 0;
+            transform: translateX(-50px) rotate(-360deg); /* 初期状態で回転 */
+            animation: fadeInRotate 3s forwards;
+            display: block;
+            margin: 0 auto; /* 画像を中央に配置 */
+        }
+
+        /* 画像のフェードインと回転アニメーションの定義 */
+        @keyframes fadeInRotate {
+            to {
+                opacity: 1;
+                transform: translateX(0) rotate(0deg);
+            }
+        }
+
+        /* ハイライトされたテキストのスタイル */
+        .highlighted-text {
+            text-align: center;
+            color: var(--highlight-color);
+            font-size: 1.3em;
+            margin-top: 20px;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: var(--main-bg-color);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: var(--box-shadow);
+            height: 60px;
+        }
+
+        /* ボタンコンテナのスタイル */
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #f85af0;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            width: max-content;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #2980b9;
+        }
+
+        /* レスポンシブデザインの対応 */
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+                padding-bottom: 80px;
+            }
+
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+
+            .diary-entries img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MmonOki's Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/19 晴れ</h2>
+            <div class="diary-entries">
+                <h3>姪っ子の力作</h3>
+                <p>
+                    姪っ子画伯作<br>作品名：キングスが今日3Pめっちゃ決まって無双するという願望
+                </p>
+                <div>
+                    <img src="img/3P.png" alt="3P無双">
+                </div>
+            </div>
+        </section>
+        <!-- ハイライトされたテキスト -->
+        <h3 class="highlighted-text">火曜日のGAME3も観たいのさ！</h3>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
