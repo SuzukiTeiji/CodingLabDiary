@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoderCrafters01 Diary</title>
+</head>
+<body>
+    <!-- 既存のコード... -->
+
+    <!-- パックマン的なゲームのプログラム -->
+    <script>
+        // 自機の座標
+        let mx = 1;
+        let my = 1;
+
+        // キー入力の処理
+        document.addEventListener("keydown", (event) => {
+            switch (event.key) {
+                case "ArrowLeft":
+                    mx--;
+                    break;
+                case "ArrowRight":
+                    mx++;
+                    break;
+                case "ArrowUp":
+                    my--;
+                    break;
+                case "ArrowDown":
+                    my++;
+                    break;
+            }
+            updatePosition();
+        });
+
+        // 自機の表示位置を更新
+        function updatePosition() {
+            const jiki = document.getElementById("jiki");
+            jiki.style.left = mx * 32 + "px";
+            jiki.style.top = my * 32 + "px";
+        }
+    </script>
+
+    <!-- 自機の表示 -->
+    <img id="jiki" src="jiki.bmp" style="position: absolute; left: 32px; top: 32px; width: 32px; height: 32px;">
+</body>
+</html>
