@@ -8,7 +8,7 @@ console.log(head1);
 console.log(head2);
 console.log(head3);
 
-let itemNames = ["ポッキーボンネット", "ビッグリボンカチューシャ", "リボンコーム"];
+let itemNames = ["ボンネット", "ビッグリボンカチューシャ", "リボンコーム"];
 let itemPrices = [100, 200, 300,];
 
 console.log("配列で出力**********************");
