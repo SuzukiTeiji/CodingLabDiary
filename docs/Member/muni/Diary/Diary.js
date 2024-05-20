@@ -1,17 +1,15 @@
 let head1 = "ボンネット";
 let head2 = "ビッグリボンカチューシャ";
 let head3 = "リボンコーム";
-let head4 = "シルクハット";
 
 
 console.log("変数で出力**********************");
 console.log(head1);
 console.log(head2);
 console.log(head3);
-console.log(head4);
 
-let itemNames = ["ポッキーボンネット", "ビッグリボンカチューシャ", "リボンコーム","シルクハット"];
-let itemPrices = [100, 200, 300, 400];
+let itemNames = ["ポッキーボンネット", "ビッグリボンカチューシャ", "リボンコーム"];
+let itemPrices = [100, 200, 300,];
 
 console.log("配列で出力**********************");
 
@@ -27,9 +25,6 @@ for (let i = 0; i < itemNames.length; i++) {
         let head3Object = {
         itemName: "リボンコーム",
         itemPrice: 300 }
-        let head4Object = {
-            itemName: "シルクハット",
-            itemPrice: 400 }
 
             let items = [pockyObject,ebisenObject,marshmallowObject];
 
