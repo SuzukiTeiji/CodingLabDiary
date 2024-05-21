@@ -8,38 +8,121 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: white; /* 背景色を白に設定 */
-            color: black; /* テキスト色を黒に設定 */
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0fff0;
+            color: #555;
+            margin-bottom: 100px;
         }
 
         header {
             text-align: center;
-            padding: 1em 0;
+            padding: 2em 0;
+            background-image: url('Diary/img/tyami.jpeg');
+
+            background-size: cover;
+            background-position: center bottom;
+            color: white;
+            position: relative;
+            animation: floatUp 12s ease-in-out forwards; /* アニメーションを修正 */
+        }
+
+        @keyframes floatUp {
+    0% {
+        background-position: center bottom;
+    }
+    50% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center 39%; /* 画像をやや下に固定 */
+    }
+}
+
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(135, 206, 250, 0.5);
+            z-index: 1;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 2;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            color: #ff69b4;
+            border-bottom: 2px solid #98fb98;
+            padding-bottom: 0.5em;
+        }
+
+        a {
+            color: #0262b1;
+            text-decoration: none;
+            transition: color 0.3s, text-decoration 0.3s;
+        }
+
+        a:hover {
+            color: #ff69b4;
+            text-decoration: underline;
         }
 
         button {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            border-radius: 4px;
+            background-color: #0594f3;
+            color: white;
+            border: 2px solid #98fb98;
+            border-radius: 20px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
         }
 
         button:hover {
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: #98fb98;
         }
 
         footer {
             text-align: center;
             padding: 1em 0;
+            width: 100%;
+            background-color: #ff69b4;
+            color: white;
             position: fixed;
             bottom: 0;
-            width: 100%;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                padding: 1em 0;
+            }
+            header h1 {
+                font-size: 24px;
+            }
+            footer {
+                padding: 0.5em 0;
+            }
         }
     </style>
 </head>
@@ -51,7 +134,6 @@
         <section class="profile">
             <h2>Profile</h2>
             <div class="Profile">
-                <!-- プロフィールにリンクを挿入 -->
                 <ul>
                     <li><a href="https://mmonoki.github.io/Portfolio/">MmonOKi's GitHub Profile</a></li>
                 </ul>
@@ -61,32 +143,31 @@
             <h2>Mmonoki's Diary Entries</h2>
             <div class="diary-entries">
                 <ul>
-                    <li><a href="Diary/20240520.html"><strong>2024/05/20</strong></a></li>
-                    <li><a href="Diary/20240519.html"><strong>2024/05/19</strong></a></li>
-                    <li><a href="Diary/20240518.html"><strong>2024/05/18</strong></a></li>
-                    <li><a href="Diary/20240517.html"><strong>2024/05/17</strong></a></li>
-                    <li><a href="Diary/20240516.html"><strong>2024/05/16</strong></a></li>
-                    <li><a href="Diary/20240515.html"><strong>2024/05/15</strong></a></li>
-                    <li><a href="Diary/20240514.html"><strong>2024/05/14</strong></a></li>
-                    <li><a href="Diary/20240513.html"><strong>2024/05/13</strong></a></li>
-                    <li><a href="Diary/20240512.html"><strong>2024/05/12</strong></a></li>
-                    <li><a href="Diary/20240511.html"><strong>2024/05/11</strong></a></li>
-                    <li><a href="Diary/20240510.html"><strong>2024/05/10</strong></a></li>
-                    <li><a href="Diary/20240509.html"><strong>2024/05/09</strong></a></li>
-                    <li><a href="Diary/20240508.html"><strong>2024/05/08</strong></a></li>
-                    <li><a href="Diary/20240507.html"><strong>2024/05/07</strong></a></li>
-                    <li><a href="Diary/20240506.html"><strong>2024/05/06</strong></a></li>
-                    <li><a href="Diary/20240505.html"><strong>2024/05/05</strong></a></li>
-                    <!-- 他の日記エントリーも同様に追加 -->
+                    <li><a href="Diary/20240521.html"><strong>2024/05/21 - ☔梅雨入りですね</strong></a></li>
+                    <li><a href="Diary/20240520.html"><strong>2024/05/20 - Javascript 全然まだまだ</strong></a></li>
+                    <li><a href="Diary/20240519.html"><strong>2024/05/19 - 姪っ子の力作</strong></a></li>
+                    <li><a href="Diary/20240518.html"><strong>2024/05/18 - ソーキ汁</strong></a></li>
+                    <li><a href="Diary/20240517.html"><strong>2024/05/17 - チケットとれました！</strong></a></li>
+                    <li><a href="Diary/20240516.html"><strong>2024/05/16 - Good job</strong></a></li>
+                    <li><a href="Diary/20240515.html"><strong>2024/05/15 - 問題です</strong></a></li>
+                    <li><a href="Diary/20240514.html"><strong>2024/05/14 - チケット取れません</strong></a></li>
+                    <li><a href="Diary/20240513.html"><strong>2024/05/13 - 息抜き</strong></a></li>
+                    <li><a href="Diary/20240512.html"><strong>2024/05/12 - プログラミングしているのにアナログ思考</strong></a></li>
+                    <li><a href="Diary/20240511.html"><strong>2024/05/11 - 定着させたい</strong></a></li>
+                    <li><a href="Diary/20240510.html"><strong>2024/05/10 - あなたもですか</strong></a></li>
+                    <li><a href="Diary/20240509.html"><strong>2024/05/09 - 今月の標語</strong></a></li>
+                    <li><a href="Diary/20240508.html"><strong>2024/05/08 - どなたですか</strong></a></li>
+                    <li><a href="Diary/20240507.html"><strong>2024/05/07 - トライ&工ラー</strong></a></li>
+                    <li><a href="Diary/20240506.html"><strong>2024/05/06 - 車にガラコ</strong></a></li>
+                    <li><a href="Diary/20240505.html"><strong>2024/05/05 - 今日も開発頑張った</strong></a></li>
                 </ul>
             </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Coding Lab</p>
-        <div class="button-container"> <!-- ボタンを中央寄せにするコンテナ -->
-  <!-- 戻るボタン -->
-  <button onclick="window.location.href='../../index.html'">Top</button>
+        <div class="button-container">
+            <button onclick="window.location.href='../../index.html'">Top</button>
         </div>
     </footer>
 </body>
