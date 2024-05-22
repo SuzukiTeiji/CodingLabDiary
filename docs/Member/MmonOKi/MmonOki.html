@@ -4,127 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MmonOKi Diary</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0fff0;
-            color: #555;
-            margin-bottom: 100px;
-        }
-
-        header {
-            text-align: center;
-            padding: 2em 0;
-            background-image: url('Diary/img/tyami.jpeg');
-
-            background-size: cover;
-            background-position: center bottom;
-            color: white;
-            position: relative;
-            animation: floatUp 12s ease-in-out forwards; /* アニメーションを修正 */
-        }
-
-        @keyframes floatUp {
-    0% {
-        background-position: center bottom;
-    }
-    50% {
-        background-position: center top;
-    }
-    100% {
-        background-position: center 39%; /* 画像をやや下に固定 */
-    }
-}
-
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(135, 206, 250, 0.5);
-            z-index: 1;
-        }
-
-        header h1 {
-            position: relative;
-            z-index: 2;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 2em;
-        }
-
-        h2 {
-            color: #ff69b4;
-            border-bottom: 2px solid #98fb98;
-            padding-bottom: 0.5em;
-        }
-
-        a {
-            color: #0262b1;
-            text-decoration: none;
-            transition: color 0.3s, text-decoration 0.3s;
-        }
-
-        a:hover {
-            color: #ff69b4;
-            text-decoration: underline;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #0594f3;
-            color: white;
-            border: 2px solid #98fb98;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        button:hover {
-            background-color: white;
-            color: #98fb98;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            width: 100%;
-            background-color: #ff69b4;
-            color: white;
-            position: fixed;
-            bottom: 0;
-        }
-
-        .button-container {
-            text-align: center;
-            margin-top: 1em;
-        }
-
-        @media screen and (max-width: 600px) {
-            header {
-                padding: 1em 0;
-            }
-            header h1 {
-                font-size: 24px;
-            }
-            footer {
-                padding: 0.5em 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="MmonOki.css">
 </head>
 <body>
     <header>
@@ -134,33 +14,159 @@
         <section class="profile">
             <h2>Profile</h2>
             <div class="Profile">
-                <ul>
-                    <li><a href="https://mmonoki.github.io/Portfolio/">MmonOKi's GitHub Profile</a></li>
-                </ul>
+                <img src="Diary/img/mmon.png" alt="Profile Picture">
+                <h3>MmonOKi</h3>
+                <a href="https://mmonoki.github.io/Portfolio/">MmonOKi's GitHub Profile</a>
             </div>
         </section>
         <section class="diary">
             <h2>Mmonoki's Diary Entries</h2>
             <div class="diary-entries">
-                <ul>
-                    <li><a href="Diary/20240521.html"><strong>2024/05/21 - ☔梅雨入りですね</strong></a></li>
-                    <li><a href="Diary/20240520.html"><strong>2024/05/20 - Javascript 全然まだまだ</strong></a></li>
-                    <li><a href="Diary/20240519.html"><strong>2024/05/19 - 姪っ子の力作</strong></a></li>
-                    <li><a href="Diary/20240518.html"><strong>2024/05/18 - ソーキ汁</strong></a></li>
-                    <li><a href="Diary/20240517.html"><strong>2024/05/17 - チケットとれました！</strong></a></li>
-                    <li><a href="Diary/20240516.html"><strong>2024/05/16 - Good job</strong></a></li>
-                    <li><a href="Diary/20240515.html"><strong>2024/05/15 - 問題です</strong></a></li>
-                    <li><a href="Diary/20240514.html"><strong>2024/05/14 - チケット取れません</strong></a></li>
-                    <li><a href="Diary/20240513.html"><strong>2024/05/13 - 息抜き</strong></a></li>
-                    <li><a href="Diary/20240512.html"><strong>2024/05/12 - プログラミングしているのにアナログ思考</strong></a></li>
-                    <li><a href="Diary/20240511.html"><strong>2024/05/11 - 定着させたい</strong></a></li>
-                    <li><a href="Diary/20240510.html"><strong>2024/05/10 - あなたもですか</strong></a></li>
-                    <li><a href="Diary/20240509.html"><strong>2024/05/09 - 今月の標語</strong></a></li>
-                    <li><a href="Diary/20240508.html"><strong>2024/05/08 - どなたですか</strong></a></li>
-                    <li><a href="Diary/20240507.html"><strong>2024/05/07 - トライ&工ラー</strong></a></li>
-                    <li><a href="Diary/20240506.html"><strong>2024/05/06 - 車にガラコ</strong></a></li>
-                    <li><a href="Diary/20240505.html"><strong>2024/05/05 - 今日も開発頑張った</strong></a></li>
-                </ul>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240522.html">
+                            <img src="Diary/img/paso.jpg" alt="2024/05/22">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240522.html">
+                            <h4>2024/05/22 師匠を見本に</h4>
+                        </a>
+                    </div>
+                </div>               
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240522.html">
+                            <img src="Diary/img/rain.jpg" alt="2024/05/22">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240521.html">
+                            <h4>2024/05/21 ☔梅雨入りですね</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240520.html">
+                            <img src="Diary/img/paso.jpg" alt="2024/05/20">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240520.html">
+                            <h4>2024/05/20 Javascript 全然まだまだ</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240519.html">
+                            <img src="Diary/img/3P.png" alt="2024/05/19">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240519.html">
+                            <h4>2024/05/19 姪っ子の力作</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240518.html">
+                            <img src="Diary/img/souki.jpeg" alt="2024/05/18">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240518.html">
+                            <h4>2024/05/18 ソーキ汁</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240517.html">
+                            <img src="Diary/img/kings.png" alt="2024/05/17">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240517.html">
+                            <h4>2024/05/17 チケットとれました！</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240516.html">
+                            <img src="Diary/img/good job.jpg" alt="2024/05/16">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240516.html">
+                            <h4>2024/05/16 Good job</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240515.html">
+                            <img src="Diary/img/paso.jpg" alt="2024/05/15">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240515.html">
+                            <h4>2024/05/15 問題です</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240514.html">
+                            <img src="Diary/img/ticket.jpeg" alt="2024/05/14">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240514.html">
+                            <h4>2024/05/14 チケット取れません</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240513.html">
+                            <img src="Diary/img/pacman.jpeg" alt="2024/05/13">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240513.html">
+                            <h4>2024/05/13 息抜き</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240512.html">
+                            <img src="Diary/img/paso.jpg" alt="2024/05/12">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240512.html">
+                            <h4>2024/05/12 プログラミングしているのにアナログ思考</h4>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240509.html">
+                            <img src="Diary/img/hyougo.jpg" alt="2024/05/09">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240509.html">
+                            <h4>2024/05/09 今月の標語</h4>
+                        </a>
+                    </div>
+                </div>
+                <!-- 他の日付も同様に追加 -->
             </div>
         </section>
     </main>
