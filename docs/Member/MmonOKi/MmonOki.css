@@ -50,6 +50,7 @@ header h1 {
   z-index: 2; /* z-indexを2に設定 */
   margin: 0; /* 外側の余白をなしにする */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を設定 */
+  word-break: break-word; /* 単語の途中で改行を許可 */
 }
 
 /* main 要素のスタイル */
@@ -181,8 +182,9 @@ a:hover {
 /* .diary-entry 内の h3 要素のスタイル */
 .diary-entry h3 {
   margin: 0; /* 外側の余白をなしにする */
-  color: #ff69b4; /* 文字色をピンクに設定 */
+  color: #1f2afd; /* 文字色を青に設定 */
   font-size: 18px; /* フォントサイズを18pxに設定 */
+  word-break: break-word; /* 単語の途中で改行を許可 */
 }
 
 /* .diary-entry 内の p 要素のスタイル */
@@ -235,6 +237,9 @@ footer {
   }
   .diary-entry {
     width: calc(100% - 20px); /* 幅を100%に設定し、20px引く */
+  }
+  .diary-entry h3 {
+    font-size: 16px; /* フォントサイズを16pxに設定 */
   }
   footer {
     padding: 0.5em 0; /* 上下に0.5emの余白を設定 */
