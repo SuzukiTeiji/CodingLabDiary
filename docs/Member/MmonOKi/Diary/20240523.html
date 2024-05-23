@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #daeaf3;
+            color: #333;
+        }
+
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px; /* 最大幅を設定 */
+            margin: 0 auto; /* 中央揃え */
+        }
+
+        .diary {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 100%; /* 親要素の幅を超えないように設定 */
+        }
+
+        .diary h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #34495e;
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .diary-entries {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .diary-entries img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .diary-entries h4 {
+            color: blue; /* Change the color to blue */
+        }
+
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4b06f8;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            width: max-content;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #3b0bd9;
+        }
+
+        /* レスポンシブ対応 */
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MmonOki's Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/23 曇り時々雨</h2>
+            <div class="diary-entries">
+                <h3>ポテト塩抜きの人</h3>
+                <div>
+                    うちの母は週に1度モスバーガーの野菜バーガーとポテトとナゲットを食べるのを楽しみにしている。<br>購入の際は毎回前もって電話注文して行くのだが、今日もいつものように電話の向こうの店員さんに注文をしていると名前を伝えていないのに、「いつもありがとうございます。」と言われびっくり😲<br>ポテトを毎回塩抜きで注文するので「あ、ポテト塩抜きの人だ！」と覚えられている様子💦。<br>あの店舗ではきっと私のニックネームは”ポテト塩抜きの人”…。<br><br>追記：muniさん日記いつもオモロイ👍
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
