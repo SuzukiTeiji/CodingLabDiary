@@ -1,0 +1,143 @@
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5dc; /* ベージュ */
+  color: #333;
+}
+
+/* ヘッダーのスタイル */
+header {
+  background-color: #8b7765; /* カーキ */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #5b4f3b; /* ダークカーキ */
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+/* メインコンテンツのスタイル */
+main {
+  margin: 20px;
+}
+
+.profile, .diary {
+  margin-bottom: 40px;
+}
+
+.profile ul, .diary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile li, .diary li {
+  margin-bottom: 10px;
+}
+
+/* プロフィールリンクのスタイル */
+.thumbnail-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #8b7765; /* カーキ */
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.thumbnail-button img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.thumbnail-button span {
+  font-size: 1.1em;
+}
+
+.thumbnail-button:hover {
+  background-color: #5b4f3b; /* ダークカーキ */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 日記エントリーのスタイル */
+.diary-entries ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.diary-entries li {
+  flex: 1 1 calc(33.333% - 20px); /* 3列レイアウト */
+  box-sizing: border-box;
+  background-color: #fff; /* 白 */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.diary-entries li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.diary-entries li a {
+  text-decoration: none;
+  color: #5b4f3b; /* ダークカーキ */
+  display: flex;
+  flex-direction: column; /* 縦書き風に表示 */
+  align-items: center;
+}
+
+.diary-entries li img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.diary-entries li strong {
+  font-size: 1.1em;
+  writing-mode: vertical-rl; /* 縦書き表示 */
+  text-orientation: upright;
+}
+
+/* フッターのスタイル */
+footer {
+  background-color: #8b7765; /* カーキ */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-top: 2px solid #5b4f3b; /* ダークカーキ */
+}
+
+/* ボタンコンテナのスタイル */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #5b4f3b; /* ダークカーキ */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4a3a2b; /* 濃いカーキ */
+}
