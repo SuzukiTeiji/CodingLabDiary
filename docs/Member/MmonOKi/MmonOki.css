@@ -189,7 +189,7 @@ a:hover {
 /* .diary-entry h3 のスタイル */
 .diary-entry h3 {
   margin: 0; /* 外側の余白をなしにする */
-  color: #0421de; /* 文字色を青に設定 */
+  color: #0626f2; /* 文字色を青に設定 */
   font-size: 18px; /* フォントサイズを18pxに設定 */
   word-break: break-word; /* 単語の途中で改行を許可 */
 }
