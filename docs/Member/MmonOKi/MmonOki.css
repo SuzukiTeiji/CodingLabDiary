@@ -22,13 +22,13 @@ header {
 /* floatUp アニメーションの定義 */
 @keyframes floatUp {
   0% {
-      background-position: center bottom; /* アニメーション開始時の背景位置 */
+    background-position: center bottom; /* アニメーション開始時の背景位置 */
   }
   50% {
-      background-position: center top; /* アニメーション中間時の背景位置 */
+    background-position: center top; /* アニメーション中間時の背景位置 */
   }
   100% {
-      background-position: center 39%; /* アニメーション終了時の背景位置 */
+    background-position: center 39%; /* アニメーション終了時の背景位置 */
   }
 }
 
@@ -157,44 +157,51 @@ a:hover {
   border-radius: 10px; /* 角を丸くする */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
   overflow: hidden; /* 内容が溢れた場合に隠す */
+  transition: transform 0.3s, box-shadow 0.3s; /* ホバー時のアニメーションを設定 */
   width: calc(33.333% - 20px); /* 幅を3分の1に設定し、20px引く */
-  transition: transform 0.3s; /* ホバー時のアニメーションを設定 */
+}
+
+/* .diary-entry クラスのホバースタイル */
+.diary-entry:hover {
+  transform: scale(1.05); /* 1.05倍に拡大 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 影を強調 */
+  cursor: pointer; /* カーソルをポインタに変更 */
 }
 
 /* .image-container クラスのスタイル */
 .image-container {
   flex: 0 0 80px; /* 幅を80pxに固定 */
   padding: 10px; /* 内側に10pxの余白を設定 */
-  margin-right: 10px; /* 右に10pxの余白を設定 */
 }
 
-/* .title-container クラスのスタイル */
-.title-container {
-  flex-grow: 1; /* 残りのスペースを埋める */
+/* .text-container クラスのスタイル */
+.text-container {
+  flex: 1; /* 残りのスペースを使用 */
+  padding: 10px 20px; /* 内側に10px（上下）20px（左右）の余白を設定 */
 }
 
-/* .diary-entry 内の img 要素のスタイル */
+/* .diary-entry img のスタイル */
 .diary-entry img {
   width: 100%; /* 幅を100%に設定 */
   height: auto; /* 高さを自動調整 */
 }
 
-/* .diary-entry 内の h3 要素のスタイル */
+/* .diary-entry h3 のスタイル */
 .diary-entry h3 {
   margin: 0; /* 外側の余白をなしにする */
-  color: #1f2afd; /* 文字色を青に設定 */
+  color: #0421de; /* 文字色を青に設定 */
   font-size: 18px; /* フォントサイズを18pxに設定 */
   word-break: break-word; /* 単語の途中で改行を許可 */
 }
 
-/* .diary-entry 内の p 要素のスタイル */
+/* .diary-entry p のスタイル */
 .diary-entry p {
   margin: 0.5em 0 0; /* 上に0.5emの余白を設定し、他はなし */
   color: #555; /* 文字色をグレーに設定 */
   font-size: 14px; /* フォントサイズを14pxに設定 */
 }
 
-/* button 要素のスタイル */
+/* button のスタイル */
 button {
   padding: 10px 20px; /* 内側に10px（上下）20px（左右）の余白を設定 */
   font-size: 16px; /* フォントサイズを16pxに設定 */
@@ -206,13 +213,13 @@ button {
   transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーションを設定 */
 }
 
-/* button 要素のホバースタイル */
+/* button のホバースタイル */
 button:hover {
   background-color: white; /* 背景色を白に変更 */
   color: #98fb98; /* 文字色をライトグリーンに変更 */
 }
 
-/* footer 要素のスタイル */
+/* footer のスタイル */
 footer {
   text-align: center; /* 中央揃え */
   padding: 1em 0; /* 上下に1emの余白を設定 */
@@ -221,10 +228,17 @@ footer {
   color: white; /* 文字色を白に設定 */
 }
 
-/* .button-container クラスのスタイル */
+/* .button-container のスタイル */
 .button-container {
   text-align: center; /* 中央揃え */
   margin-top: 1em; /* 上に1emの余白を設定 */
+}
+
+/* メディアクエリ: 画面幅が900px以下の場合 */
+@media screen and (max-width: 900px) {
+  .diary-entry {
+    width: calc(50% - 20px); /* 幅を50%に設定し、20px引く */
+  }
 }
 
 /* メディアクエリ: 画面幅が600px以下の場合 */
