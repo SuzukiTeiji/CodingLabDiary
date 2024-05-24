@@ -16,10 +16,10 @@ body {
 
 .diary-entries {
 background-color: rgba(30, 23, 6, 0.8);
-padding: 20px;
-border-radius: 10px;
-margin: 20px auto; /* 左右に余白を追加 */
-max-width: 700px; /* 必要に応じて最大幅を設定 */
+padding: 3%;
+border-radius: 20%;
+margin: 30px auto; /* 左右に余白を追加 */
+max-width: 1200px; /* 必要に応じて最大幅を設定 */
 }
 
 .button-container button {
