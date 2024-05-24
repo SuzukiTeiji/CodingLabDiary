@@ -1,144 +1,153 @@
 /* 全体のベース設定 */
 body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: "Arial", sans-serif; /* ベースとなるフォントファミリー */
+  margin: 0; /* デフォルトのマージンをリセット */
+  padding: 0; /* デフォルトのパディングをリセット */
   background-color: #e0f7fa; /* 明るい水色の背景 */
-  color: #333;
+  color: #333; /* テキストの基本色 */
 }
 
 header {
-  background-color: #ffca28; /* 明るい黄色 */
-  color: #000;
-  padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #ffca28; /* 明るい黄色の背景色 */
+  color: #000; /* ヘッダー内のテキストカラー */
+  padding: 20px 0; /* 上下のパディングを20pxに設定 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 影を追加 */
 }
 
 main {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  padding: 20px; /* 全体のパディング */
+  max-width: 800px; /* コンテンツの最大幅 */
+  margin: auto; /* コンテンツを中央寄せ */
 }
 
+footer {
+  background-color: #fff; /* フッターの背景色 */
+  color: #fff; /* フッターのテキストカラー */
+  text-align: center; /* テキストを中央揃え */
+  padding: 10px 0; /* 上下のパディングを10pxに設定 */
+  position: fixed; /* フッターを固定 */
+  bottom: 0; /* フッターを画面下部に配置 */
+  width: 100%; /* フッターの幅を100%に設定 */
+}
+
+/* コンテンツのスタイル */
 .diary {
-  background-color: #ffffff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  background-color: #ffffff; /* 日記の背景色 */
+  padding: 15px; /* 内側のパディング */
+  border-radius: 8px; /* 角を丸くする */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
+  margin-bottom: 20px; /* 下部のマージン */
 }
 
+.div-comment {
+  padding: 1em; /* 内側のパディング */
+  margin: 1em; /* 外側のマージン */
+  border: 1px #333 solid; /* 枠線のスタイル */
+}
+
+.article {
+  position: relative; /* 相対位置を設定 */
+  padding: 20px; /* 内側のパディング */
+  border: 1px solid #ddd; /* 枠線のスタイル */
+  margin-bottom: 10px; /* 下部のマージン */
+  list-style-type: none; /* リストマーカーを非表示 */
+}
+
+.new-article::before {
+  content: "NEW"; /* 擬似要素の内容 */
+  position: absolute; /* 絶対位置を設定 */
+  top: 10px; /* 上部からの距離 */
+  right: 10px; /* 右部からの距離 */
+  background-color: #ff0000; /* 背景色 */
+  color: #ffffff; /* テキストカラー */
+  padding: 5px 10px; /* 内側のパディング */
+  font-size: 12px; /* フォントサイズ */
+  font-weight: bold; /* フォントウェイト */
+  border-radius: 3px; /* 角を丸くする */
+  z-index: 1; /* 重なり順序を設定 */
+}
+
+img {
+  width: 90%; /* 幅を90%に設定 */
+  height: auto; /* 高さを自動調整 */
+  margin: 1.2em; /* 外側のマージン */
+  padding: 0.2em; /* 内側のパディング */
+  border: solid 1px #ccc; /* 枠線のスタイル */
+}
+
+/* テキストのスタイル */
 h1 {
-  text-align: center;
-  width: 100%;
+  text-align: center; /* 中央揃え */
+  width: 100%; /* 幅を100%に設定 */
 }
 
 h2,
 h3,
 h4 {
-  color: #333;
+  color: #333; /* 見出しの基本色 */
 }
 
 h2 {
-  padding: 0.5em; /*文字周りの余白*/
-  color: #c26603;
-  border-bottom: solid 3px #516ab6; /*下線*/
+  padding: 0.5em; /* 文字周りの余白 */
+  color: #c26603; /* 見出しの文字色 */
+  border-bottom: solid 3px #516ab6; /* 下線のスタイル */
 }
 
 h3 {
-  padding: 0.5em; /*文字周りの余白*/
-  color: #494949; /*文字色*/
-  background: #fffaf4; /*背景色*/
-  border-left: solid 5px #ffaf58; /*左線（実線 太さ 色）*/
+  padding: 0.5em; /* 文字周りの余白 */
+  color: #494949; /* 文字色 */
+  background: #fffaf4; /* 背景色 */
+  border-left: solid 5px #ffaf58; /* 左線のスタイル */
+}
+
+/* 汎用スタイル */
+div {
+  margin: 10px 0; /* 上下のマージン */
 }
 
 div.diary-entries {
-  margin-top: 10px;
+  margin-top: 10px; /* 上部のマージン */
+  margin-bottom: 50px; /* 下部のマージン */
 }
 
-footer {
-  background-color: #fff; /* 深みのあるティール色 */
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
+/* ボタンのスタイル */
 .button-container button {
-  background-color: #ff7043; /* 明るい赤橙色 */
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #ff7043; /* 明るい赤橙色の背景色 */
+  color: #fff; /* テキストのカラー */
+  border: none; /* 枠線をなしに設定 */
+  padding: 10px 20px; /* 内側のパディング */
+  margin: 5px; /* 外側のマージン */
+  border-radius: 5px; /* 角を丸くする */
+  cursor: pointer; /* カーソルをポインターに変更 */
 }
 
 .button-container button:hover {
-  background-color: #ffa726; /* 明るいオレンジ色 */
-}
-img {
-  width: 90%;
-  height: auto;
-  margin: 1.2em;
-  padding: 0.2em;
-  border: solid 1px #ccc;
-}
-.div-comment {
-  padding: 1em;
-  margin: 1em;
-  border: 1px #333 solid;
+  background-color: #ffa726; /* 明るいオレンジ色の背景色 */
 }
 
-/* styles.css */
-
-/* 基本的なスタイル */
-.article {
-  position: relative;
-  padding: 20px;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  list-style-type: none; /* リストマーカーを非表示 */
-}
-
-/* new-articleクラスを持つ記事にNEWラベルを追加 */
-.new-article::before {
-  content: "NEW";
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #ff0000;
-  color: #ffffff;
-  padding: 5px 10px;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 3px;
-  z-index: 1;
-}
-
+/* レスポンシブデザイン */
 @media (max-width: 768px) {
   header,
   main,
   footer {
-    padding: 10px;
+    padding: 10px; /* 全体のパディング */
   }
 
   h1 {
-    font-size: 32px;
-    text-align: center;
+    font-size: 32px; /* フォントサイズ */
+    text-align: center; /* 中央揃え */
   }
+
   h2 {
-    font-size: 18px;
+    font-size: 18px; /* フォントサイズ */
   }
 
   h3,
   h4 {
-    font-size: 16px;
+    font-size: 16px; /* フォントサイズ */
   }
 
   .button-container button {
-    padding: 8px 16px;
+    padding: 8px 16px; /* 内側のパディング */
   }
 }
