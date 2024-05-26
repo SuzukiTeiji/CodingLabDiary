@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字コードやビューポートの設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル -->
+    <title>MAKI.COMPASS Diary</title>
+    <!-- スタイルシートの定義 -->
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f3;
+            color: #333;
+        }
+        /* ヘッダー部分のスタイル */
+        header {
+            background-color: #043e1e; /* 緑色 */
+            color: #f8f9f3;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* ヘッダーとメインセクションの間に余白を追加 */
+        }
+        /* タイトルのスタイル */
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+        
+        /* 日記エントリーのスタイル */
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px; /* テキストの下に余白を追加 */
+        }
+         /* 画像をセンタリングするスタイル */
+        .diary-entries img {
+            display: block;
+            margin: 0 auto;
+        }
+      </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 日記セクション -->
+        <section class="diary">
+            <h2>2024/05/26</h2>
+            <div class="diary-entries">
+                <h3>歓迎会と突発性難聴</h3>
+                   <p>5/25(土)朝　左耳軽い違和感</p>
+                   <p>夜、職場の歓迎会で久々の外出。</p>
+                   <P>静かな環境だと少し左耳が詰まった感じ程度の症状、賑かな場所だとポンコツスピーカーのように音が割れて聞こえる。</P>
+                   <p>８年前、右耳が突発性難聴になった時の初期症状と似ている！</p>
+                   <P>5/26(日)朝　耳鼻科受診</P>
+                   <p>結果、左耳　突発性難聴(軽度)だった。</p>
+                   <p>歓迎会で賑かな場所へ行く機会がなければ軽度で気付くこと出来なかったはず。</p>
+                   <p>早い段階で気付けてラッキー🍀　前回は２週間入院だった´д` ;</p>
+            </div>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer style="background-color: #043e1e; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
