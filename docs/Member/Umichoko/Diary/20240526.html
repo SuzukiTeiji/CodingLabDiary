@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umichoko's Diary</title>
+    
+    <style>
+        
+
+        body {
+            background-image: url('img/Choco.png'); /* 画像のパスを指定してください */
+            background-size: cover; /* 画像をウィンドウに合わせて表示 */
+            background-repeat: no-repeat; /* 画像の繰り返しを防止 */
+            background-attachment: fixed; /* スクロールしても背景が固定される */
+        }
+        .diary {
+            background-color: rgba(２, 255, 255, 0.９); /* 背景の透明度を調整 */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: rgb(202, 240, 15); color: rgb(20, 162, 223); text-align: center; padding: 1em 0;">
+        <h1>Umichoko's Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/05/26 くもり</h2>
+            <div class="diary-entries">
+                <h3>🍫🍫🍫</h3>
+                <div>チロルチョコにハマって毎日の楽しみにしている幸😄♡むにさん、下地さんに教えてもらいながら念願の背景を作ることができました！！
+                    嬉しいです✨✨ありがとうございます😄</div>
+            </div>
+        </section>
+    </main>
+    <footer style="background-color: hsl(68, 82%, 48%); color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
