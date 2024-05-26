@@ -76,7 +76,7 @@ main {
 }
 
 .diary-entries li {
-  flex: 1 1 calc(33.333% - 20px); /* 3列レイアウト */
+  flex: 1 1 calc(20% - 20px); /* 5列レイアウト */
   box-sizing: border-box;
   background-color: #fff; /* 白 */
   padding: 10px;
@@ -98,18 +98,16 @@ main {
   align-items: center;
 }
 
-.diary-entries li img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 10px;
-  border-radius: 5px;
-}
-
 .diary-entries li strong {
   font-size: 1.1em;
   writing-mode: vertical-rl; /* 縦書き表示 */
   text-orientation: upright;
+}
+
+.diary-entries li span {
+  font-size: 1em;
+  writing-mode: horizontal-tb; /* 横書き表示 */
+  margin-bottom: 5px; /* タイトルとの間にスペース */
 }
 
 /* フッターのスタイル */
@@ -128,16 +126,18 @@ footer {
 }
 
 button {
+  background-color: #8b7765; /* カーキ */
+  color: #fff;
+  border: none;
   padding: 10px 20px;
   font-size: 1em;
-  border: none;
   border-radius: 5px;
-  background-color: #5b4f3b; /* ダークカーキ */
-  color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-  background-color: #4a3a2b; /* 濃いカーキ */
+  background-color: #5b4f3b; /* ダークカーキ */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
