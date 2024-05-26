@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: hsl(0, 0%, 100%);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 1px solid #ddd;
+}
+
+main {
+    padding: 1em;
+}
+
+.diary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-around;
+}
+
+article {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 1em);
+    box-sizing: border-box;
+}
+
+article h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.diary-entries {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+}
+
+.diary-entries h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.diary-entries div {
+    margin-top: 0.5em;
+    color: #666;
+}
+
+.main-entry {
+    background-color: #ffe4e1;
+    border: 2px solid #ff7f7f;
+}
+
+.main-entry h3 {
+    color: #ff4500;
+    font-size: 1.2em;
+}
+
+.main-entry div {
+    color: #ff6347;
+    font-size: 1.1em;
+}
+
+footer {
+    background-color: #fff9f9;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.button-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
