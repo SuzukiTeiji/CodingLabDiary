@@ -1,4 +1,5 @@
 body {
+    font-family: 'Pacifico', cursive;
     font-size: 1.2em;
     color: rgb(233, 251, 182);
     text-shadow: 2px 2px 4px #211005;
@@ -6,6 +7,7 @@ body {
     background-image: url('img/Diary.jpg');
     background-size: cover;
 }
+
 
 .diary-entries {
     background-color: rgba(30, 23, 6, 0.8); /* 内容の背景色を設定して読みやすく */
