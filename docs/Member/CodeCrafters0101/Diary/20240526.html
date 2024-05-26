@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マルバツゲーム</title>
+<style>
+  .board { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .cell { width: 100px; height: 100px; border: 1px solid #000; display: flex; justify-content: center; align-items: center; font-size: 2em; }
+</style>
+</head>
+<body>
+    <header style="background-color: hsl(100,0, 0); color: rgb(80, 0, 0); text-align: center;padding: 1em 0;">
+        <h1>CoderCrafters01 Diary</h1>
+
+<main>
+    <section class = "Diary">
+        <h2>2024/05/26</h2>
+        <div class = "diary-entries">
+            <h3>〇×ゲームだぜ！</h3>
+            <div>
+                四角内をクリックするだけの簡単なゲームです
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="gameBoard" class="board">
+  <div class="cell" onclick="makeMove(this, 0)"></div>
+  <div class="cell" onclick="makeMove(this, 1)"></div>
+  <div class="cell" onclick="makeMove(this, 2)"></div>
+  <div class="cell" onclick="makeMove(this, 3)"></div>
+  <div class="cell" onclick="makeMove(this, 4)"></div>
+  <div class="cell" onclick="makeMove(this, 5)"></div>
+  <div class="cell" onclick="makeMove(this, 6)"></div>
+  <div class="cell" onclick="makeMove(this, 7)"></div>
+  <div class="cell" onclick="makeMove(this, 8)"></div>
+</div>
+
+<script>
+const board = [];
+const player = 'X';
+const computer = 'O';
+
+function makeMove(cell, index) {
+  if (!board[index]) {
+    cell.innerText = player;
+    board[index] = player;
+    if (checkWin(player)) {
+      alert('あなたの勝ちです！');
+      return;
+    }
+    computerMove();
+  }
+}
+
+function computerMove() {
+  let moveMade = false;
+  while (!moveMade) {
+    const randomIndex = Math.floor(Math.random() * 9);
+    if (!board[randomIndex]) {
+      document.getElementsByClassName('cell')[randomIndex].innerText = computer;
+      board[randomIndex] = computer;
+      moveMade = true;
+    }
+  }
+  if (checkWin(computer)) {
+    alert('コンピュータの勝ちです！');
+  }
+}
+
+function checkWin(player) {
+  const winConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ];
+
+  return winConditions.some(condition => {
+    return condition.every(index => board[index] === player);
+  });
+}
+</script>
+</body>
+</html>
