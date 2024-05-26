@@ -8,29 +8,31 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: white; /* 背景色を白に設定 */
-            color: black; /* テキスト色を黒に設定 */
+            font-family: 'Helvetica Neue', sans-serif; /* フォントをHelvetica Neueに変更 */
+            background-color: #f9f9f9; /* 背景色を薄いグレーに設定 */
+            color: #333; /* テキスト色をダークグレーに設定 */
         }
 
         header {
             text-align: center;
             padding: 1em 0;
+            background-color: #222; /* ヘッダーの背景色を黒に設定 */
+            color: white; /* ヘッダーテキスト色を白に設定 */
         }
 
         button {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
+            background-color: #222; /* ボタンの背景色を黒に設定 */
+            color: white;
+            border: 2px solid #222; /* ボーダーを黒に設定 */
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
         }
 
         button:hover {
-            background-color: black;
+            background-color: #444; /* ホバー時の背景色を濃いグレーに設定 */
             color: white;
         }
 
@@ -40,6 +42,8 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            background-color: #222; /* フッターの背景色を黒に設定 */
+            color: white; /* フッターテキスト色を白に設定 */
         }
     </style>
 </head>
@@ -53,37 +57,27 @@
             <div class="Profile">
                 <!-- プロフィールにリンクを挿入 -->
                 <ul>
-                    <li><a href=https://codecrafters0101.github.io/Practice01.github.io/>CoderCrafters01 GitHub Profile (自分のページへのリンクを貼る）</a></li>
+                    <li><a href="https://codecrafters0101.github.io/Practice01.github.io/">CoderCrafters01 GitHub Profile</a></li>
                 </ul>
             </div>
         </section>
         <section class="diary">
             <h2>Diary Entries</h2>
             <div class="diary-entries">
-
                 <ul>
                     <li><a href="Diary/20240526.html"><strong>2024/05/26</strong></a></li>
                     <!-- 他の日記エントリーも同様に追加 -->
                 </ul>
-
-
                 <ul>
                     <li><a href="Diary/20240518.html"><strong>2024/05/18</strong></a></li>
                     <!-- 他の日記エントリーも同様に追加 -->
                 </ul>
-
                 <ul>
                     <li><a href="Diary/20240512.html"><strong>2024/05/12</strong></a></li>
                     <!-- 他の日記エントリーも同様に追加 -->
                 </ul>
-                
                 <ul>
                     <li><a href="Diary/20240511.html"><strong>2024/05/11</strong></a></li>
-                    <!-- 他の日記エントリーも同様に追加 -->
-                </ul>
- 
-                <ul>
-                    <li><a href="Diary/20240501.html"><strong>2024/05/01</strong></a></li>
                     <!-- 他の日記エントリーも同様に追加 -->
                 </ul>
             </div>
@@ -92,8 +86,8 @@
     <footer>
         <p>&copy; 2024 Coding Lab</p>
         <div class="button-container"> <!-- ボタンを中央寄せにするコンテナ -->
-  <!-- 戻るボタン -->
-  <button onclick="window.location.href='../../index.html'">Top</button>
+            <!-- 戻るボタン -->
+            <button onclick="window.location.href='../../index.html'">Top</button>
         </div>
     </footer>
 </body>
