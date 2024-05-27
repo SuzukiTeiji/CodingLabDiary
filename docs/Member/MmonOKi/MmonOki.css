@@ -71,6 +71,10 @@ h2 {
   padding-bottom: 0.5em; /* 下に0.5emの余白を設定 */
 }
 
+h3 {
+  color: #0626f2;
+}
+
 /* a 要素（リンク）のスタイル */
 a {
   color: #0262b1; /* 文字色を青に設定 */
@@ -188,7 +192,7 @@ a:hover {
 
 /* .diary-entry h3 のスタイル */
 .diary-entry h3 {
-  margin: 0; /* 外側の余白をなしにする */
+  margin: 10px; /* 外側の余白をなしにする */
   color: #0626f2; /* 文字色を青に設定 */
   font-size: 18px; /* フォントサイズを18pxに設定 */
   word-break: break-word; /* 単語の途中で改行を許可 */
