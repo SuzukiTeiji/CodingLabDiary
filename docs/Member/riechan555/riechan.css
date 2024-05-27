@@ -1,0 +1,128 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(214, 140, 227);/* 薄いパープル */
+    color: #fdfdfe;
+  }
+  
+  header {
+    background-color: #372dca;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 3.0em;
+  }
+  
+  main {
+    margin: 20px;
+  }
+  footer {
+    background-color: #372dca;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+   
+  }
+  
+  .members,
+  .latest-diaries {
+    margin-bottom: 30px;
+  }
+  
+  .icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    padding: 1em;
+  }
+  .icon-container a {
+    padding: 10px;
+  }
+  .member {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+  }
+  
+  .diary-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .diary-links a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .register-diary {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  .member-icon {
+    width: 100px;
+    height: auto;
+  }
+  
+  .member {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .member:hover .member-name {
+    display: block;
+  }
+  
+  .member-name {
+    display: none;
+    position: absolute;
+    bottom: -20px;
+    /* アイコンの下に表示する調整 */
+    left: 50%;
+    /* アイコン中央に配置する調整 */
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    /* テキストの背景色 */
+    color: black;
+    /* テキストの色を黒に設定 */
+    padding: 5px 10px;
+    /* テキストの余白 */
+    border-radius: 5px;
+    /* テキストの角を丸くする */
+    white-space: nowrap;
+    /* テキストが折り返されないようにする */
+  }
+  
+  .diary-link {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+  }
+  
+  .diary-link:hover {
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+  
+    .icon-container {
+      width: 100%;
+    }
+    .icon-container a {
+      padding: 10px;
+    }
+  }
+  
