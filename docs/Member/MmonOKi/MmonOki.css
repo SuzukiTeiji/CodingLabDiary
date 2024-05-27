@@ -145,6 +145,10 @@ a:hover {
   color: white; /* 文字色を白に設定 */
 }
 
+.search-container {
+  padding: 20px;
+}
+
 /* .diary-entries クラスのスタイル */
 .diary-entries {
   display: flex; /* フレックスボックスレイアウトを使用 */
