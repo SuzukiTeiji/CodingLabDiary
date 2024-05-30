@@ -43,6 +43,18 @@
             <div class="diary-entries">
                 <div class="diary-entry">
                     <div class="image-container">
+                        <a href="Diary/20240530.html">
+                            <img src="Diary/img/nyanmen.jpg" alt="2024/05/30">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240530.html">
+                            <h3>2024/05/30 にゃーん麺</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="diary-entry">
+                    <div class="image-container">
                         <a href="Diary/20240529.html">
                             <img src="Diary/img/thanks.jpg" alt="2024/05/29">
                         </a>
@@ -267,6 +279,9 @@
             <button onclick="window.location.href='../../index.html'">Top</button>
         </div>
     </footer>
+    <!-- 上に戻るボタン -->
+    <button id="back-to-top" onclick="scrollToTop()">☝上に戻る</button>
+
     <script>
         // 選択された年月に基づいて日記エントリーをフィルタリングする関数
         function filterDiary() {
@@ -289,6 +304,24 @@
                 }
             });
         }
+
+        // ページ上部にスクロールする関数
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // スクロール時に上に戻るボタンの表示を制御する関数
+        window.onscroll = function() {
+            let backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
     </script>
 </body>
 </html>
