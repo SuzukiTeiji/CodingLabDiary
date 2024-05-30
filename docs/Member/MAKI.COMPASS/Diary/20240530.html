@@ -37,23 +37,23 @@
             font-size: 1.1em;
             margin-bottom: 10px; /* テキストの下に余白を追加 */
         }
-         /* 画像をセンタリングするスタイル */
-        .diary-entries img {
+           /* 画像をセンタリングするスタイル */
+           .diary-entries img {
             display: block;
             margin: 0 auto;
-            animation: slide-in 1s forwards; /* アニメーションを追加 */
+            animation: slide-in-rotate 1s forwards; /* アニメーションを変更 */
         }
-        /* スライドインアニメーション */
-        @keyframes slide-in {
+        /* スライドインおよび回転アニメーション */
+        @keyframes slide-in-rotate {
             from {
-                transform: translateX(100%);
+                transform: translateX(100%) rotate(0deg);
                 opacity: 0;
             }
             to {
-                transform: translateX(0);
+                transform: translateX(0) rotate(360deg);
                 opacity: 1;
             }
-        }
+        } 
       </style>
 </head>
 <body>
@@ -65,12 +65,13 @@
     <main>
         <!-- 日記セクション -->
         <section class="diary">
-            <h2>2024/05/29</h2>
+            <h2>2024/05/30</h2>
             <div class="diary-entries">
-                <h3>買い出し</h3>
-                   <P>今日は肉の日、買い出しのため宜野湾ドンキへ。</P>
-                   <P>夕焼けが綺麗だった</P>
-                   <img src="img/ドンキ夕焼け.jpeg" width=400>
+                <h3>医療事務　９つ</h3>
+                   <P>５月から勤務している訪問看護ステーションの事務職（医療事務の資格不要）</P>
+                   <P>行政へ申請したらもらえる加算額や、利用者様にとってお得になる制度がないのか？気になった。</P>
+                   <P>基本が分からないから医療事務勉強してみようと思いネット検索、なんと医療事務の資格は９つもあるらしい、どれが良いのか悩む。</P>
+                   <img src="img/医療事務９つ.jpeg" width=400>
             </div>
         </section>
     </main>
