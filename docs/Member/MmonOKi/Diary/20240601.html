@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ddf1f7;
+            background-color: #f7f9fc;
             color: #333;
         }
 
@@ -18,65 +18,68 @@
             color: #fff;
             padding: 1em 0;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* タイトルを中央に */
         }
 
         h1 {
             margin: 0;
-            font-size: 1.5em;
-            text-align: center; /* タイトルを中央に */
+            font-size: 2em;
+        }
+
+        h1 a {
+            color: #fff; /* リンクの色を白に */
+            text-decoration: none; /* リンクの下線を消す */
+        }
+
+        h1 a:hover {
+            text-decoration: underline; /* ホバー時に下線を追加 */
         }
 
         main {
             padding: 20px;
-            /* フッターの高さ分の余白を追加 */
             padding-bottom: 80px; /* フッターの高さに応じて調整 */
         }
 
         .diary {
-    /* 背景画像を設定 */
-    background-image: url('img/22856685.jpg');
-    /* 背景画像を要素に合わせて拡大縮小 */
-    background-size: cover;
-    /* 背景画像を中央に配置 */
-    background-position: center;
-    /* 背景画像の繰り返しを禁止 */
-    background-repeat: no-repeat;
-    /* 背景色を指定 */
-    background-color: rgb(240, 238, 209);
-    /* 角を丸くする */
-    border-radius: 10px;
-    /* 内側に20pxの余白を設定 */
-    padding: 20px;
-    /* 下に20pxの余白を設定 */
-    margin-bottom: 20px;
-    /* 幅を最大800pxに制限 */
-    max-width: 800px;
-    /* 左右の余白を自動調整 */
-    margin: 0 auto;
-}
-
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* テキストを左揃え */
+        }
 
         .diary h2 {
+            background-color: rgb(207, 247, 247);
             margin-top: 0;
-            font-size: 1.2em;
-            color: #34495e;
+            font-size: 1.5em;
+            color: #031cf9;
+            position: relative; /* 相対位置 */
+            padding-left: 10px; /* 左側に余白を追加 */
+        }
+
+        .diary h2::before {
+            content: "";
+            position: absolute; /* 絶対位置 */
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background-color: #5bc0de; /* 色つきの帯 */
         }
 
         .diary h3 {
             margin-top: 0;
-            font-size: 1.1em;
-            color: #062ff9;
+            font-size: 1.3em;
+            color: #3498db;
         }
 
         .diary p {
             font-weight: 600;
-            color: red;
-        }
-
-        .diary-entries {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            color: #e74c3c;
         }
 
         .diary-entries img {
@@ -84,33 +87,10 @@
             height: auto;
             border-radius: 5px;
             margin-top: 10px;
-            /* アニメーションを追加 */
-            opacity: 0;
-            transform: scale(0.5);
-            animation: fadeInZoom 3s forwards;
+            /* アニメーションを削除 */
+            opacity: 1;
+            transform: scale(1);
         }
-
- /* アニメーションの定義 */
-        @keyframes fadeInZoom {
-        from {
-        opacity: 0;
-        transform: scale(0.9);
-        }
-        to {
-        opacity: 1;
-        transform: scale(1);
-        }
-        }
-
-/* アニメーションの使用例 */
-    .image {
-    animation: fadeInZoom 5s ease-out; /* アニメーション時間を5秒に設定 */
-/* 初期状態の設定 */
-    opacity: 0;
-    transform: scale(0.9);
-}
-
-
 
         footer {
             background-color: #5bc0de; /* 水色 */
@@ -135,16 +115,15 @@
             color: white;
             cursor: pointer;
             height: 40px;
-            width: max-content;
             border-radius: 5px;
             transition: background-color 0.3s;
+            margin: 0 10px;
         }
 
         .button-container button:hover {
             background-color: #2980b9;
         }
 
-        /* レスポンシブ対応 */
         @media screen and (max-width: 600px) {
             main {
                 padding: 10px;
@@ -159,15 +138,24 @@
 </head>
 <body>
     <header>
-        <h1>MmonOki's Diary</h1>
+        <h1><a href="https://suzukiteiji.github.io/CodingLabDiary/Member/MmonOKi/MmonOki.html">MmonOki's Diary</a></h1>
     </header>
     <main>
         <section class="diary">
-            <h2>2024/05/27 曇り</h2>
+            <h2>2024/06/01 蘭</h2>
             <div class="diary-entries">
-                <h3>梅雨の晴れ間</h3>
                 <div>
-                    今日は曇りですが若干日が差し梅雨の晴れ間で少し気が晴れます。<br>午前中時間が取れたので日記の検索機能を追加してみた。<br>午後から税理士さんへ送付する書類の整理を頑張らなねば。月末を気持ちよく乗り切ろう！！<br><br><p>☆KINGS明日優勝しますように☆</p>
+                    実家の蘭がどんどん咲いてどんどんゴージャスになってきた🌸<br>6輪くらいだったのが2週間で10輪ほどに😲。
+                </div>
+                <br>
+                <div>
+                    これが<br>
+                    <img src="img/ran1.jpg" alt="蘭1"><br><br>
+                    これに<br>
+                    <img src="img/ran2.jpg" alt="">                    
+                </div>
+                <div>
+                    さあ今日から６月!!<br>Mmonもゴージャスにパワーアップして頑張っていくぞ💪<br>
                 </div>
             </div>
         </section>     
