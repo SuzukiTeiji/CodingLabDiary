@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>郵便番号で住所検索</title>
+    <link rel="stylesheet" href="css/zipsearch.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>郵便番号で住所検索</h1>
+      <div class="form-group">
+        <label for="zip">郵便番号:</label>
+        <div class="div-container">
+          <div class="div-search-input">
+            <input type="text" id="zip" placeholder="例: 123-4567" />
+          </div>
+          <div class="div-search-input">
+            <button id="zipSearchBtn">検索</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">住所:</label>
+        <input type="text" id="address" readonly />
+      </div>
+      <div>
+        郵便番号から住所検索を行うサービスを利用してみました。<br />
+        <a href="https://zipcloud.ibsnet.co.jp/doc/api" target="_blank">
+          zipcloud　郵便番号検索API
+        </a>
+      </div>
+    </div>
+    <script src="js/zipsearch.js"></script>
+  </body>
+</html>
