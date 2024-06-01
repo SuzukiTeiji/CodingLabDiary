@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字コードやビューポートの設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル -->
+    <title>MAKI.COMPASS Diary</title>
+    <!-- スタイルシートの定義 -->
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f3;
+            color: #333;
+        }
+        /* ヘッダー部分のスタイル */
+        header {
+            background-color: #043e1e; /* 緑色 */
+            color: #f8f9f3;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* ヘッダーとメインセクションの間に余白を追加 */
+        }
+        /* タイトルのスタイル */
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+        
+        /* 日記エントリーのスタイル */
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px; /* テキストの下に余白を追加 */
+        }
+        /* 画像をセンタリングするスタイル */
+        .diary-entries img {
+            display: block;
+            margin: 0 auto;
+            animation: reverse-slide-in-rotate 2s forwards; /* アニメーションを変更 */
+        }
+        /* 逆スライドインおよび逆回転アニメーション */
+        @keyframes reverse-slide-in-rotate {
+            from {
+                transform: translateX(-100%) rotate(0deg); /* 左からスライドイン */
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0) rotate(-360deg); /* 逆回転 */
+                opacity: 1;
+            }
+        } 
+      </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 日記セクション -->
+        <section class="diary">
+            <h2>2024/06/01</h2>
+            <div class="diary-entries">
+                <h3>世界牛乳の日</h3>
+                    <P>６月１日は牛乳大好きな息子の誕生日🎂</P>
+                    <P>そして、世界牛乳の日。</P>
+                    <P>オレは牛乳を好きになるべくして生まれた！と牛乳について語る息子</P>
+                    <P><a href="https://www.maff.go.jp/j/press/chikusan/c_gyunyu/230526.html">農林水産省</a>　6月1日は牛乳の日、6月は牛乳月間です！</P>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/agyt5mKCC4k?si=v391d3UA9pOvfb1i&amp;start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer style="background-color: #043e1e; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
