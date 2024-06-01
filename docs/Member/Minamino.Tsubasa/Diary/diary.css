@@ -18,6 +18,7 @@ main {
   padding: 20px; /* 全体のパディング */
   max-width: 800px; /* コンテンツの最大幅 */
   margin: auto; /* コンテンツを中央寄せ */
+  margin-bottom: 150px;
 }
 
 footer {
