@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 1s;
+}
+
+.image1 {
+    background-image: url('IMG_1288.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image2 {
+    background-image: url('IMG_1291.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+@keyframes rotate {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+.image-container:hover .image {
+    animation: rotate 4s infinite;
+}
