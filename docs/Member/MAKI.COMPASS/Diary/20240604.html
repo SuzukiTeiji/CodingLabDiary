@@ -37,7 +37,24 @@
             font-size: 1.1em;
             margin-bottom: 10px; /* テキストの下に余白を追加 */
         }
-       
+         /* 画像をセンタリングするスタイル */
+         .diary-entries img {
+            display: block;
+            margin: 0 auto; /* 水平方向に中央揃え */
+            width: 0; /* 初期状態で画像を小さく */
+            border-radius: 20px; /* 角を丸める */
+            height: auto;
+            animation: grow 2s ease-in-out forwards; /* アニメーションの適用 */
+        }
+        /* 画像が大きくなるアニメーション */
+        @keyframes grow {
+            from {
+                width: 0; /* 初期状態で画像を小さく */
+            }
+            to {
+                width: 400px; /* 最終的な画像の幅 */
+            }
+        }
     </style>
 </head>
 <body>
@@ -49,15 +66,13 @@
     <main>
         <!-- 日記セクション -->
         <section class="diary">
-            <h2>2024/06/03</h2>
+            <h2>2024/06/04</h2>
             <div class="diary-entries">
-                <h3>子育て支援員研修</h3>
-                <P>自宅警備員の息子（不登校８年目）</P>
-                <p>不登校をお笑い要素満載で話せる変な我が家 → 世間一般的な考え方に拘らない秘訣の１つ</p>
-                <p>保護者の分かち合いの場と親子共に経験不足を補う場の重要性を感じ、月１回ゆる〜く子供や保護者の居場所づくり活動を開催中。<a href="https://sites.google.com/view/tsubomi
-                    ">（蕾の会）</a></P>
-
-                <P><a href="https://www.lec-jp.com/school/naha/006238.html">沖縄県子育て支援員研修</a>　年末からチェックしていた全国共通の研修制度で必要な知識や技能を修得し活動の範囲広げてみようかなと考え応募してみた</P>
+                <h3>我が家の掟</h3>
+                <p>ゆで卵と生卵の区別のため🥚</p>
+                <p>ゆで卵には顔をかく✍️</p>
+                <img id="animated-img" src="img/ゆで卵.png" alt="Diary Image" width=500>
+            </div>
         </section>
     </main>
     <!-- フッター -->
@@ -69,12 +84,5 @@
             <button onclick="window.location.href='../../../index.html'">Top</button>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        const animatedImg = document.getElementById('animated-img');
-        animatedImg.style.animation = 'bounce 2s ease-in-out 2 alternate';
-        animatedImg.style.animationFillMode = 'forwards';
-    </script>
 </body>
 </html>
