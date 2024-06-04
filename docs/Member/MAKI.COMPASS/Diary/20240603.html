@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字コードやビューポートの設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル -->
+    <title>MAKI.COMPASS Diary</title>
+    <!-- スタイルシートの定義 -->
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f3;
+            color: #333;
+        }
+        /* ヘッダー部分のスタイル */
+        header {
+            background-color: #043e1e; /* 緑色 */
+            color: #f8f9f3;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* ヘッダーとメインセクションの間に余白を追加 */
+        }
+        /* タイトルのスタイル */
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+        
+        /* 日記エントリーのスタイル */
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px; /* テキストの下に余白を追加 */
+        }
+        /* 画像をセンタリングするスタイル */
+        .diary-entries img {
+            display: block;
+            margin: 100px auto 0; /* 上に100pxの余白を追加 */
+        }
+        /* 上下にバウンスするアニメーション */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-70px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 日記セクション -->
+        <section class="diary">
+            <h2>2024/06/03</h2>
+            <div class="diary-entries">
+                <h3>子育て支援員研修</h3>
+                <P>自宅警備員の息子（不登校８年目）</P>
+                <p>不登校をお笑い要素満載で話せる変な我が家 → 世間一般的な考え方に拘らない秘訣の１つ</p>
+                <p>保護者の分かち合いの場と親子共に経験不足を補う場の重要性を感じ、月１回ゆる〜く子供や保護者の居場所づくり活動を開催中。<a href="https://sites.google.com/view/tsubomi
+                    ">（蕾の会）</a></P>
+
+                <P><a href="https://www.lec-jp.com/school/naha/006238.html">沖縄県子育て支援員研修</a>　年末からチェックしていた全国共通の研修制度で必要な知識や技能を修得し活動の範囲広げてみようかなと考え応募してみた</P>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer style="background-color: #043e1e; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const animatedImg = document.getElementById('animated-img');
+        animatedImg.style.animation = 'bounce 2s ease-in-out 2 alternate';
+        animatedImg.style.animationFillMode = 'forwards';
+    </script>
+</body>
+</html>

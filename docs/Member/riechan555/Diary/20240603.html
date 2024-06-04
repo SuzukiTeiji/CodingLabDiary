@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemberA's Diary</title>
+</head>
+<body>
+    <header style="background-color: hsl(280, 64%, 61%); color: rgb(137, 42, 185); text-align: center; padding: 1em 0;">
+        <h1>riechan555's Diary</h1>
+        <link rel="stylesheet" href="css/kakeibo.css">
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/06/03 晴 </h2>
+            <div class="diary-entries">
+                <h3>昨日の家計簿アプリ</h3>
+                <main>
+                    <div id="list-screen">
+                        <input type="text" id="search" placeholder="フリーワード検索">
+                        <button id="add-button">追加</button>
+                        <table id="data-table">
+                            <thead>
+                                <tr>
+                                    <th>日付</th>
+                                    <th>分類</th>
+                                    <th>金額</th>
+                                    <th>内容</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data-body">
+                                <!-- データ行が挿入される -->
+                            </tbody>
+                        </table>
+                        <p id="no-data-message">データが1件も登録されていません</p>
+                    </div>
+            
+                    <div id="form-screen" style="display: none;">
+                        <button id="back-button">戻る</button>
+                        <h2 id="form-title">データ登録</h2>
+                        <form id="data-form">
+                            <label for="date">日付:</label>
+                            <input type="date" id="date" required>
+                            <label for="category">分類:</label>
+                            <select id="category">
+                                <option value="支出">支出</option>
+                                <option value="収入">収入</option>
+                            </select>
+                            <label for="amount">金額:</label>
+                            <input type="number" id="amount" required>
+                            <label for="description">内容:</label>
+                            <input type="text" id="description" required>
+                            <label for="receipt">レシート画像:</label>
+                            <input type="file" id="receipt" accept="image/*">
+                            <img id="receipt-preview" style="display: none;">
+                            <button type="submit" id="save-button">保存</button>
+                        </form>
+                    </div>
+                </main>   
+                <div>
+                
+　　　　　      </div>　　
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer style="background-color: hsl(280, 64%, 61%); color: #110548e6; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const greetingElement = document.getElementById('greeting');
+            const now = new Date();
+            const hours = now.getHours();
+
+            let greetingMessage = '';
+
+            if (hours >= 5 && hours < 12) {
+                greetingMessage 
+            } else if (hours >= 12 && hours < 18) {
+                greetingMessage 
+            } else {
+                greetingMessage 
+            }
+
+            greetingElement.textContent = greetingMessage;
+        });
+    </script>
+　　<script src="js/kakeibo.js"></script>
+</body>
+</html>

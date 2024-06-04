@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        /* 基本のスタイル設定 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        /* ヘッダーのスタイル設定 */
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* タイトルを中央に */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        h1 a {
+            color: #fff; /* リンクの色を白に */
+            text-decoration: none; /* リンクの下線を消す */
+        }
+
+        h1 a:hover {
+            text-decoration: underline; /* ホバー時に下線を追加 */
+        }
+
+        /* メインコンテンツのスタイル設定 */
+        main {
+            padding: 20px;
+            padding-bottom: 80px; /* フッターの高さに応じて調整 */
+        }
+
+        /* 日記セクションのスタイル設定 */
+        .diary {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* テキストを左揃え */
+        }
+
+        .diary h2 {
+            background-color: rgb(207, 247, 247);
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #031cf9;
+            position: relative; /* 相対位置 */
+            padding-left: 10px; /* 左側に余白を追加 */
+        }
+
+        .diary h2::before {
+            content: "";
+            position: absolute; /* 絶対位置 */
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background-color: #5bc0de; /* 色つきの帯 */
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+
+        .diary p {
+            font-weight: 600;
+            color: #e74c3c;
+        }
+
+        .diary-entries img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            /* アニメーションを削除 */
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* フッターのスタイル設定 */
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            height: 60px; /* フッターの高さ */
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #0d86d7;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #f705be;
+        }
+
+        /* メディアクエリ: 画面幅が600px以下の場合のスタイル設定 */
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+                padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        /* 天気情報セクションのスタイル設定 */
+        #weather-container {
+            border: 2px solid #5bc0de; /* 枠線の色 */
+            border-radius: 10px; /* 枠線の角を丸くする */
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff; /* 背景色 */
+        }
+
+        #weather-result {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        #weather-container button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #081ff5;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #weather-container button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="https://suzukiteiji.github.io/CodingLabDiary/Member/MmonOKi/MmonOki.html">MmonOki's Diary</a></h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/06/03　お天気API</h2>
+            <div class="diary-entries">
+                <div>
+                    師匠の郵便番号検索APIが面白かったのでとりあえず登録不要でできる無料APIを探して浦添市のお天気アプリを作ってみた。
+                </div>
+                <div id="weather-container">
+                    <h3>浦添市の現在の天気</h3>
+                    <!-- 天気情報を取得するボタン -->
+                    <button onclick="fetchWeather()">天気を取得</button>
+                    <!-- 天気情報の表示エリア -->
+                    <div id="weather-result"></div>
+                </div><br>
+                <div>
+                    </div>
+                     <a href="https://paiza.hatenablog.com/entry/2021/11/04/130000"target="_blank">APIキーもログインも不要！完全無料で使える天気予報API「Open-Meteo」を使ってみた！</a><br>
+                     <a href="https://open-meteo.com/" target="_blank">Open-Meteo-お天気API
+                    </a>
+                  </div>
+            </div>
+        </section>     
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+    <script>
+        // 天気情報を取得する関数
+        function fetchWeather() {
+            const resultDiv = document.getElementById('weather-result');
+            resultDiv.innerHTML = '天気情報を取得中...'; // 情報取得中のメッセージを表示
+            
+            // 浦添市の緯度と経度
+            const latitude = 26.2455;
+            const longitude = 127.7358;
+
+            // Open-Meteo APIのURL
+            const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
+            
+            // APIリクエストを送信
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.current_weather) {
+                        const weather = data.current_weather;
+                        const weatherDescription = getWeatherDescription(weather.weathercode);
+                        const weatherStr = `温度: ${weather.temperature}℃, 風速: ${weather.windspeed}m/s, 天気: ${weatherDescription}`;
+                        resultDiv.innerHTML = weatherStr; // 天気情報を表示
+                    } else {
+                        resultDiv.innerHTML = `天気情報を取得できませんでした。`;
+                    }
+                })
+                .catch(error => {
+                    resultDiv.innerHTML = `リクエストエラー: ${error}`;
+                });
+        }
+
+        // 天気コードを人間にわかりやすい説明に変換する関数
+        function getWeatherDescription(weatherCode) {
+            const weatherDescriptions = {
+                0: '晴れ',
+                1: '主に晴れ',
+                2: '晴れ間もあるが曇り',
+                3: '曇り',
+                45: '霧',
+                48: '霧氷霧',
+                51: '霧雨',
+                53: '中程度の霧雨',
+                55: '激しい霧雨',
+                56: '凍結霧雨',
+                57: '激しい凍結霧雨',
+                61: '小雨',
+                63: '中程度の雨',
+                65: '激しい雨',
+                66: '凍結小雨',
+                67: '凍結激しい雨',
+                71: '小雪',
+                73: '中程度の雪',
+                75: '激しい雪',
+                77: 'にわか雪',
+                80: '小さなにわか雨',
+                81: '中程度のにわか雨',
+                82: '激しいにわか雨',
+                85: '小さなにわか雪',
+                86: '激しいにわか雪',
+                95: '雷雨',
+                96: 'ひょうのある雷雨',
+                99: '激しい雷雨'
+            };
+            return weatherDescriptions[weatherCode] || '不明'; // 天気コードに対応する説明を返す
+        }
+    </script>
+</body>
+</html>
