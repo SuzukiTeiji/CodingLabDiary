@@ -22,10 +22,10 @@ header {
 
 header h1 {
     font-family: 'Comic Neue', cursive;
-    font-size: 2.5em;
+    font-size: 3.0em;
     color: white;
     text-shadow: 2px 2px #ff3b2d;
-    margin: 0;
+    margin: 1.0;
 }
 
 .calendar {
@@ -75,13 +75,21 @@ header h1 {
     color: white;
 }
 
-.diary-title {
+.diary-title, .diary-content {
     display: block;
-    margin-top: 5px;
     font-size: 0.8em;
     color: #ff6f61;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
 }
 
+.diary-content {
+    display: none;
+    font-size: 0.8em;
+    color: #333;
+}
 button {
     margin: 1em 0;
     padding: 0.5em 1em;
