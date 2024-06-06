@@ -63,8 +63,6 @@ header h1 {
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     position: relative;
-    height: 100px; /* 高さを固定して見た目を統一 */
-    overflow: hidden;
 }
 
 .calendar td:hover {
@@ -82,9 +80,6 @@ header h1 {
     margin-top: 5px;
     font-size: 0.8em;
     color: #ff6f61;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 button {
