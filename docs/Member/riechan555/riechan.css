@@ -1,99 +1,107 @@
-/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(214, 140, 227);/* 薄いパープル */
-    color: #fdfdfe;
-  }
-  
-  header {
-    background-color: #372dca;/* 深みのあるブルー */
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  h1 {
-    margin: 1.0;
-    font-size: 3.0em;
-    }
-  
-  main {
-    margin: 20px;
-  }
-
-  footer {
-    background-color: #372dca;/* 深みのあるブルー */
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-   }
-
-  .profile, .diary {
-    margin-bottom: 40px;
-  }
-
-  .profile ul, .diary ul {
-    list-style: none;
+    font-family: 'Comic Neue', cursive;
+    background-color: #f0f8ff;
+    margin: 0;
     padding: 0;
-  }
-
-  .profile li, .diary li {
-    margin-bottom: 10px;
-  }
-
-  .riechan -button {
     display: flex;
+    justify-content: center;
     align-items: center;
-    text-decoration: none;
-    background-color: rgb(214, 140, 227);/* 薄いパープル */
-    color: #fff;
+    height: 100vh;
+}
+
+header {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+header h1 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 2px #ff3b2d;
+    margin: 0;
+}
+
+.calendar {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.calendar th {
+    background-color: #ff6f61;
+    color: white;
+    font-family: 'Comic Neue', cursive;
     padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    }
-  
-  .riechan -button  img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    margin-right: 10px;
-    border-radius: 5px;
-  }
+    text-align: center;
+    border-radius: 8px;
+}
 
-  .riechan -button {
-    width: 100px;
-    height: auto;
-  }
+.calendar td {
+    background-color: #fff5f5;
+    border: 1px solid #ff6f61;
+    color: #ff6f61;
+    font-family: 'Comic Neue', cursive;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    height: 100px; /* 高さを固定して見た目を統一 */
+    overflow: hidden;
+}
 
-  .riechan -button:hover {
-    background-color:  #372dca;/* 深みのあるブルー */
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  .riechan -button {
-    display: none;
-    position: absolute;
-    bottom: -20px;
-    /* アイコンの下に表示する調整 */
-    left: 50%;
-    /* アイコン中央に配置する調整 */
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    /* テキストの背景色 */
-    color: black;
-    /* テキストの色を黒に設定 */
-    padding: 5px 10px;
-    /* テキストの余白 */
-    border-radius: 5px;
-    /* 角を50%丸くして円形にする */
+.calendar td:hover {
+    background-color: #ffe6e6;
+    transform: scale(1.05);
+}
+
+.calendar .today {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.diary-title {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: #ff6f61;
     white-space: nowrap;
-    /* テキストが折り返されないようにする */
-  }
-  
-  
- 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+button {
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3b2d;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
