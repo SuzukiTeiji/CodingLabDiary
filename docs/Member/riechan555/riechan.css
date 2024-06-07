@@ -5,7 +5,7 @@ body {
     background-color: #f0f8ff;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: block; /* フレックスから変更 */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -22,19 +22,56 @@ header {
 
 header h1 {
     font-family: 'Comic Neue', cursive;
-    font-size: 3.0em;
+    font-size: 2.5em;
     color: white;
     text-shadow: 2px 2px #ff3b2d;
-    margin: 1.0;
+    margin: 0;
 }
 
-.calendar {
+.profile, .diary {
+    padding: 1em;
+}
+
+.calendar-container {
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 90%;
     max-width: 1200px;
+    margin-top: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    padding: 0.5em 1em;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calendar-header button:hover {
+    background-color: #ff3b2d;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-header h2 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2em;
+    color: #ff6f61;
+    margin: 0;
 }
 
 .calendar table {
@@ -63,6 +100,8 @@ header h1 {
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     position: relative;
+    height: 100px;
+    overflow: hidden;
 }
 
 .calendar td:hover {
@@ -78,33 +117,17 @@ header h1 {
 .diary-title, .diary-content {
     display: block;
     font-size: 0.8em;
-    color: #ff6f61;
-    white-space:nowrap;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     cursor: pointer;
 }
 
-.diary-content {
-    display: none;
-    font-size: 0.8em;
-    color: #333;
-}
-button {
-    margin: 1em 0;
-    padding: 0.5em 1em;
-    background-color: #ff6f61;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Comic Neue', cursive;
-    font-size: 1.2em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+.diary-title {
+    color: #ff6f61;
 }
 
-button:hover {
-    background-color: #ff3b2d;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.diary-content {
+    display: none;
+    color: #333;
 }
