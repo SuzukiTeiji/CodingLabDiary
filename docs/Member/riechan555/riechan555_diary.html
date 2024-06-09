@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>riechan555　diary</title>
-    <link rel="stylesheet" href="riechan.css">    
+    <title>riechan555 Diary</title>
+    <link rel="stylesheet" href="riechan.css">
 </head>
+
 <body>
     <header>
         <h1>riechan555</h1>
@@ -13,7 +15,7 @@
     <main>
         <section class="profile">
             <h2>Profile</h2>
-            <div class="Profile">
+            <div class="profile-links">
                 <!-- プロフィールにリンクを挿入 -->
                 <ul>
                     <li><a href="https://ruiaithuba.github.io/">ruiaithuba</a></li>
@@ -23,30 +25,121 @@
         <section class="diary">
             <h2>Diary Entries</h2>
             <div class="diary-entries">
-                <ul>
-                    <li><a href="Diary/20240603.html">6月3日　昨日の家計簿アプリ</a></li>
-                    <li><a href="Diary/20240601.html">6月1日　JavaScript</a></li>
-                    <li><a href="Diary/20240523.html">5月23日　Progate</a></li>
-                    <li><a href="Diary/20240520.html">5月20日　完成した物</a></li>
-                    <li><a href="Diary/20240518.html">5月18日　家の前で</a></li>
-                    <li><a href="Diary/20240516.html">5月16日　システム手帳完成</a></li>
-                    <li><a href="Diary/20240513.html">5月13日　レザークラフト</a></li>
-                    <li><a href="Diary/20240512.html">5月12日　ハプニング</a></li>
-                    <li><a href="Diary/20240511.html">5月11日　親子でデジタル創作</a></li>
-                    <li><a href="Diary/20240508.html">5月8日　連日の暑さ</a></li>
-                    <li><a href="Diary/20240504.html">5月4日　行きたかったパン屋さん</a></li>
-                    <li><a href="Diary/20240501.html">5月1日　今朝の大雨凄かったですね</a></li>
-                    <li><a href="Diary/20240430.html">4月30日　蒸し暑い</a></li>
-            　　    <li><a href="Diary/20240429.html">4月29日　北谷</a></li>
-                    <li><a href="Diary/20240428.html">4月28日　初めまして日記</a></li>
-                </ul>
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button onclick="previousMonth()">前の月</button>
+                        <h2 id="current-month">2024年6月</h2>
+                        <button onclick="nextMonth()">次の月</button>
+                    </div>
+                    <div class="calendar">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>日</th>
+                                    <th>月</th>
+                                    <th>火</th>
+                                    <th>水</th>
+                                    <th>木</th>
+                                    <th>金</th>
+                                    <th>土</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- カレンダーの日付セルがここに挿入される -->
+                                <tr>
+                                    <td></td><td></td><td></td>
+                                    <td>
+                                        1
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">JavaScript</span>
+                                        <span class="diary-content">これは日記の内容1です。</span>
+                                    </td>
+                                    <td>
+                                        2
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">タイトル2</span>
+                                        <span class="diary-content">これは日記の内容2です。</span>
+                                    </td>
+                                    <td>
+                                        3
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">昨日の家計簿アプリ</span>
+                                        <span class="diary-content">これは日記の内容3です。</span>
+                                    </td>
+                                    <td>
+                                        4
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">タイトル4</span>
+                                        <span class="diary-content">これは日記の内容4です。</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        5
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">タイトル5</span>
+                                        <span class="diary-content">これは日記の内容5です。</span>
+                                    </td>
+                                    <td>
+                                        6
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">タイトル6</span>
+                                        <span class="diary-content">これは日記の内容6です。</span>
+                                    </td>
+                                    <td>
+                                        7
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">タイトル7</span>
+                                        <span class="diary-content">これは日記の内容7です。</span>
+                                    </td>
+                                    <td>
+                                        8
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">タイトル8</span>
+                                        <span class="diary-content">これは日記の内容8です。</span>
+                                    </td>
+                                    <td>
+                                        9
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">タイトル9</span>
+                                        <span class="diary-content">これは日記の内容9です。</span>
+                                    </td>
+                                    <td>
+                                        10
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">タイトル10</span>
+                                        <span class="diary-content">これは日記の内容10です。</span>
+                                    </td>
+                                    <td>
+                                        11
+                                        <span class="diary-title" onclick="toggleDiaryContent(this)">タイトル11</span>
+                                        <span class="diary-content">これは日記の内容11です。</span>
+                                    </td>
+                                </tr>
+                                <!-- その他の日付セルを追加 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
+    <script src="diary-calendar.js"></script>
+    <section>
+        <ul>
+            <li><a href="Diary/20240604.html">6月4日 メルカリで即売れた</a></li>
+            <li><a href="Diary/20240603.html">6月3日 昨日の家計簿アプリ</a></li>
+            <li><a href="Diary/20240601.html">6月1日 JavaScript</a></li>
+            <li><a href="Diary/20240523.html">5月23日 Progate</a></li>
+            <li><a href="Diary/20240520.html">5月20日 完成した物</a></li>
+            <li><a href="Diary/20240518.html">5月18日 家の前で</a></li>
+            <li><a href="Diary/20240516.html">5月16日 システム手帳完成</a></li>
+            <li><a href="Diary/20240513.html">5月13日 レザークラフト</a></li>
+            <li><a href="Diary/20240512.html">5月12日 ハプニング</a></li>
+            <li><a href="Diary/20240511.html">5月11日 親子でデジタル創作</a></li>
+            <li><a href="Diary/20240508.html">5月8日 連日の暑さ</a></li>
+            <li><a href="Diary/20240504.html">5月4日 行きたかったパン屋さん</a></li>
+            <li><a href="Diary/20240501.html">5月1日 今朝の大雨凄かったですね</a></li>
+            <li><a href="Diary/20240430.html">4月30日 蒸し暑い</a></li>
+            <li><a href="Diary/20240429.html">4月29日 北谷</a></li>
+            <li><a href="Diary/20240428.html">4月28日 初めまして日記</a></li>
+        </ul>
+    </section>
     <footer>
         <p>&copy; 2024 Coding Lab</p>
         <!-- 戻るボタン -->
         <button onclick="window.location.href='../../index.html'">Top</button>
     </footer>
 </body>
+
 </html>

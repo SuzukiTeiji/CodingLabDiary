@@ -37,7 +37,13 @@
             font-size: 1.1em;
             margin-bottom: 10px; /* テキストの下に余白を追加 */
         }
-       
+         /* 画像をセンタリングするスタイル */
+         .diary-entries img {
+            display: block;
+            margin: 0 auto; /* 水平方向に中央揃え */
+            border-radius: 20px; /* 角を丸める */
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -49,15 +55,16 @@
     <main>
         <!-- 日記セクション -->
         <section class="diary">
-            <h2>2024/06/03</h2>
+            <h2>2024/06/05</h2>
             <div class="diary-entries">
-                <h3>子育て支援員研修</h3>
-                <P>自宅警備員の息子（不登校８年目）</P>
-                <p>不登校をお笑い要素満載で話せる変な我が家 → 世間一般的な考え方に拘らない秘訣の１つ</p>
-                <p>保護者の分かち合いの場と親子共に経験不足を補う場の重要性を感じ、月１回ゆる〜く子供や保護者の居場所づくり活動を開催中。<a href="https://sites.google.com/view/tsubomi
-                    ">（蕾の会）</a></P>
-
-                <P><a href="https://www.lec-jp.com/school/naha/006238.html">沖縄県子育て支援員研修</a>　年末からチェックしていた全国共通の研修制度で必要な知識や技能を修得し活動の範囲広げてみようかなと考え応募してみた</P>
+                <h3>学生証</h3>
+                <p>学校に行けない息子の学生証用の写真に関して担任より連絡がきた、選択肢は３つ。</p>
+                <p>①過去の写真を使い回す</p>
+                <p>②学校か自宅で先生に写真を撮ってもらう</p>
+                <p>③自宅で撮影、データ提出。</p>
+                <p>息子の選択は③　久々の制服着用。なぜか制服にからまり制服に征服されていた😆</p>
+                <img id="animated-img" src="img/制服.png" alt="Diary Image" width=400>
+            </div>
         </section>
     </main>
     <!-- フッター -->
@@ -69,12 +76,5 @@
             <button onclick="window.location.href='../../../index.html'">Top</button>
         </div>
     </footer>
-
-    <!-- JavaScript -->
-    <script>
-        const animatedImg = document.getElementById('animated-img');
-        animatedImg.style.animation = 'bounce 2s ease-in-out 2 alternate';
-        animatedImg.style.animationFillMode = 'forwards';
-    </script>
 </body>
 </html>
