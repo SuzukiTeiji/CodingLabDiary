@@ -9,14 +9,15 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('img/Choco.png'); /* 画像のパスを指定してください */
-            background-color: rgb(255, 255, 255); /* 背景色を白に設定 */
-            color: black; /* テキスト色を黒に設定 */
-            background-image: url('img/Choco.png'); /* 画像のパスを指定してください */
+            background-image: url('Diary/img/Choco.png'); /* ここで背景画像を指定 */
+            background-size: cover; /* 画像を画面全体に表示 */
+            background-position: center; /* 画像を中央に配置 */
+            background-repeat: no-repeat; /* 画像を繰り返さない */
         }
 
-        
         header {
+            background-color: #f090c5;
+            color: white;
             text-align: center;
             padding: 1em 0;
         }
@@ -30,8 +31,10 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
-            
         }
+        
+        
+    
 
         button:hover {
             background-color: black;
@@ -57,13 +60,12 @@
             <div class="Profile">
                 <!-- プロフィールにリンクを挿入 -->
                 <ul>
-                    <li><a href=https://github.com/nakazatoyu/yumiko.gitthub.io> </a>Umichoco🎵</li>
-                </ul></a></li>
+                    <li><a href="https://github.com/nakazatoyu/yumiko.gitthub.io">Umichoco🎵</a></li>
                 </ul>
             </div>
         </section>
         <section class="diary">
-            <h2>Diary Entries</h2><li>
+            <h2>Diary Entries</h2>
             <div class="diary-entries">
                 <ul>
                     <li><a href="Diary/20240609.html"><strong>2024/06/09</strong></a></li>
@@ -92,9 +94,8 @@
     </main>
     <footer>
         <p>&copy; 2024 Coding Lab</p>
-        <div class="button-container"> <!-- ボタンを中央寄せにするコンテナ -->
-  <!-- 戻るボタン -->
-  <button onclick="window.location.href='../../index.html'">Top</button>
+        <div class="button-container">
+            <button onclick="window.location.href='../../index.html'">Top</button>
         </div>
     </footer>
 </body>
