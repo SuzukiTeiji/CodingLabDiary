@@ -1,13 +1,9 @@
 function toggleDiaryContent(element) {
-    const title = element;
-    const content = element.nextElementSibling;
-
-    if (content.style.display === 'block') {
-        content.style.display = 'none';
-        title.style.display = 'block';
+    const flipCardInner = element.closest('.flip-card-inner');
+    if (flipCardInner.style.transform === 'rotateY(180deg)') {
+        flipCardInner.style.transform = 'rotateY(0deg)';
     } else {
-        content.style.display = 'block';
-        title.style.display = 'none';
+        flipCardInner.style.transform = 'rotateY(180deg)';
     }
 }
 
