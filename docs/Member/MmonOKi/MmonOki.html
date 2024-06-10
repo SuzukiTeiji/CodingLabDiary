@@ -7,11 +7,24 @@
     <link rel="stylesheet" href="MmonOki.css">
 </head>
 <body>
+    <!-- ヘッダー -->
     <header>
         <h1>MmonOki</h1>
     </header>
+
+    <!-- ナビゲーションメニュー -->
+    <nav>
+        <!-- モバイル用のメニューアイコン -->
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="https://suzukiteiji.github.io/CodingLabDiary/">TOP</a></li>
+            <li><a href="https://suzukiteiji.github.io/CodingLabDiary/Member/MmonOKi/MmonOki.html">Diary</a></li>
+            <li><a href="https://mmonoki.github.io/Portfolio/">Profile</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section class="profile">
+        <section id="profile" class="profile">
             <h2>Profile</h2>
             <div class="Profile">
                 <img src="Diary/img/mmon.png" alt="プロフィール写真">
@@ -19,9 +32,8 @@
                 <a href="https://mmonoki.github.io/Portfolio/">MmonOKiのGitHubプロフィール</a>
             </div>
         </section>
-        <section class="diary">
+        <section id="diary" class="diary">
             <h2>Mmonoki's Diary Entries</h2>
-            <!-- アーカイブ検索のタイトルと検索入力フィールドと年月選択を横並びにするコンテナ -->
             <div class="search-container">
                 <h3>アーカイブ検索</h3>
                 <label for="year-month-select">年月を選択:</label>
@@ -35,12 +47,22 @@
                     <option value="2024/07">2024年7月</option>
                     <option value="2024/06">2024年6月</option>
                     <option value="2024/05">2024年5月</option>
-                    <!-- 他の年月のオプションを必要に応じて追加 -->
                 </select>
             </div>
-            <!-- 日記エントリーのためのコンテナ -->
-        <section class="diary">
-            <div class="diary-entries">
+            <div class="diary-entries">                
+                <!-- 日記エントリーがここに続く -->
+                <div class="diary-entry">
+                    <div class="image-container">
+                        <a href="Diary/20240610.html">
+                            <img src="Diary/img/humberger.jpg" alt="2024/06/10">
+                        </a>
+                    </div>
+                    <div class="title-container">
+                        <a href="Diary/20240610.html">
+                            <h3>2024/06/10 ハンバーガーメニュー</h3>
+                        </a>
+                    </div>
+                </div>
                 <div class="diary-entry">
                     <div class="image-container">
                         <a href="Diary/20240607.html">
@@ -327,33 +349,27 @@
             <button onclick="window.location.href='../../index.html'">Top</button>
         </div>
     </footer>
+
     <!-- 上に戻るボタン -->
     <button id="back-to-top" onclick="scrollToTop()">☝上に戻る</button>
 
+    <!-- JavaScriptの部分 -->
     <script>
-        // 選択された年月に基づいて日記エントリーをフィルタリングする関数
+        // 日記のフィルタリング関数
         function filterDiary() {
-            // ドロップダウンから選択された年と月の値を取得
             let yearMonth = document.getElementById("year-month-select").value;
-            // すべての日記エントリー要素を取得
             let diaryEntries = document.querySelectorAll(".diary-entry");
-
-            // 各日記エントリーをループ処理
             diaryEntries.forEach(function(entry) {
-                // 画像のalt属性からエントリーの年と月を取得
                 let entryYearMonth = entry.querySelector("img").alt.split("/").slice(0, 2).join("/");
-                // 選択された年と月が「すべて」であるか、エントリーの年と月と一致するかを確認
                 if (yearMonth === "all" || entryYearMonth === yearMonth) {
-                    // 年と月が一致する場合は、エントリーを表示
                     entry.style.display = "block";
                 } else {
-                    // 年と月が一致しない場合は、エントリーを非表示にする
                     entry.style.display = "none";
                 }
             });
         }
 
-        // ページ上部にスクロールする関数
+        // "上に戻る" ボタンのスクロール関数
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
@@ -361,7 +377,7 @@
             });
         }
 
-        // スクロール時に上に戻るボタンの表示を制御する関数
+        // スクロールイベントで "上に戻る" ボタンの表示を制御
         window.onscroll = function() {
             let backToTopButton = document.getElementById("back-to-top");
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -370,6 +386,12 @@
                 backToTopButton.style.display = "none";
             }
         };
+
+        // モバイルメニューのトグル関数
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('nav-active');
+        }
     </script>
 </body>
 </html>

@@ -1,212 +1,278 @@
 /* body 要素のスタイル */
 body {
-  margin: 0; /* 外側の余白をなしにする */
-  padding: 0; /* 内側の余白をなしにする */
-  font-family: 'Roboto', sans-serif; /* フォントをRobotoに設定 */
-  background-color: #f0fff0; /* 背景色をライトグリーンに設定 */
-  color: #555; /* 文字色をグレーに設定 */
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0fff0;
+  color: #555;
+}
+
+/* ナビゲーションメニューのスタイル */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0262b1;
+  color: white;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* モバイル用のメニューアイコンのスタイル */
+nav .menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* ナビゲーションリンクのスタイル */
+nav .nav-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+/* ナビゲーションリンクのリストアイテムのスタイル */
+nav .nav-links li {
+  margin-left: 20px;
+}
+
+/* ナビゲーションリンクのアンカーのスタイル */
+nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* ナビゲーションリンクのホバー時のスタイル */
+nav .nav-links li a:hover {
+  color: #ff69b4;
+}
+
+/* モバイル用のメディアクエリ */
+@media (max-width: 768px) {
+  nav .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0262b1;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav .nav-links.nav-active {
+    display: flex;
+  }
+
+  nav .menu-icon {
+    display: block;
+  }
 }
 
 /* header 要素のスタイル */
 header {
-  text-align: center; /* 中央揃え */
-  padding: 4em 0; /* 上下に4emの余白を設定 */
-  background-image: url('Diary/img/tyami.jpeg'); /* 背景画像を設定 */
-  background-size: cover; /* 背景画像を要素に合わせて拡大縮小 */
-  background-position: center bottom; /* 背景画像の位置を下中央に設定 */
-  color: white; /* 文字色を白に設定 */
-  position: relative; /* 相対位置を設定 */
-  animation: floatUp 12s ease-in-out forwards; /* floatUp アニメーションを12秒で実行 */
+  text-align: center;
+  padding: 4em 0;
+  background-image: url('Diary/img/tyami.jpeg');
+  background-size: cover;
+  background-position: center bottom;
+  color: white;
+  position: relative;
+  animation: floatUp 12s ease-in-out forwards;
 }
 
 /* floatUp アニメーションの定義 */
 @keyframes floatUp {
   0% {
-    background-position: center bottom; /* アニメーション開始時の背景位置 */
+    background-position: center bottom;
   }
   50% {
-    background-position: center top; /* アニメーション中間時の背景位置 */
+    background-position: center top;
   }
   100% {
-    background-position: center 39%; /* アニメーション終了時の背景位置 */
+    background-position: center 39%;
   }
 }
 
 /* header 要素の擬似要素 before のスタイル */
 header::before {
-  content: ""; /* 空のコンテンツを追加 */
-  position: absolute; /* 絶対位置を設定 */
-  top: 0; /* 上端から0 */
-  left: 0; /* 左端から0 */
-  right: 0; /* 右端から0 */
-  bottom: 0; /* 下端から0 */
-  background-color: rgba(135, 206, 250, 0.5); /* 半透明の青色背景を設定 */
-  z-index: 1; /* z-indexを1に設定 */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(135, 206, 250, 0.5);
+  z-index: 1;
 }
 
 /* header 内の h1 要素のスタイル */
 header h1 {
-  position: relative; /* 相対位置を設定 */
-  z-index: 2; /* z-indexを2に設定 */
-  margin: 0; /* 外側の余白をなしにする */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を設定 */
-  word-break: break-word; /* 単語の途中で改行を許可 */
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  word-break: break-word;
 }
 
 /* main 要素のスタイル */
 main {
-  padding: 20px; /* 内側に20pxの余白を設定 */
-  padding-bottom: 80px; /* 下に80pxの余白を設定 */
+  padding: 20px;
+  padding-bottom: 80px;
 }
 
 /* section 要素のスタイル */
 section {
-  margin-bottom: 2em; /* 下に2emの余白を設定 */
+  margin-bottom: 2em;
 }
 
 /* h2 要素のスタイル */
 h2 {
-  color: #ff69b4; /* 文字色をピンクに設定 */
-  border-bottom: 2px solid #98fb98; /* 下線をライトグリーンに設定 */
-  padding-bottom: 0.5em; /* 下に0.5emの余白を設定 */
+  color: #ff69b4;
+  border-bottom: 2px solid #98fb98;
+  padding-bottom: 0.5em;
 }
 
+/* h3 要素のスタイル */
 h3 {
   color: #0626f2;
 }
 
 /* a 要素（リンク）のスタイル */
 a {
-  color: #0262b1; /* 文字色を青に設定 */
-  text-decoration: none; /* 下線を削除 */
-  transition: color 0.3s, text-decoration 0.3s; /* ホバー時のアニメーションを設定 */
+  color: #0262b1;
+  text-decoration: none;
+  transition: color 0.3s, text-decoration 0.3s;
 }
 
 /* a 要素のホバースタイル */
 a:hover {
-  color: #ff69b4; /* 文字色をピンクに変更 */
-  text-decoration: underline; /* 下線を追加 */
+  color: #ff69b4;
+  text-decoration: underline;
 }
 
 /* .Profile クラスのスタイル */
 .Profile {
-  background-color: #b6f7b6; /* 背景色をライトグリーンに設定 */
-  border: 1px solid #98fb98; /* 枠線をライトグリーンに設定 */
-  border-radius: 10px; /* 角を丸くする */
-  padding: 20px; /* 内側に20pxの余白を設定 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
-  text-align: center; /* 中央揃え */
-  transition: transform 0.3s; /* ホバー時のアニメーションを設定 */
+  background-color: #b6f7b6;
+  border: 1px solid #98fb98;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
 }
 
 /* .Profile クラスのホバースタイル */
 .Profile:hover {
-  transform: translateY(-5px); /* 上に5px移動 */
+  transform: translateY(-5px);
 }
 
 /* .Profile 内の img 要素のスタイル */
 .Profile img {
-  border-radius: 50%; /* 画像を円形にする */
-  width: auto; /* 自動調整 */
-  height: 80px; /* 高さを80pxに設定 */
-  object-fit: cover; /* 画像を中央にフィット */
-  margin-bottom: 10px; /* 下に10pxの余白を設定 */
+  border-radius: 50%;
+  width: auto;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 /* .Profile 内の h3 要素のスタイル */
 .Profile h3 {
-  margin: 0; /* 外側の余白をなしにする */
-  color: #ff69b4; /* 文字色をピンクに設定 */
-  font-size: 22px; /* フォントサイズを22pxに設定 */
+  margin: 0;
+  color: #ff69b4;
+  font-size: 22px;
 }
 
 /* .Profile 内の p 要素のスタイル */
 .Profile p {
-  color: #555; /* 文字色をグレーに設定 */
-  font-size: 14px; /* フォントサイズを14pxに設定 */
-  margin: 10px 0 0; /* 上に10pxの余白を設定し、他はなし */
+  color: #555;
+  font-size: 14px;
+  margin: 10px 0 0;
 }
 
 /* .Profile 内の a 要素のスタイル */
 .Profile a {
-  display: inline-block; /* インラインブロックに設定 */
-  margin-top: 10px; /* 上に10pxの余白を設定 */
-  padding: 10px 15px; /* 内側に10px（上下）15px（左右）の余白を設定 */
-  color: white; /* 文字色を白に設定 */
-  background-color: #0262b1; /* 背景色を青に設定 */
-  border-radius: 5px; /* 角を丸くする */
-  text-decoration: none; /* 下線を削除 */
-  transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーションを設定 */
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #0262b1;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* .Profile 内の a 要素のホバースタイル */
 .Profile a:hover {
-  background-color: #ff69b4; /* 背景色をピンクに変更 */
-  color: white; /* 文字色を白に設定 */
+  background-color: #ff69b4;
+  color: white;
 }
 
+/* .search-container クラスのスタイル */
 .search-container {
   padding: 20px;
 }
 
 /* .diary-entries クラスのスタイル */
 .diary-entries {
-  display: flex; /* フレックスボックスレイアウトを使用 */
-  flex-wrap: wrap; /* 複数行に折り返す */
-  gap: 20px; /* 要素間の間隔を20pxに設定 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 /* .diary-entry クラスのスタイル */
 .diary-entry {
-  display: flex; /* フレックスボックスレイアウトを使用 */
-  align-items: center; /* 縦方向に中央揃え */
-  background-color: white; /* 背景色を白に設定 */
-  border: 1px solid #98fb98; /* 枠線をライトグリーンに設定 */
-  border-radius: 10px; /* 角を丸くする */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
-  overflow: hidden; /* 内容が溢れた場合に隠す */
-  transition: transform 0.3s, box-shadow 0.3s; /* ホバー時のアニメーションを設定 */
-  width: calc(33.333% - 20px); /* 幅を3分の1に設定し、20px引く */
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #98fb98;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: calc(33.333% - 20px);
 }
 
 /* .diary-entry クラスのホバースタイル */
 .diary-entry:hover {
-  transform: scale(1.05); /* 1.05倍に拡大 */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 影を強調 */
-  cursor: pointer; /* カーソルをポインタに変更 */
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 /* .image-container クラスのスタイル */
 .image-container {
-  flex: 0 0 80px; /* 幅を80pxに固定 */
-  padding: 10px; /* 内側に10pxの余白を設定 */
+  flex: 0 0 80px;
+  padding: 10px;
 }
 
 /* .text-container クラスのスタイル */
 .text-container {
-  flex: 1; /* 残りのスペースを使用 */
-  padding: 10px 20px; /* 内側に10px（上下）20px（左右）の余白を設定 */
+  flex: 1;
+  padding: 10px 20px;
 }
 
 /* .diary-entry img のスタイル */
 .diary-entry img {
-  width: 100%; /* 幅を100%に設定 */
-  height: auto; /* 高さを自動調整 */
+  width: 100%;
+  height: auto;
 }
 
 /* .diary-entry h3 のスタイル */
 .diary-entry h3 {
-  margin: 15px; /* 外側の余白をなしにする */
-  color: #0626f2; /* 文字色を青に設定 */
-  font-size: 18px; /* フォントサイズを18pxに設定 */
-  word-break: break-word; /* 単語の途中で改行を許可 */
+  margin: 15px 0 0;
+  color: #0626f2;
+  font-size: 18px;
+  word-break: break-word;
 }
 
 /* .diary-entry p のスタイル */
 .diary-entry p {
-  margin: 0.5em 0 0; /* 上に0.5emの余白を設定し、他はなし */
-  color: #555; /* 文字色をグレーに設定 */
-  font-size: 14px; /* フォントサイズを14pxに設定 */
+  margin: 0.5em 0 0;
+  color: #555;
+  font-size: 14px;
 }
 
 /* 上に戻るボタンのスタイル */
@@ -223,65 +289,65 @@ a:hover {
   border-radius: 5px;
   font-size: 16px;
 }
+
 #back-to-top:hover {
   background-color: #12b1f6;
 }
 
 /* button のスタイル */
 button {
-  padding: 10px 20px; /* 内側に10px（上下）20px（左右）の余白を設定 */
-  font-size: 16px; /* フォントサイズを16pxに設定 */
-  background-color: #0594f3; /* 背景色を青に設定 */
-  color: white; /* 文字色を白に設定 */
-  border: 2px solid #98fb98; /* 枠線をライトグリーンに設定 */
-  border-radius: 20px; /* 角を丸くする */
-  cursor: pointer; /* カーソルをポインタに設定 */
-  transition: background-color 0.3s, color 0.3s; /* ホバー時のアニメーションを設定 */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0594f3;
+  color: white;
+  border: 2px solid #98fb98;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* button のホバースタイル */
 button:hover {
-  background-color: white; /* 背景色を白に変更 */
-  color: #98fb98; /* 文字色をライトグリーンに変更 */
+  background-color: white;
+  color: #98fb98;
 }
 
 /* footer のスタイル */
 footer {
-  text-align: center; /* 中央揃え */
-  padding: 1em 0; /* 上下に1emの余白を設定 */
-  width: 100%; /* 幅を100%に設定 */
-  background-color: #ff69b4; /* 背景色をピンクに設定 */
-  color: white; /* 文字色を白に設定 */
+  text-align: center;
+  padding: 1em 0;
+  width: 100%;
+  background-color: #ff69b4;
+  color: white;
 }
 
 /* .button-container のスタイル */
 .button-container {
-  text-align: center; /* 中央揃え */
-  margin-top: 1em; /* 上に1emの余白を設定 */
+  text-align: center;
+  margin-top: 1em;
 }
 
 /* メディアクエリ: 画面幅が900px以下の場合 */
 @media screen and (max-width: 900px) {
   .diary-entry {
-    width: calc(50% - 20px); /* 幅を50%に設定し、20px引く */
+    width: calc(50% - 20px);
   }
 }
 
 /* メディアクエリ: 画面幅が600px以下の場合 */
 @media screen and (max-width: 600px) {
   header {
-    padding: 1em 0; /* 上下に1emの余白を設定 */
+    padding: 1em 0;
   }
   header h1 {
-    font-size: 24px; /* フォントサイズを24pxに設定 */
+    font-size: 24px;
   }
   .diary-entry {
-    width: calc(100% - 20px); /* 幅を100%に設定し、20px引く */
+    width: calc(100% - 20px);
   }
   .diary-entry h3 {
-    font-size: 16px; /* フォントサイズを16pxに設定 */
+    font-size: 16px;
   }
   footer {
-    padding: 0.5em 0; /* 上下に0.5emの余白を設定 */
+    padding: 0.5em 0;
   }
 }
