@@ -110,6 +110,15 @@ main {
   margin-bottom: 5px; /* タイトルとの間にスペース */
 }
 
+/* 日記エントリーのスタイルにイラストを追加 */
+.diary-entries li img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-top: 10px; /* タイトルとイラストの間にスペース */
+  border-radius: 5px;
+}
+
 /* フッターのスタイル */
 footer {
   background-color: #8b7765; /* カーキ */
@@ -141,3 +150,5 @@ button:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+
