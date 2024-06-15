@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* タイトルを中央に */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        h1 a {
+            color: #fff; /* リンクの色を白に */
+            text-decoration: none; /* リンクの下線を消す */
+        }
+
+        h1 a:hover {
+            text-decoration: underline; /* ホバー時に下線を追加 */
+        }
+
+        main {
+            padding: 20px;
+            padding-bottom: 80px; /* フッターの高さに応じて調整 */
+        }
+
+        .diary {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* テキストを左揃え */
+        }
+
+        .diary h2 {
+            background-color: rgb(207, 247, 247);
+            margin-top: 0;
+            font-size: 24px;
+            color: #031cf9;
+            position: relative; /* 相対位置 */
+            padding-left: 10px; /* 左側に余白を追加 */
+        }
+
+        .diary h2::before {
+            content: "";
+            position: absolute; /* 絶対位置 */
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background-color: #5bc0de; /* 色つきの帯 */
+        }
+
+        .diary h3 {
+            font-size: 15px;
+            border: 1px solid #3498db;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+
+        .diary span {
+            font-weight: 600;
+            color: #e74c3c;
+        }
+
+        .diary-entries img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            /* アニメーションを削除 */
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            height: 60px; /* フッターの高さ */
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #fd04f1;
+        }
+
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+                padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        #fileInput {
+            display: block;
+            margin: 20px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .input-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .input-container input {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .input-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .input-container button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="https://suzukiteiji.github.io/CodingLabDiary/Member/MmonOKi/MmonOki.html">MmonOki's Diary</a></h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/06/03 データをエクセルから（に）ダウンロード</h2>
+            <div class="diary-entries">
+                <h3>
+                    データをエクセルからダウンロードできる機能を作ってみた。
+                </h3>
+                <!-- エクセルファイルの入力 -->
+                <input type="file" id="fileInput" accept=".xlsx, .xls">
+                <h3>
+                    名簿追加機能（一人一人足す）
+                </h3>
+                <!-- データ入力フォームを追加 -->
+                <div class="input-container">
+                    <input type="text" id="nameInput" placeholder="名前">
+                    <input type="email" id="emailInput" placeholder="メールアドレス">
+                    <input type="tel" id="phoneInput" placeholder="電話番号">
+                    <button onclick="addEntry()">追加</button>
+                </div>
+                <h3>
+                    データをエクセルにダウンロードする機能も作ってみた。
+                </h3>
+                <!-- データをエクセルにダウンロードボタン -->
+                <button onclick="downloadExcel()">データをエクセルにダウンロード</button> <span>←※データをExcelファイル形式にダウンロードできます。</span>
+                <table id="memberTable">
+                    <thead>
+                        <tr>
+                            <th>名前</th>
+                            <th>メールアドレス</th>
+                            <th>電話番号</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+
+    <!-- SheetJSライブラリのインクルード -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    <script>
+        // エクセルファイルの読み込み
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const data = new Uint8Array(e.target.result);
+                    const workbook = XLSX.read(data, { type: 'array' });
+                    const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+                    const jsonData = XLSX.utils.sheet_to_json(firstSheet, { header: 1 });
+                    displayData(jsonData);
+                };
+                reader.readAsArrayBuffer(file);
+            }
+        });
+
+        // データをHTMLテーブルに表示する関数
+        function displayData(data) {
+            const tbody = document.querySelector('#memberTable tbody');
+            tbody.innerHTML = '';
+            data.forEach((row, rowIndex) => {
+                if (rowIndex === 0) return; // ヘッダー行をスキップ
+                const tr = document.createElement('tr');
+                row.forEach(cell => {
+                    const td = document.createElement('td');
+                    td.textContent = cell;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+        }
+
+        // データをテーブルに追加する関数
+        function addEntry() {
+            const name = document.getElementById('nameInput').value;
+            const email = document.getElementById('emailInput').value;
+            const phone = document.getElementById('phoneInput').value;
+
+            if (name && email && phone) {
+                const tbody = document.querySelector('#memberTable tbody');
+                const tr = document.createElement('tr');
+                
+                const nameTd = document.createElement('td');
+                nameTd.textContent = name;
+                tr.appendChild(nameTd);
+
+                const emailTd = document.createElement('td');
+                emailTd.textContent = email;
+                tr.appendChild(emailTd);
+
+                const phoneTd = document.createElement('td');
+                phoneTd.textContent = phone;
+                tr.appendChild(phoneTd);
+
+                tbody.appendChild(tr);
+
+                // 入力欄をクリア
+                document.getElementById('nameInput').value = '';
+                document.getElementById('emailInput').value = '';
+                document.getElementById('phoneInput').value = '';
+            } else {
+                alert('すべてのフィールドに入力してください。');
+            }
+        }
+
+        // データをエクセルファイルにダウンロードする機能を実装
+        function downloadExcel() {
+            // テーブルデータを取得
+            const tableData = [];
+            const rows = document.querySelectorAll('#memberTable tr');
+            rows.forEach(row => {
+                const cells = row.querySelectorAll('th, td');
+                const rowData = [];
+                cells.forEach(cell => {
+                    rowData.push(cell.textContent);
+                });
+                tableData.push(rowData);
+            });
+
+            // ワークシートを作成
+            const worksheet = XLSX.utils.aoa_to_sheet(tableData);
+
+            // ワークブックを作成
+            const workbook = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(workbook, worksheet, "会員名簿");
+
+            // エクセルファイルを生成してダウンロード
+            XLSX.writeFile(workbook, "会員名簿.xlsx");
+        }
+    </script>
+</body>
+</html>
