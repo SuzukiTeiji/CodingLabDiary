@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字コードやビューポートの設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル -->
+    <title>MAKI.COMPASS Diary</title>
+    <!-- スタイルシートの定義 -->
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f3;
+            color: #333;
+        }
+        /* ヘッダー部分のスタイル */
+        header {
+            background-color: #043e1e; /* 緑色 */
+            color: #f8f9f3;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* ヘッダーとメインセクションの間に余白を追加 */
+        }
+        /* タイトルのスタイル */
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+        
+        /* 日記エントリーのスタイル */
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px; /* テキストの下に余白を追加 */
+        }
+         /* 画像をセンタリングするスタイル */
+         .diary-entries img {
+            display: block;
+            margin: 0 auto; /* 水平方向に中央揃え */
+            border-radius: 20px; /* 角を丸める */
+            height: auto;
+        }
+         /* 画像を横並びにするスタイル */
+         .diary-entries {
+            display: flex;
+            justify-content: center; /* 画像を中央揃え */
+            gap: 10px; /* 画像間に余白を追加 */
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 日記セクション -->
+        <section class="diary">
+            <h2>2024/06/15</h2>
+            <div class="diary-text">
+                <h3>遊び大会</h3>
+                <p>息子とトランプ・UNO・チンチロ勝負</p>
+                <p>母：トランプで数回勝ったのみ´д`;</p>
+                <p>息子：圧勝。（息子に戦略系は勝てる気がしない）</p>
+                <p>遊びながら、息子が日記ネタを考えてくれスマホで写真撮影。</p>
+                <p>楽しんで盛り上がっている感を出すためだけど、味方によてはボッチっぽい😆</p>
+            </div>
+            <div class="diary-entries">
+                <img src="img/トランプ.png" alt="Diary Image 1" width="300">
+                <img src="img/チンチロ.png" alt="Diary Image 2" width="300">
+                <img src="img/卒倒.png" alt="Diary Image 3" width="300">
+            </div>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer style="background-color: #043e1e; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
