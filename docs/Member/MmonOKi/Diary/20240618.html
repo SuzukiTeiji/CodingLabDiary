@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+        }
+
+        header {
+            background-color: #5bc0de;
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        h1 a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        h1 a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            padding-bottom: 80px;
+        }
+
+        .diary {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            overflow: hidden;
+            height: 600px; /* 高さを増やす */
+        }
+
+        .diary h2 {
+            background-color: rgb(207, 247, 247);
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #031cf9;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .diary h2::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background-color: #5bc0de;
+        }
+
+        .diary span {
+            font-weight: 700;
+            color: #f809c0;
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+
+        .diary p {
+            font-weight: 600;
+            color: #e74c3c;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden; /* スライドショーが枠を超えないようにする */
+            height: 400px; /* 高さを固定 */
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            object-fit: contain; /* 画像をコンテナに収める */
+            background-color: #fff; /* 画像の背景を白に */
+        }
+
+        .slideshow-container img.active {
+            opacity: 1;
+        }
+
+        .slideshow-container .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1em;
+            display: none;
+            transition: opacity 2s ease-in-out;
+        }
+
+        .slideshow-container .caption.active {
+            display: block;
+            opacity: 1;
+        }
+
+        footer {
+            background-color: #5bc0de;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            height: 60px;
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #de0be6;
+        }
+
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+                padding-bottom: 80px;
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="https://suzukiteiji.github.io/CodingLabDiary/Member/MmonOKi/MmonOki.html">MmonOki's Diary</a></h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/06/18 スライドショー</h2>
+            <div class="diary-entries">
+                <div>
+                    画像をスライドショーする機能を作ってみた。<br>複数画像を6秒ごとで自動的に切り替えて見せることができます。
+                </div><br>
+                <div>
+                    <span>●やんばる付近の面白スポット</span>
+                </div><br>              
+                <div class="slideshow-container">
+                    <img src="img/todoroki.jpeg" alt="轟の滝" class="active">
+                    <div class="caption active">轟の滝</div>
+                    <img src="img/kuina.jpg" alt="くいな">
+                    <div class="caption">ヤンバルクイナ生態展示学習施設 クイナの森</div>
+                    <img src="img/tokage.jpg" alt="トカゲ">
+                    <div class="caption">名護漁港食堂付近の巨大トカゲ😲</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slideshow-container img');
+        const captions = document.querySelectorAll('.slideshow-container .caption');
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+            });
+            captions.forEach((caption, index) => {
+                caption.classList.remove('active');
+            });
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].classList.add('active');
+            captions[slideIndex - 1].classList.add('active');
+            setTimeout(showSlides, 6000); // 6秒ごとに画像を切り替える
+        }
+
+        showSlides();
+    </script>
+</body>
+</html>
