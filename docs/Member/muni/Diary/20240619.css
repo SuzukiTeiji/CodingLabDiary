@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #060504;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f9f5f2;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; /* 中央揃え */
+}
+
+h1 {
+    color: #fbdf60;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #fbf7fb;
+    color: rgb(4, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; /* 中央揃え */
+}
+
+button:hover {
+    background-color: #f7f4f8;
+}
+
+#spells {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spell {
+    background-color: #eae3dc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 72px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto; /* 中央揃え */
+    padding-right: 1000px; /* 右側の空白 */
+}
+
+.spell h2 {
+    margin-top: 0;
+    color: #6e2323;
+    text-align: center;
+}
