@@ -18,8 +18,8 @@ body {
 
 .diary-entries {
 background-color: rgba(30, 23, 6, 0.8);
-padding: 3%;
-border-radius: 20%;
+padding: 10%;
+border-radius: 30%;
 margin: 30px auto; /* 左右に余白を追加 */
 max-width: 1200px; /* 必要に応じて最大幅を設定 */
 }
