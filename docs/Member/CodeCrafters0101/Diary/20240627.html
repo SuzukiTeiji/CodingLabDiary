@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>天気情報表示</title>
+    <link rel="stylesheet" href="20240627.css">
+</head>
+<body>
+    <div class="container">
+        <h1>沖縄の過去10年くらいの気温情報</h1>
+        <p>20240626の日記で作成したcsvデータを使って、日付から情報を表示するものを作ってみました。</p>
+        <p>対象期間は【2014/6/25～2021/6/25】です。</p>
+
+        <label for="dateInput">日付を入力してください（西暦/月/日）:</label>
+        <input type="text" id="dateInput" placeholder="例: 2024/06/27">
+        <button onclick="getWeather()">表示</button>
+
+        <div id="result">
+            <p id="maxTemp"></p>
+            <p id="minTemp"></p>
+        </div>
+    </div>
+
+    <script src="20240627.js"></script>
+</body>
+</html>
