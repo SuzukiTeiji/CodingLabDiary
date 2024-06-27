@@ -114,6 +114,14 @@
 
         .map-container {
             text-align: center; /* 地図とリンクを中央揃え */
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .map-container iframe {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
         }
 
         .map-container a {
@@ -121,6 +129,8 @@
             font-size: 1.2em;
             color: #3498db; /* リンクの色を青に */
             text-decoration: none; /* 下線を消す */
+            display: inline-block;
+            margin-top: 10px;
         }
 
         .map-container a:hover {
@@ -168,6 +178,9 @@
             .button-container {
                 display: block;
                 text-align: center;
+            }
+            .map-container iframe {
+                height: auto; /* 高さを自動に */
             }
         }
     </style>
