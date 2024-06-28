@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字コードやビューポートの設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル -->
+    <title>MAKI.COMPASS Diary</title>
+    <!-- スタイルシートの定義 -->
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f3;
+            color: #333;
+        }
+        /* ヘッダー部分のスタイル */
+        header {
+            background-color: #043e1e; /* 緑色 */
+            color: #f8f9f3;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* ヘッダーとメインセクションの間に余白を追加 */
+        }
+        /* タイトルのスタイル */
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+        
+        /* 日記エントリーのスタイル */
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px; /* テキストの下に余白を追加 */
+        }
+        /* 画像をセンタリングするスタイル */
+        .diary-entries {
+            display: flex;
+            justify-content: center; /* 画像を中央揃え */
+            gap: 20px; /* 画像間に余白を追加 */
+        }
+        /* 画像のスタイル */
+        .diary-entries img {
+            display: block;
+            margin: 0 auto; /* 水平方向に中央揃え */
+            border-radius: 20px; /* 角を丸める */
+            height: auto;
+            max-width: 70%; /* 最大幅を指定 */
+            max-height: 70%; /* 最大高さを指定 */
+        }
+        /* フィギュアのスタイル */
+        figure {
+            margin: 0; /* マージンをゼロに */
+            text-align: center; /* 中央揃え */
+        }
+        /* キャプションのスタイル */
+        figcaption {
+            margin-top: 5px; /* 上に少しの余白を追加 */
+            font-size: 0.9em; /* フォントサイズを小さく */
+            color: #666; /* 色を灰色に */
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 日記セクション -->
+        <section class="diary">
+            <h2>2024/06/28</h2>
+            <div class="diary-text">
+                <h3>たいちょう</h3>
+                <p>昨日から微熱が出たり引いたり、倦怠感が続きコロナ検査キットを使ってみたけど結果は陰性で一安心。</p>
+                <p>体調不良のため、自宅では息子とは距離を取り1人でアニメ「怪獣８号」視聴しながらのんびり過ごしていた。</p>
+                <p>息子：私のiPadを覗き込み「体調」はどんな感じ？</p>
+                <p>私：「隊長すごく良い感じ」亜白隊長も保科副隊長もカッケーo(^-^)o</p>
+                <p>息子は私の「体調」気遣い声かけたのに、私はアニメの話題を振られた思い「隊長」の感想を答える。</p>
+                <p>DAY16「言語技術ワーク」大切さを親子で笑い転げながら再確認。</p>
+            </div>
+            <!-- <div class="diary-entries">
+                <figure>
+                    <img src="img/通信速度.jpeg" alt="Diary Image 1" width="500">
+                    <figcaption>左:ポケットWi-Fi　　右:ソフトバンク光</figcaption>
+                </figure>
+            </div> -->
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer style="background-color: #043e1e; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
