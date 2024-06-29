@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字コードやビューポートの設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル -->
+    <title>MAKI.COMPASS Diary</title>
+    <!-- スタイルシートの定義 -->
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f3;
+            color: #333;
+        }
+        /* ヘッダー部分のスタイル */
+        header {
+            background-color: #043e1e; /* 緑色 */
+            color: #f8f9f3;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* ヘッダーとメインセクションの間に余白を追加 */
+        }
+        /* タイトルのスタイル */
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+        
+        /* 日記エントリーのスタイル */
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px; /* テキストの下に余白を追加 */
+        }
+        /* コンテンツを横並びにするスタイル */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        /* 画像コンテナのスタイル */
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+        /* 画像のスタイル */
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px; /* 角を丸める */
+        }
+        /* マップコンテナのスタイル */
+        .map-container {
+            flex: 1;
+            text-align: center;
+        }
+        .map-container iframe {
+            max-width: 100%;
+            width: 100%;
+            height: 450px;
+        }
+        .map-container a {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #043e1e; /* 緑色 */
+            text-decoration: none; /* 下線を消す */
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        /* レスポンシブデザイン */
+        @media screen and (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+            }
+            .image-container, .map-container {
+                width: 100%;
+            }
+        }
+        
+        /* フィギュアのスタイル */
+        figure {
+            margin: 0; /* マージンをゼロに */
+            text-align: center; /* 中央揃え */
+        }
+        /* キャプションのスタイル */
+        figcaption {
+            margin-top: 5px; /* 上に少しの余白を追加 */
+            font-size: 0.9em; /* フォントサイズを小さく */
+            color: #666; /* 色を灰色に */
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 日記セクション -->
+        <section class="diary">
+            <h2>2024/06/29</h2>
+            <div class="diary-text">
+                <h3>推し☆エクレア</h3>
+                <p>パティスリークプルのエクレア</p>
+                <p>表面のチョコが分厚く食べ応えがあり美味しい</p>
+                <p>風邪症状が落ち着いたらエクレアと、Mmon Okiさんオススメ田芋チーズケーキ買い食いに行く🤤</p>
+            </div>
+            <!-- コンテンツを横並びにするコンテナ -->
+            <div class="content-container">
+                <!-- 画像コンテナ -->
+                <div class="image-container">
+                    <img src="img/エクレアのぼりjpg.jpg" alt="Diary Image 1"width="400">
+                    <figcaption>のぼりが目印</figcaption>
+                </div>
+                <!-- マップコンテナ -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.0592843481227!2d127.76452377505016!3d26.227263177062408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56db3470cfa8d%3A0xe49b0d67dc090840!2z44OR44OG44Kj44K544Oq44O8IOOCr-ODl-ODqw!5e0!3m2!1sja!2sjp!4v1719619694048!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div>
+                        <a href="https://www.instagram.com/patisserie_couple/" target="_blank">パティスリークプル</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer style="background-color: #043e1e; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
