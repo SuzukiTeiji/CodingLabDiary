@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 中央揃え */
+        }
+
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* タイトルを中央に */
+            width: 100%; /* 幅を100%に */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        h1 a {
+            color: #fff; /* リンクの色を白に */
+            text-decoration: none; /* リンクの下線を消す */
+        }
+
+        h1 a:hover {
+            text-decoration: underline; /* ホバー時に下線を追加 */
+        }
+
+        main {
+            padding: 20px;
+            padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            width: 100%; /* 幅を100%に */
+            display: flex;
+            justify-content: center; /* 中央揃え */
+        }
+
+        .diary {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* テキストを左揃え */
+        }
+
+        .diary h2 {
+            background-color: rgb(207, 247, 247);
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #031cf9;
+            position: relative; /* 相対位置 */
+            padding-left: 10px; /* 左側に余白を追加 */
+        }
+
+        .diary h2::before {
+            content: "";
+            position: absolute; /* 絶対位置 */
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background-color: #5bc0de; /* 色つきの帯 */
+        }
+
+        .diary span {
+            font-weight: 700;
+            color: #f809c0;
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+
+        .diary p {
+            font-weight: 600;
+            color: #e74c3c;
+        }
+
+        .diary-entries img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: block; /* ブロック要素にする */
+            margin-left: auto; /* 左右中央揃え */
+            margin-right: auto; /* 左右中央揃え */
+        }
+
+        .diary-entries iframe {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            display: block; /* ブロック要素にする */
+            margin-left: auto; /* 左右中央揃え */
+            margin-right: auto; /* 左右中央揃え */
+        }
+
+        .map-container {
+            width: 100%;
+            display: flex;
+            justify-content: center; /* 地図を中央に */
+        }
+
+        .map-container iframe {
+            width: 100%;
+            max-width: 600px; /* 最大幅を設定 */
+            height: 450px;
+            border: 0;
+        }
+
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%; /* 幅を100%に */
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            height: 60px; /* フッターの高さ */
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #f722d7;
+        }
+
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+                padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="https://suzukiteiji.github.io/CodingLabDiary/Member/MmonOKi/MmonOki.html">MmonOki's Diary</a></h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/07/04 製麺所が作った沖縄そば</h2>
+            <div class="diary-entries">
+                <div>
+                    先日うるま市にランチに行こうと出かけたら、お目当てのお店がなんと臨時休業😞<br>いやあこれは困ったとその近辺を車を走らせていたらなんだか気になる沖縄そば屋さんを発見！<br>その名も<span>"大宝そば 製麺所が作った沖縄そば"</span>さん。
+                </div>
+                <br>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.9527324257947!2d127.85928797448604!3d26.360390776980605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e50f336cae96bf%3A0xac9a9b6378fee172!2z5aSn5a6d44Gd44GwIOijvem6uuaJgOOBjOS9nOOBo-OBn-aylue4hOOBneOBsA!5e0!3m2!1sja!2sjp!4v1720083051374!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>                
+                <br>
+                <div>
+                    大宝そば（左）と軟骨ソーキそば（右）とジューシーを注文しましたよ。<br>製麺所の麵だけあってもっちもちで美味しい😋です。<br>ジューシーの隣の薬味は味変で後から入れてみてくださいと言われた辛みのある鰹節でした（なかなかの辛みでした💦）。
+                </div>
+                <div>
+                    <img src="img/taihou.jpg" alt="大宝そ宝宝">                    
+                </div>                    
+                <div>
+                    ふらっと入ったそば屋が思いのほか美味しくよかったなと思う一日でした。
+                </div>
+                <br><br>
+            </div>
+        </section>     
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
