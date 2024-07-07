@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minamino.Tsubasa's Diary</title>
+    <link rel="stylesheet" href="diary.css" />
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="../MinaminoTsubasa.html">Minamino.Tsubasa's Diary</a></h1>
+    </header>
+    <main>
+      <section class="diary">
+        <h2>おもしろグラフ - 2024/07/7 晴れ</h2>
+        <div>Javascriptでグラフを使いたい時に便利なライブラリがあります。</div>
+        <div>それが「<a href="https://www.highcharts.com/demo" target="_blank">Highcharts（ハイチャート）</a>」です。</div>
+        <div>それを使ってネットで見つけたおもしろグラフを表示させてみました。</div>
+        <hr>
+        <div id="packman" style="width: 100%; height: 400px"></div>
+        <hr>
+        <div id="pyramid" style="width: 100%; height: 400px"></div>
+        <hr>
+        <div id="japan" style="width: 100%; height: 400px; border:1px solid #ccc;padding: 50px 10px;"></div>
+        <hr>
+        <div id="france" style="width: 100%; height: 400px; border:1px solid #ccc;padding: 50px 10px;"></div>
+        <hr>
+        <div>グラフ表示が必要になったらぜひご活用下さい。</div>
+      </section>
+    </main>
+    <footer>
+      <div class="button-container">
+        <!-- 戻るボタン -->
+        <button onclick="history.back();">戻る</button>
+        <!-- TOPボタン -->
+        <button onclick="window.location.href='../../../index.html'">
+          Top
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
