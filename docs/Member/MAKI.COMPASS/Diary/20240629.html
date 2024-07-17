@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKI.COMPASS Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f3;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* ビューポートの高さ全体を使用 */
+        }
+        header {
+            background-color: #043e1e;
+            color: #f8f9f3;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        main {
+            flex: 1; /* メインコンテンツを拡張させる */
+            padding: 20px;
+            padding-bottom: 60px; /* フッターの高さ分の余白 */
+        }
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        .map-container {
+            flex: 1;
+            text-align: center;
+        }
+        .map-container iframe {
+            max-width: 100%;
+            width: 100%;
+            height: 450px;
+        }
+        .map-container a {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #043e1e;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+        figcaption {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        footer {
+            background-color: #043e1e;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+            }
+            .image-container, .map-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/06/29</h2>
+            <div class="diary-text">
+                <h3>推し☆エクレア</h3>
+                <p>パティスリークプルのエクレア</p>
+                <p>表面のチョコが分厚く食べ応えがあり美味しい</p>
+                <p>風邪症状が良くなったら、エクレアとMmonOkiさんオススメの田芋チーズケーキ食べる🤤</p>
+            </div>
+            <div class="content-container">
+                <div class="image-container">
+                    <img src="img/エクレアのぼりjpg.jpg" alt="Diary Image 1"width="400">
+                    <figcaption>のぼりが目印</figcaption>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.0592843481227!2d127.76452377505016!3d26.227263177062408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56db3470cfa8d%3A0xe49b0d67dc090840!2z44OR44OG44Kj44K544Oq44O8IOOCr-ODl-ODqw!5e0!3m2!1sja!2sjp!4v1719619694048!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div>
+                        <a href="https://www.instagram.com/patisserie_couple/" target="_blank">パティスリークプル</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>

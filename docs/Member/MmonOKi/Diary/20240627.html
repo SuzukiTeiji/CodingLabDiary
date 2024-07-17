@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #c9f0e4;
+            color: #333;
+        }
+
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* タイトルを中央に */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        h1 a {
+            color: #fff; /* リンクの色を白に */
+            text-decoration: none; /* リンクの下線を消す */
+        }
+
+        h1 a:hover {
+            text-decoration: underline; /* ホバー時に下線を追加 */
+        }
+
+        main {
+            padding: 20px;
+            padding-bottom: 120px; /* フッターの高さに応じて調整 */
+            background-image: url('your-background-image.jpg'); /* 背景画像を指定 */
+            background-size: cover; /* 画像をカバーするように */
+            background-position: center; /* 画像を中央に */
+        }
+
+        .diary {
+            background-color: rgba(255, 255, 255, 0.8); /* 背景色を少し透明に */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* テキストを左揃え */
+        }
+
+        /* アニメーションの定義 */
+        @keyframes fadeInRightToLeft {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .diary h2 {
+            background-color: rgb(207, 247, 247);
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #031cf9;
+            position: relative; /* 相対位置 */
+            padding-left: 10px; /* 左側に余白を追加 */
+            animation: fadeInRightToLeft 3s ease-in-out; /* フェードインアニメーションの追加 */
+        }
+
+        .diary h2::before {
+            content: "";
+            position: absolute; /* 絶対位置 */
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background-color: #5bc0de; /* 色つきの帯 */
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+
+        .diary span {
+            font-weight: 600;
+            color: #a20fe6;
+        }
+
+        .diary-entries img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px; /* 角を少し丸くする */
+            border: 3px solid #5bc0de; /* フレームの色と太さを小さくする */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 影を少し小さくする */
+            margin-top: 10px;
+            padding: 3px; /* 内側の余白を少なくする */
+            background-color: white; /* 内側のフレームの背景色 */
+            display: block;
+            margin-left: auto;
+            margin-right: auto; /* 画像を中央揃え */
+        }
+
+        .map-container {
+            text-align: center; /* 地図とリンクを中央揃え */
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .map-container iframe {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+
+        .map-container a {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #3498db; /* リンクの色を青に */
+            text-decoration: none; /* 下線を消す */
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .map-container a:hover {
+            color: #f504e9; /* ホバー時の色 */
+            text-decoration: underline; /* ホバー時に下線を追加 */
+        }
+
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            height: 60px; /* フッターの高さ */
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #f504e9;
+        }
+
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+                padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+            .map-container iframe {
+                height: auto; /* 高さを自動に */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="https://suzukiteiji.github.io/CodingLabDiary/Member/MmonOKi/MmonOki.html">MmonOki's Diary</a></h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/06/27 田芋チーズケーキ</h2>
+            <div class="diary-entries">
+                <div>
+                    本日はお中元に千葉の友人に送ったら喜ばれた逸品をご紹介。<br>田芋の独特なお味と濃厚チーズのコラボが絶妙！<br>那覇の新都心にある<span>「田芋工房」</span>さんの<span>田芋チーズケーキ</span>です。<br>（ホールサイズ以外にハーフサイズ、1ピースカットもあります。）
+                </div>
+                
+                <br>ハーフはこちら（ホールのハーフサイズです）
+                <div>
+                  <img src="img/tamucake1.jpeg" alt="ハーフ">                    
+                </div>
+                <br>
+                <br>1ピースはこちら
+                <div>
+                  <img src="img/tamucake2.jpeg" alt="1ピース">                    
+                </div>
+                <br>
+                <div>
+                    機会がありましたらぜひご賞味ください😋。
+                </div>
+                <br>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.8875654802873!2d127.69127877514673!3d26.232842588977288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56bdac55436b5%3A0x2f21c656ce30f992!2z55Sw6IqL5bel5oi_44GN44KT55Sw6YKj6KaH5paw6YO95b-D5bqX!5e0!3m2!1sja!2sjp!4v1719465482780!5m2!1sja!2sjp" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div>
+                        <a href="https://www.interlink-okinawa.com/kinta/kinta-shintoshin.html" target="_blank">田芋工房きん田 那覇新都心店</a> <!-- リンクの追加 -->
+                    </div>
+                </div>
+            </div>
+        </section>     
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/20240627.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #0056b3; /* 濃い青色 */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555; /* 濃い灰色 */
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+label, input, button {
+    font-size: 18px;
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#maxTemp, #minTemp {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007BFF;
+}
