@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <!-- ファビコンの追加 (PNG形式) -->
+    <link rel="icon" href="img/fabicon.png" type="image/png">
+    <link rel="shortcut icon" href="img/fabicon.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #c9f0e4;
+            color: #333;
+        }
+
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* タイトルを中央に */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        h1 a {
+            color: #fff; /* リンクの色を白に */
+            text-decoration: none; /* リンクの下線を消す */
+        }
+
+        h1 a:hover {
+            text-decoration: underline; /* ホバー時に下線を追加 */
+        }
+
+        main {
+            padding: 20px;
+            padding-bottom: 120px; /* フッターの高さに応じて調整 */
+            background-image: url('your-background-image.jpg'); /* 背景画像を指定 */
+            background-size: cover; /* 画像をカバーするように */
+            background-position: center; /* 画像を中央に */
+        }
+
+        .diary {
+            background-color: rgba(255, 255, 255, 0.8); /* 背景色を少し透明に */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* テキストを左揃え */
+        }
+
+        /* アニメーションの定義 */
+        @keyframes fadeInRightToLeft {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .diary h2 {
+            background-color: rgb(207, 247, 247);
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #031cf9;
+            position: relative; /* 相対位置 */
+            padding-left: 10px; /* 左側に余白を追加 */
+            animation: fadeInRightToLeft 3s ease-in-out; /* フェードインアニメーションの追加 */
+        }
+
+        .diary h2::before {
+            content: "";
+            position: absolute; /* 絶対位置 */
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background-color: #5bc0de; /* 色つきの帯 */
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+
+        .diary span {
+            font-weight: 600;
+            color: #a20fe6;
+        }
+
+        .diary-entries img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 10px; /* 角を少し丸くする */
+            border: 3px solid #5bc0de; /* フレームの色と太さを小さくする */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 影を少し小さくする */
+            margin-top: 10px;
+            padding: 3px; /* 内側の余白を少なくする */
+            background-color: white; /* 内側のフレームの背景色 */
+            display: block;
+            margin-left: auto;
+            margin-right: auto; /* 画像を中央揃え */
+        }
+
+        .map-container {
+            text-align: center; /* 地図とリンクを中央揃え */
+        }
+
+        .map-container a {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #3498db; /* リンクの色を青に */
+            text-decoration: none; /* 下線を消す */
+        }
+
+        .map-container a:hover {
+            color: #f504e9; /* ホバー時の色 */
+            text-decoration: underline; /* ホバー時に下線を追加 */
+        }
+
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            height: 60px; /* フッターの高さ */
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #f504e9;
+        }
+
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+                padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="https://suzukiteiji.github.io/CodingLabDiary/Member/MmonOKi/MmonOki.html">MmonOki's Diary</a></h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/07/24 ファビコン</h2>
+            <div class="diary-entries">
+                <div>
+                    今日はファビコン設置に挑戦してみました（この日記のタブにあります）。<br>Webサイトを見ているときにタブの左側に表示されているあれです。<br>
+                </div>
+                
+                <br>こんな感じです。
+                <div>
+                  <img src="img/fabimihon.jpg" alt="ファビコン見本">                    
+                </div>
+                <br>ファビコンの主要なファイル形式は「.ico」のようですが変換するのが面倒だったので今回は「.png」形式で32×32のサイズにしました。<br>沖縄本島は台風それましたが風はやはり強いですね。<br>これで海水温が下がれば少しは猛暑日は減りますかね。             
+            </div>
+        </section>     
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
