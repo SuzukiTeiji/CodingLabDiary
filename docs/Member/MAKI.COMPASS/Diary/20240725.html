@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAKI.COMPASS Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f3;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* ビューポートの高さ全体を使用 */
+        }
+        header {
+            background-color: #043e1e;
+            color: #f8f9f3;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        main {
+            flex: 1; /* メインコンテンツを拡張させる */
+            padding: 20px;
+            padding-bottom: 60px; /* フッターの高さ分の余白 */
+        }
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        .map-container {
+            flex: 1;
+            text-align: center;
+        }
+        .map-container iframe {
+            max-width: 100%;
+            width: 100%;
+            height: 450px;
+        }
+        .map-container a {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #043e1e;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        figure {
+            margin: 0;
+            text-align: center;
+        }
+        figcaption {
+            margin-top: 5px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        footer {
+            background-color: #043e1e;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+        @media screen and (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+            }
+            .image-container, .map-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/07/25</h2>
+            <div class="diary-text">
+                <h3>カオス状態</h3>
+                <br>５月から勤務している職場</br>
+                <br>前任者、お話や料理上手。でも、事務処理は苦手だったようで引継いだ負の遺産が大きく、カオス状態💦</br>
+                <br>この状態で代表は前任者のことを一切悪く言うことなく率先して対応に取り組む</br>
+                <br>事務職以外の方々も協力してくれる。素敵な職場で働くことが出来たことに感謝😊</dr>
+            </div>
+           
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
