@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天気情報</title>
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* 天気をイメージした淡い青色 */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        /* タイトルのスタイル */
+        h1 {
+            color: #1e90ff; /* ディープスカイブルー */
+            margin-bottom: 20px;
+        }
+        /* ボタンのスタイル */
+        button {
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #4682b4; /* スティールブルー */
+        }
+        /* 天気情報表示エリアのスタイル */
+        #weatherResult {
+            background-color: #ffffff; /* 白色 */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #weatherResult h2 {
+            margin-top: 10px;
+            color: #1e90ff;
+        }
+        #weatherResult p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- タイトル -->
+    <h1>天気情報</h1>
+    <!-- データ取得ボタン -->
+    <button id="fetchWeatherBtn">沖縄のデータを取得</button>
+    <!-- 天気情報表示エリア -->
+    <div id="weatherResult"></div>
+
+    <!-- JavaScriptファイルを読み込む -->
+    <script src="Weather.js"></script>
+</body>
+</html>

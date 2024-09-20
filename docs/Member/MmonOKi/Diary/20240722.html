@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MmonOki's Diary</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* 中央揃え */
+        }
+
+        header {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* タイトルを中央に */
+            width: 100%; /* 幅を100%に */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        h1 a {
+            color: #fff; /* リンクの色を白に */
+            text-decoration: none; /* リンクの下線を消す */
+        }
+
+        h1 a:hover {
+            text-decoration: underline; /* ホバー時に下線を追加 */
+        }
+
+        main {
+            padding: 20px;
+            padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            width: 100%; /* 幅を100%に */
+            display: flex;
+            justify-content: center; /* 中央揃え */
+        }
+
+        .diary {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* テキストを左揃え */
+        }
+
+        .diary h2 {
+            background-color: rgb(207, 247, 247);
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #031cf9;
+            position: relative; /* 相対位置 */
+            padding-left: 10px; /* 左側に余白を追加 */
+        }
+
+        .diary h2::before {
+            content: "";
+            position: absolute; /* 絶対位置 */
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 80%;
+            background-color: #5bc0de; /* 色つきの帯 */
+        }
+
+        .diary span {
+            font-weight: 700;
+            color: #2d09f8;
+        }
+
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+            color: #3498db;
+        }
+
+        .diary p {
+            font-weight: 600;
+            color: #e74c3c;
+        }
+
+        .diary-entries img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: block; /* ブロック要素にする */
+            margin-left: auto; /* 左右中央揃え */
+            margin-right: auto; /* 左右中央揃え */
+        }
+
+        footer {
+            background-color: #5bc0de; /* 水色 */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%; /* 幅を100%に */
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+            height: 60px; /* フッターの高さ */
+        }
+
+        .button-container {
+            display: inline-block;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            height: 40px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+
+        .button-container button:hover {
+            background-color: #f722d7;
+        }
+
+        @media screen and (max-width: 600px) {
+            main {
+                padding: 10px;
+                padding-bottom: 80px; /* フッターの高さに応じて調整 */
+            }
+            .button-container {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="https://suzukiteiji.github.io/CodingLabDiary/Member/MmonOKi/MmonOki.html">MmonOki's Diary</a></h1>
+    </header>
+    <main>
+        <section class="diary">
+            <h2>2024/07/22 なんとなく</h2>
+            <div class="diary-entries">
+                <div>
+                    10日ぶりの日記です。<br>止まっていたプロゲートのNode.jsとSQLを再開しているのでそこに時間を取られ、日記をかけず(;^ω^)。<br>HTMLとCSS、Javascriptはどんどん進んでいけたのですが、Node.jsとSQLは何をどうするのかの着地点のイメージがつかず一旦プロゲート先行の学習をストップして師匠の勉強会を先行にしてプロゲートを復習にシフトチェンジしていました。<br>今は師匠のおかげでなんとなく以前よりスムーズにプロゲートの学習をすることができています。ありがとうございます。<br>といっても<span>”なんとなく”</span>です。<br>でも私にとってはこの<span>”なんとなく”</span>が重要なのかなと思っています。<br><br>さてここで問題です。この画像にネッコ🐈は何匹いるでしょう。
+                </div>
+                <div>
+                  <img src="img/cats.jpg" alt="ネッコ">                    
+                </div>
+                <br>
+                <div>■答え<br>3匹です。<br><br>
+                    皆さんと楽しく学習できることに感謝しつつこれからも頑張っていきたいと思っています🌸。
+                </div>                
+            </div>
+        </section>     
+    </main>
+    <footer>
+        <div class="button-container">
+            <button onclick="history.back();">戻る</button>
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字コードやビューポートの設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトル -->
+    <title>MAKI.COMPASS Diary</title>
+    <!-- スタイルシートの定義 -->
+    <style>
+        /* ページ全体のスタイル */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9f3;
+            color: #333;
+        }
+        /* ヘッダー部分のスタイル */
+        header {
+            background-color: #043e1e; /* 緑色 */
+            color: #f8f9f3;
+            padding: 1em 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px; /* ヘッダーとメインセクションの間に余白を追加 */
+        }
+        /* タイトルのスタイル */
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+            text-align: center; /* タイトルを中央に */
+        }
+        
+        /* 日記エントリーのスタイル */
+        .diary h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+            margin-bottom: 10px; /* テキストの下に余白を追加 */
+        }
+        /* 画像をセンタリングするスタイル */
+        .diary-entries {
+            display: flex;
+            justify-content: center; /* 画像を中央揃え */
+            gap: 20px; /* 画像間に余白を追加 */
+        }
+        /* 画像のスタイル */
+        .diary-entries img {
+            display: block;
+            margin: 0 auto; /* 水平方向に中央揃え */
+            border-radius: 20px; /* 角を丸める */
+            height: auto;
+            max-width: 100%; /* 最大幅を指定 */
+            max-height: 300px; /* 最大高さを指定 */
+        }
+        /* フィギュアのスタイル */
+        figure {
+            margin: 0; /* マージンをゼロに */
+            text-align: center; /* 中央揃え */
+        }
+        /* キャプションのスタイル */
+        figcaption {
+            margin-top: 5px; /* 上に少しの余白を追加 */
+            font-size: 0.9em; /* フォントサイズを小さく */
+            color: #666; /* 色を灰色に */
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>MAKI.COMPASS Diary</h1>
+    </header>
+    <!-- メインコンテンツ -->
+    <main>
+        <!-- 日記セクション -->
+        <section class="diary">
+            <h2>2024/06/20</h2>
+            <div class="diary-text">
+                <h3>ネット環境</h3>
+                <p>Wi-Fi：ソフトバンク光</p>
+                <p>スマホ：ワイモバイル</p>
+                <p>ソフトバンク系でまとめている我が家</p>
+                <p>しかし、ネットが劇的に遅すぎ💦</p>
+                <p>私のMacBook Airでは有線で6.8Mbps（息子のゲーミングPC有線で27Mbps）</p>
+                <p>快適なネット環境整えるにはどうしたら良いんだろ〜</p>
+            </div>
+            <div class="diary-entries">
+                <figure>
+                    <img src="img/MacBook Air.png" alt="Diary Image 1">
+                    <figcaption>MacBook Air 自宅速度(有線の意味ある??)</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/スマホ.png" alt="Diary Image 2">
+                    <figcaption>スマホ(自宅速度)</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/スマホ(職場).png" alt="Diary Image 3">
+                    <figcaption>スマホ(職場速度)</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    <!-- フッター -->
+    <footer style="background-color: #043e1e; color: white; text-align: center; padding: 1em 0; position: fixed; bottom: 0; width: 100%;">
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button onclick="history.back();">戻る</button>
+            <!-- TOPボタン -->
+            <button onclick="window.location.href='../../../index.html'">Top</button>
+        </div>
+    </footer>
+</body>
+</html>
