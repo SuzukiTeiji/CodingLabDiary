@@ -1,114 +1,103 @@
-/* styles.css */
-
-body {
-  font-family: Arial, sans-serif;
+/* 基本リセット */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f3; /* ベースカラー: ライトグレー */
+  color: #333;
+}
+
+/* ヘッダー */
 header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-main {
+  background-color: #2e2e2e; /* ダークグレー */
+  color: #ffffff;
   padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.members,
-.latest-diaries {
-  margin-bottom: 30px;
+/* メンバーセクション */
+.members {
+  padding: 40px 20px;
 }
 
 .icon-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 70%;
-  padding: 1em;
+  gap: 20px;
 }
-.icon-container a {
-  padding: 10px;
-}
+
 .member {
+  display: block;
   text-align: center;
-  margin: 10px;
+  transition: transform 0.3s ease;
 }
 
 .member img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin-bottom: 5px;
-}
-
-.diary-links {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.diary-links a {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.register-diary {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-.member-icon {
-  width: 100px;
-  height: auto;
-}
-
-.member {
-  position: relative;
-  display: inline-block;
-}
-
-.member:hover .member-name {
-  display: block;
+  border: 3px solid #1e90ff; /* アクセントカラー: ライトブルー */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
 }
 
 .member-name {
-  display: none;
-  position: absolute;
-  bottom: -20px;
-  /* アイコンの下に表示する調整 */
-  left: 50%;
-  /* アイコン中央に配置する調整 */
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
-  /* テキストの背景色 */
-  color: black;
-  /* テキストの色を黒に設定 */
-  padding: 5px 10px;
-  /* テキストの余白 */
-  border-radius: 5px;
-  /* テキストの角を丸くする */
-  white-space: nowrap;
-  /* テキストが折り返されないようにする */
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem;
+}
+
+.member:hover {
+  transform: scale(1.1);
+}
+
+/* 最新日記欄 */
+.latest-diaries {
+  background-color: #ffffff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 40px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.latest-diaries h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.diary-links ul {
+  list-style: none;
+}
+
+.diary-links li {
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 .diary-link {
   text-decoration: none;
-  color: black;
-  transition: color 0.3s;
+  color: #1e90ff; /* アクセントカラー: ライトブルー */
+  transition: color 0.3s ease;
 }
 
 .diary-link:hover {
-  color: #333;
+  color: #ff6347; /* アクセントカラー: サーモンピンク */
 }
 
-@media (max-width: 768px) {
-
-  .icon-container {
-    width: 100%;
-  }
-  .icon-container a {
-    padding: 10px;
-  }
+/* フッター */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2e2e2e; /* ダークグレー */
+  color: #ffffff;
+  margin-top: 40px;
 }
