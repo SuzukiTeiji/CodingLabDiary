@@ -5,20 +5,22 @@
   box-sizing: border-box;
 }
 
+/* ヘッダー */
+header {
+  background-color: #2e2e2e; /* ダークグレー */
+  color: #ffffff;
+  padding: 20px; /* 高さを縮小 */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f0f0f3; /* ベースカラー: ライトグレー */
   color: #333;
 }
 
-/* ヘッダー */
-header {
-  background-color: #2e2e2e; /* ダークグレー */
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+
 
 /* メンバーセクション */
 .members {
