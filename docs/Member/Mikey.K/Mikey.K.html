@@ -4,44 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikey.K's Diary</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: white; /* 背景色を白に設定 */
-            color: black; /* テキスト色を黒に設定 */
-        }
-
-        header {
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: transparent;
-            color: black;
-            border: 2px solid black;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        button:hover {
-            background-color: black;
-            color: white;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="Mikey.K.css">
 </head>
 <body>
     <header>
@@ -49,30 +12,101 @@
     </header>
     <main>
         <section class="profile">
-            <h2>Profile</h2>
+            <h2>▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼</h2>
             <div class="Profile">
-                <!-- プロフィールにリンクを挿入 -->
                 <ul>
-                    <li><a href="https://mikeydkishi.github.io/portfolio/">Mikey.K's GitHub Profile </a></li>
+                    <li>
+                        <a href="https://mikeydkishi.github.io/portfolio/" target="_blank" class="thumbnail-button">
+                            <img src="Diary/img/thumbnail.png" alt="Profile image">
+                            <span>My Profile Page</span>
+
+                        </a>
+                    </li>
                 </ul>
             </div>
+            <h2>▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼△▼</h2>
         </section>
+    
         <section class="diary">
-            <h2>Diary Entries</h2>
-            <div class="diary-entries">
-                <ul>
-                    <li><a href="Diary/20240505.html"><strong>2024/05/05</strong></a></li>
-                    <!-- 他の日記エントリーも同様に追加 -->
-                </ul>
+            <h4>Diary Entries</h4>
+            <div class="search-container">
+                <h3>検索</h3>
+                <label id="year-month-select">年月を選択：</label>
+                <select id="year-month-select" onchange="filterDiary()">
+                    <option value="all">すべて</option>
+                    <option value="2024/12">2024年12月</option>
+                    <option value="2024/11">2024年11月</option>
+                    <option value="2024/10">2024年10月</option>
+                    <option value="2024/09">2024年9月</option>
+                    <option value="2024/08">2024年8月</option>
+                    <option value="2024/07">2024年7月</option>
+                    <option value="2024/06">2024年6月</option>
+                    <option value="2024/05">2024年5月</option>
+                    <!-- 他の年月のオプションを必要に応じて追加 -->
+                </select>
             </div>
-        </section>
+    <section class="diary">
+        <div class="diary-entries">
+            <div class= "diary-entry">
+                <a href="Diary/20240505.html">
+                    <img src="Diary/img/20240505.img" alt="20240505">
+                </a>
+            <div class="title-container">
+                <a href="Diary/20240505.html">
+                    <h3>2024/05/05 宿題</h3>
+                </a>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Coding Lab</p>
-        <div class="button-container"> <!-- ボタンを中央寄せにするコンテナ -->
-  <!-- 戻るボタン -->
-  <button onclick="window.location.href='../../index.html'">Top</button>
+        <div class="button-container">
+            <button onclick="window.location.href='../../index.html'">Top</button>
         </div>
     </footer>
+    <!-- 上に戻るボタン -->
+    <button id="back-to-top" onclick="scrollToTop()">☝上に戻る</button>
+
+    <script>
+        // 選択された年月に基づいて日記エントリーをフィルタリングする関数
+        function filterDiary() {
+            // ドロップダウンから選択された年と月の値を取得
+            let yearMonth = document.getElementById("year-month-select").value;
+            // すべての日記エントリー要素を取得
+            let diaryEntries = document.querySelectorAll(".diary-entry");
+
+            // 各日記エントリーをループ処理
+            diaryEntries.forEach(function(entry) {
+                // 画像のalt属性からエントリーの年と月を取得
+                let entryYearMonth = entry.querySelector("img").alt.split("/").slice(0, 2).join("/");
+                // 選択された年と月が「すべて」であるか、エントリーの年と月と一致するかを確認
+                if (yearMonth === "all" || entryYearMonth === yearMonth) {
+                    // 年と月が一致する場合は、エントリーを表示
+                    entry.style.display = "block";
+                } else {
+                    // 年と月が一致しない場合は、エントリーを非表示にする
+                    entry.style.display = "none";
+                }
+            });
+        }
+
+        // ページ上部にスクロールする関数
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // スクロール時に上に戻るボタンの表示を制御する関数
+        window.onscroll = function() {
+            let backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
