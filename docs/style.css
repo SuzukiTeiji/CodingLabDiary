@@ -39,6 +39,13 @@ nav ul li a {
   font-size: 18px;
   font-weight: bold; /* 文字を太くする */
 }
+nav ul li a:hover {
+  color: #d4af35; /* 変更したい色を指定 */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  text-decoration: underline; /* ホバー時の下線アニメーション */
+}
+
+
 
 /* メニューアイコン */
 .menu-icon {
@@ -49,15 +56,65 @@ nav ul li a {
   top: 20px;
   right: 20px;
   background-color: #d4af35; /* 背景色を追加 */
-  border-radius: 50%; /* 丸みを追加 */
+  border-radius: 35%; /* 丸みを追加 */
   padding: 3px; /* パディングを追加 */
-  transition: transform 0.3s; /* ホバー時のアニメーション */
+  transition: transform 0.3s, background-color 0.3s; /* ホバー時のアニメーション */
 }
 
 .menu-icon:hover {
   transform: scale(1.2); /* ホバー時に拡大 */
+  background-color: #ffcc00; /* ホバー時に色を変更 */
 }
 
+
+
+/*メニューバー*/
+
+.header {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-bar {
+  background-color: #333;
+  overflow: hidden;
+  text-align: center; /* 中央に配置 */
+}
+
+.menu-bar a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px 30px; /* パディングを調整 */
+  text-decoration: none;
+  font-weight: bold;
+  height: auto; /* 高さを自動に設定 */    
+  line-height:auto; 
+}
+
+
+.menu-bar a:hover {
+  background-color: #d4af35;
+  color: black;
+}
+
+.menu-bar a:hover {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+  
+
+  
 
 
 
@@ -129,6 +186,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .latest-diaries h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -150,6 +208,17 @@ body {
   transition: color 0.3s ease;
 }
 
+.diary-link:hover {
+  color: #281f01; /* ホバー時の色 */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  text-decoration: underline; /* ホバー時の下線アニメーション */
+}
+  
+
+
+
+
+
 /* フッター */
 footer {
   text-align: center;
@@ -158,3 +227,4 @@ footer {
   color: #ffffff;
   margin-top: 40px;
 }
+
