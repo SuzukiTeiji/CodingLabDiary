@@ -1,0 +1,113 @@
+/* 全体のリセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 背景画像の設定 */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url('img/tedakosky.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* コンテナ全体のレイアウト */
+  #container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* メインコンテンツ */
+  #container-main {
+    padding: 20px;
+  }
+  
+  /* ヘッダーのスタイル */
+  #container-header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  /* コンテンツのスタイル */
+  #container-contents {
+    margin-top: 20px;
+  }
+  
+  /* 各セクションのスタイル */
+  #container-contents h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .container-contents-description {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .container-contents-description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .container-contents-description ul li {
+    margin: 5px 0;
+  }
+  
+  /* メッセージ部分のスタイル */
+  #container-contents-messages h3 {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  #container-contents-messages div {
+    font-size: 1.2rem;
+    color: #333;
+    background-color: rgba(240, 240, 240, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* フッターのスタイル */
+  #container-footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ccc;
+    margin-top: 20px;
+    color: #555;
+  }
+  
+  /* リンクのスタイル */
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #004499;
+  }
+  
+  /* メディアクエリ - 小さな画面のスタイル */
+  @media (max-width: 768px) {
+    #container {
+      padding: 10px;
+    }
+  
+    #container-contents h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
