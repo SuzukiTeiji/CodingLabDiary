@@ -7,12 +7,79 @@
 
 /* ヘッダー */
 header {
-  background-color: #2e2e2e; /* ダークグレー */
+  background-color: #6e6f72; /* ダークグレー */
   color: #ffffff;
-  padding: 20px; /* 高さを縮小 */
+  padding: 45px; /* 高さを縮小 */
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* メニューアイコン */
+/* メニューアイコン */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #d4af35;/* 背景色を追加 */
+  border-radius: 40%; /* 丸みを追加 */
+  padding: 5px; /* パディングを追加 */
+  transition: transform 0.3s; /* ホバー時のアニメーション */
+}
+
+.menu-icon:hover {
+  transform: scale(1.2); /* ホバー時に拡大 */
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* メニュー */
+nav {
+  display: none;
+}
+
+nav.show {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;/* メニューアイコン */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffcccb; /* 背景色を追加 */
+  border-radius: 50%; /* 丸みを追加 */
+  padding: 10px; /* パディングを追加 */
+  transition: transform 0.3s; /* ホバー時のアニメーション */
+}
+
+.menu-icon:hover {
+  transform: scale(1.2); /* ホバー時に拡大 */
+}
+
+  font-size: 18px;
+}
+
 
 body {
   font-family: 'Arial', sans-serif;
@@ -25,7 +92,7 @@ body {
 /* メンバーセクション */
 .members {
   padding: 40px 20px;
-  font-size: 80px; /* Adjust the size as needed */
+  font-size: 40px; /* Adjust the size as needed */
   text-align: center;
 }
 
@@ -52,7 +119,7 @@ body {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 3px solid #1e90ff; /* アクセントカラー: ライトブルー */
+  border: 3px solid #3c3e44; /* アクセントカラー: ライトブルー */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
@@ -73,8 +140,8 @@ body {
 
 /* 最新日記欄 */
 .latest-diaries {
-  background-color: #ffffff;
-  border: 2px solid #333;
+  background-color: #d4af35;
+  border: 2px solid #3c3e44;
   border-radius: 55px;
   padding: 10px;
   margin: 40px auto; /* Center the section and reduce the width */
@@ -85,7 +152,7 @@ body {
 .latest-diaries h2 {
   text-align: center;
   margin-bottom: 20px;
-  color: #333;
+  color: #3c3e44;
 }
 
 .diary-links ul {
@@ -99,19 +166,15 @@ body {
 
 .diary-link {
   text-decoration: none;
-  color: #1e90ff; /* アクセントカラー: ライトブルー */
+  color: #3c3e44; /* アクセントカラー: */
   transition: color 0.3s ease;
-}
-
-.diary-link:hover {
-  color: #ff6347; /* アクセントカラー: サーモンピンク */
 }
 
 /* フッター */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #2e2e2e; /* ダークグレー */
+  padding: 40px;
+  background-color: #3c3e44; /* ダークグレー */
   color: #ffffff;
   margin-top: 40px;
 }
