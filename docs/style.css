@@ -228,3 +228,48 @@ footer {
   margin-top: 40px;
 }
 
+/* デフォルトではメニューアイコンを非表示 */
+.menu-icon {
+  display: none;
+}
+
+/* 画面幅が768px以下の時にメニューアイコンを表示 */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+      display: block;
+      font-size: 2em;
+      cursor: pointer;
+  }
+
+  /* メニューはデフォルトで非表示 */
+  #menu {
+      display: none;
+  }
+
+  /* .show クラスが付いた時のみ表示 */
+  #menu.show {
+      display: block;
+      background-color: #fff; /* メニューの背景色を設定 */
+      position: absolute;
+      top: 50px; /* ヘッダーの下にメニューが表示されるように調整 */
+      width: 100%;
+  }
+
+  /* メニューのリンクスタイル */
+  #menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  #menu ul li {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+  }
+
+  #menu ul li a {
+      text-decoration: none;
+      color: #000;
+  }
+}
