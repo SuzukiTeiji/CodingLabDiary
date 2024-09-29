@@ -213,11 +213,6 @@ body {
   transition: color 0.3s ease, text-decoration 0.3s ease;
   text-decoration: underline; /* ホバー時の下線アニメーション */
 }
-  
-
-
-
-
 
 /* フッター */
 footer {
@@ -232,6 +227,9 @@ footer {
 .menu-icon {
   display: none;
 }
+header {
+  display: none;
+}
 
 /* 画面幅が768px以下の時にメニューアイコンを表示 */
 @media screen and (max-width: 768px) {
@@ -240,7 +238,12 @@ footer {
       font-size: 2em;
       cursor: pointer;
   }
-
+  header {
+    display: block;
+  }
+  .menu-bar {
+    display: none;
+  }
   /* メニューはデフォルトで非表示 */
   #menu {
       display: none;
