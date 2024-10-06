@@ -1,7 +1,7 @@
 /* 基本リセット */
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -9,13 +9,11 @@
 header {
   background-color: #6e6f72; /* ダークグレー */
   color: #3c3e44;
-  padding: 32px; /* 高さを縮小 */
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* メニュー */
-
 nav {
   display: none;
 }
@@ -45,8 +43,6 @@ nav ul li a:hover {
   text-decoration: underline; /* ホバー時の下線アニメーション */
 }
 
-
-
 /* メニューアイコン */
 .menu-icon {
   font-size: 19px; /* フォントサイズを大きく */
@@ -66,10 +62,7 @@ nav ul li a:hover {
   background-color: #ffcc00; /* ホバー時に色を変更 */
 }
 
-
-
 /*メニューバー*/
-
 .header {
   background-color: #f8f8f8;
   padding: 10px 0;
@@ -112,19 +105,13 @@ nav ul li a:hover {
   100% { transform: translateX(0); }
 }
 
-  
-
-  
-
-
-
 body {
-  font-family: 'Arial', sans-serif;
   background-color: #f0f0f3; /* ベースカラー: ライトグレー */
   color: #333;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.6; /* 行間を広く */
+
 }
-
-
 
 /* メンバーセクション */
 .members {
@@ -133,7 +120,6 @@ body {
   text-align: center;
 }
 
-
 .icon-container {
   display: flex;
   flex-wrap: wrap;
@@ -141,7 +127,6 @@ body {
   gap: 20px;
   justify-content: center;
   gap: 30px; /* アイコン間の隙間を狭くする */
-
 }
 
 .member {
@@ -173,19 +158,15 @@ body {
 }
 
 
-
-
 /* 最新日記欄 */
 .latest-diaries {
   background-color: #d4af35;
-  border: 2px solid #3c3e44;
   border-radius: 55px;
-  padding: 10px;
+  padding: 20px;
   margin: 40px auto; /* Center the section and reduce the width */
   width: 70%; /* Adjust the width as needed */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .latest-diaries h2 {
   text-align: center;
@@ -231,8 +212,70 @@ header {
   display: none;
 }
 
+/* グローバルスタイルの更新 */
+header, .menu-bar, #container, footer {
+  margin: 0 auto; /* 中央寄せ */
+  padding: 20px;
+}
+
+/* ヘッダースタイルの更新 */
+header {
+  background-color: #fff; /* 背景色を白に */
+  color: #333;
+  box-shadow: none; /* 影を削除 */
+}
+
+/* ナビゲーションメニューのスタイル更新 */
+nav ul li a {
+  color: #333; /* メニューリンクの色 */
+  padding: 10px 20px; /* パディングを調整 */
+}
+
+nav ul li a:hover, .menu-bar a:hover {
+  color: #0056b3; /* ホバー時の色を変更 */
+  background-color: transparent; /* 背景色の変更を解除 */
+}
+
+/* コンテナースタイルの更新 */
+#container {
+  background-color: #f9f9f9; /* コンテナの背景色 */
+  border: 1px solid #ddd; /* 境界線を追加 */
+  padding: 20px; /* パディングを追加 */
+}
+
+/* 見出しスタイルの更新 */
+h1, h2, h3 {
+  color: #333; /* 見出しの色を濃いグレーに */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* フッタースタイルの更新 */
+footer {
+  background-color: #333; /* 背景色を濃いグレーに */
+  color: #fff; /* テキスト色を白に */
+  padding: 20px 0; /* パディングを設定 */
+  text-align: center; /* テキストを中央揃え */
+}
+
+/* レスポンシブデザイン対応 */
 /* 画面幅が768px以下の時にメニューアイコンを表示 */
 @media screen and (max-width: 768px) {
+  header, .menu-bar, #container, footer {
+    padding: 10px;
+}
+
+/* メニューバーのスタイルを修正 */
+.menu-bar {
+    background-color: #333;
+    text-align: left; /* テキストを左揃えに */
+}
+
+.menu-bar a {
+    display: block; /* リンクをブロック要素に */
+    padding: 10px; /* パディングを調整 */
+}
+
   .menu-icon {
       display: block;
       font-size: 2em;
@@ -275,4 +318,13 @@ header {
       text-decoration: none;
       color: #000;
   }
+}
+
+/* 特定のページ要素のスタイル修正 */
+.container-contents-description {
+  background-color: #fff; /* 背景色を白に */
+  padding: 15px; /* パディングを設定 */
+  margin-bottom: 20px; /* 下マージンを設定 */
+  border-left: 5px solid #0056b3; /* 左の境界線を青に */
+  font-size: 16px; /* フォントサイズを設定 */
 }
