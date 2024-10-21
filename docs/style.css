@@ -83,10 +83,9 @@ nav ul li a:hover {
   padding: 10px 30px; /* パディングを調整 */
   text-decoration: none;
   font-weight: bold;
-  height: auto; /* 高さを自動に設定 */    
-  line-height:auto; 
+  height: auto; /* 高さを自動に設定 */
+  line-height: auto;
 }
-
 
 .menu-bar a:hover {
   background-color: #d4af35;
@@ -98,19 +97,28 @@ nav ul li a:hover {
 }
 
 @keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 body {
   background-color: #f0f0f3; /* ベースカラー: ライトグレー */
   color: #333;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.6; /* 行間を広く */
-
 }
 
 /* メンバーセクション */
@@ -156,7 +164,6 @@ body {
 .member:hover {
   transform: scale(1.1);
 }
-
 
 /* 最新日記欄 */
 .latest-diaries {
@@ -213,7 +220,10 @@ header {
 }
 
 /* グローバルスタイルの更新 */
-header, .menu-bar, #container, footer {
+header,
+.menu-bar,
+#container,
+footer {
   margin: 0 auto; /* 中央寄せ */
   padding: 20px;
 }
@@ -231,7 +241,8 @@ nav ul li a {
   padding: 10px 20px; /* パディングを調整 */
 }
 
-nav ul li a:hover, .menu-bar a:hover {
+nav ul li a:hover,
+.menu-bar a:hover {
   color: #0056b3; /* ホバー時の色を変更 */
   background-color: transparent; /* 背景色の変更を解除 */
 }
@@ -244,7 +255,9 @@ nav ul li a:hover, .menu-bar a:hover {
 }
 
 /* 見出しスタイルの更新 */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #333; /* 見出しの色を濃いグレーに */
   margin-top: 20px;
   margin-bottom: 10px;
@@ -261,62 +274,55 @@ footer {
 /* レスポンシブデザイン対応 */
 /* 画面幅が768px以下の時にメニューアイコンを表示 */
 @media screen and (max-width: 768px) {
-  header, .menu-bar, #container, footer {
+  header,
+  .menu-bar,
+  #container,
+  footer {
     padding: 10px;
-}
+  }
 
-/* メニューバーのスタイルを修正 */
-.menu-bar {
-    background-color: #333;
-    text-align: left; /* テキストを左揃えに */
-}
-
-.menu-bar a {
-    display: block; /* リンクをブロック要素に */
-    padding: 10px; /* パディングを調整 */
-}
-
+  /* メニューバーのスタイルを修正 */
+  .menu-bar {
+    display: none;
+  }
   .menu-icon {
-      display: block;
-      font-size: 2em;
-      cursor: pointer;
+    display: block;
+    font-size: 2em;
+    cursor: pointer;
   }
   header {
     display: block;
   }
-  .menu-bar {
-    display: none;
-  }
   /* メニューはデフォルトで非表示 */
   #menu {
-      display: none;
+    display: none;
   }
 
   /* .show クラスが付いた時のみ表示 */
   #menu.show {
-      display: block;
-      background-color: #fff; /* メニューの背景色を設定 */
-      position: absolute;
-      top: 50px; /* ヘッダーの下にメニューが表示されるように調整 */
-      width: 100%;
+    display: block;
+    background-color: #fff; /* メニューの背景色を設定 */
+    position: absolute;
+    top: 50px; /* ヘッダーの下にメニューが表示されるように調整 */
+    width: 100%;
   }
 
   /* メニューのリンクスタイル */
   #menu ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   #menu ul li {
-      margin: 0;
-      padding: 10px;
-      text-align: center;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
   }
 
   #menu ul li a {
-      text-decoration: none;
-      color: #000;
+    text-decoration: none;
+    color: #000;
   }
 }
 
