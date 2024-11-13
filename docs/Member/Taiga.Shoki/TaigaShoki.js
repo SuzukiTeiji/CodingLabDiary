@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ダミーの日記データ（実際にはファイルやデータベースから取得することができます）
     const diaryEntries = [
         { date: '2024年10月31日', link: 'Diary/20241031.html' },
-        { date: '2024年11月17日', link: 'diary_2024_11_10.html' },
-        { date: '2024年11月10日', link: 'diary_2024_11_09.html' },
-        { date: '2024年11月9日', link: 'diary_2024_11_08.html' }
+        { date: '2024年11月10日', link: 'Diary/20241110.html' },
     ];
 
     // 日記リンクを表示する
